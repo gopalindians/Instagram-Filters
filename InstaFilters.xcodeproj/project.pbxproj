@@ -126,6 +126,8 @@
 		5094874314FD1B39007B42FF /* brannanScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094873E14FD1B39007B42FF /* brannanScreen.png */; };
 		5094874614FD1C91007B42FF /* IFInkwellFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094874514FD1C8F007B42FF /* IFInkwellFilter.m */; };
 		5094874814FD1D11007B42FF /* inkwellMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094874714FD1D0F007B42FF /* inkwellMap.png */; };
+		5094874B14FD1DA8007B42FF /* IFWaldenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094874A14FD1DA6007B42FF /* IFWaldenFilter.m */; };
+		5094874D14FD1EA3007B42FF /* waldenMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094874C14FD1EA1007B42FF /* waldenMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,6 +283,9 @@
 		5094874414FD1C8E007B42FF /* IFInkwellFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFInkwellFilter.h; path = IFFilters/IFInkwellFilter.h; sourceTree = "<group>"; };
 		5094874514FD1C8F007B42FF /* IFInkwellFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFInkwellFilter.m; path = IFFilters/IFInkwellFilter.m; sourceTree = "<group>"; };
 		5094874714FD1D0F007B42FF /* inkwellMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inkwellMap.png; sourceTree = "<group>"; };
+		5094874914FD1DA4007B42FF /* IFWaldenFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWaldenFilter.h; path = IFFilters/IFWaldenFilter.h; sourceTree = "<group>"; };
+		5094874A14FD1DA6007B42FF /* IFWaldenFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFWaldenFilter.m; path = IFFilters/IFWaldenFilter.m; sourceTree = "<group>"; };
+		5094874C14FD1EA1007B42FF /* waldenMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waldenMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +505,8 @@
 				5094873814FD1A82007B42FF /* IFBrannanFilter.m */,
 				5094874414FD1C8E007B42FF /* IFInkwellFilter.h */,
 				5094874514FD1C8F007B42FF /* IFInkwellFilter.m */,
+				5094874914FD1DA4007B42FF /* IFWaldenFilter.h */,
+				5094874A14FD1DA6007B42FF /* IFWaldenFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -507,6 +514,7 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094874C14FD1EA1007B42FF /* waldenMap.png */,
 				5094874714FD1D0F007B42FF /* inkwellMap.png */,
 				5094873A14FD1B33007B42FF /* brannanProcess.png */,
 				5094873B14FD1B34007B42FF /* brannanBlowout.png */,
@@ -674,6 +682,7 @@
 				5094874214FD1B39007B42FF /* brannanLuma.png in Resources */,
 				5094874314FD1B39007B42FF /* brannanScreen.png in Resources */,
 				5094874814FD1D11007B42FF /* inkwellMap.png in Resources */,
+				5094874D14FD1EA3007B42FF /* waldenMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +722,7 @@
 				5094872C14FD18E4007B42FF /* IFToasterFilter.m in Sources */,
 				5094873914FD1A83007B42FF /* IFBrannanFilter.m in Sources */,
 				5094874614FD1C91007B42FF /* IFInkwellFilter.m in Sources */,
+				5094874B14FD1DA8007B42FF /* IFWaldenFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
