@@ -107,6 +107,11 @@
 		5094871614FD12BA007B42FF /* sierraMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094871514FD12BA007B42FF /* sierraMap.png */; };
 		5094871914FD1372007B42FF /* IFLomofiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094871814FD1371007B42FF /* IFLomofiFilter.m */; };
 		5094871B14FD148C007B42FF /* lomoMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094871A14FD148B007B42FF /* lomoMap.png */; };
+		5094871E14FD15D4007B42FF /* IFEarlybirdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094871D14FD15D3007B42FF /* IFEarlybirdFilter.m */; };
+		5094872014FD1672007B42FF /* earlyBirdCurves.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094871F14FD1671007B42FF /* earlyBirdCurves.png */; };
+		5094872214FD169C007B42FF /* earlybirdOverlayMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872114FD169B007B42FF /* earlybirdOverlayMap.png */; };
+		5094872414FD16CE007B42FF /* earlybirdBlowout.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872314FD16CC007B42FF /* earlybirdBlowout.png */; };
+		5094872614FD16F4007B42FF /* earlybirdMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872514FD16F3007B42FF /* earlybirdMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,6 +244,12 @@
 		5094871714FD1371007B42FF /* IFLomofiFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFLomofiFilter.h; path = IFFilters/IFLomofiFilter.h; sourceTree = "<group>"; };
 		5094871814FD1371007B42FF /* IFLomofiFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFLomofiFilter.m; path = IFFilters/IFLomofiFilter.m; sourceTree = "<group>"; };
 		5094871A14FD148B007B42FF /* lomoMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lomoMap.png; sourceTree = "<group>"; };
+		5094871C14FD15D2007B42FF /* IFEarlybirdFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFEarlybirdFilter.h; path = IFFilters/IFEarlybirdFilter.h; sourceTree = "<group>"; };
+		5094871D14FD15D3007B42FF /* IFEarlybirdFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFEarlybirdFilter.m; path = IFFilters/IFEarlybirdFilter.m; sourceTree = "<group>"; };
+		5094871F14FD1671007B42FF /* earlyBirdCurves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlyBirdCurves.png; sourceTree = "<group>"; };
+		5094872114FD169B007B42FF /* earlybirdOverlayMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlybirdOverlayMap.png; sourceTree = "<group>"; };
+		5094872314FD16CC007B42FF /* earlybirdBlowout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlybirdBlowout.png; sourceTree = "<group>"; };
+		5094872514FD16F3007B42FF /* earlybirdMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlybirdMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +461,8 @@
 				5094871314FD11B8007B42FF /* IFSierraFilter.m */,
 				5094871714FD1371007B42FF /* IFLomofiFilter.h */,
 				5094871814FD1371007B42FF /* IFLomofiFilter.m */,
+				5094871C14FD15D2007B42FF /* IFEarlybirdFilter.h */,
+				5094871D14FD15D3007B42FF /* IFEarlybirdFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -457,6 +470,10 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094872314FD16CC007B42FF /* earlybirdBlowout.png */,
+				5094872514FD16F3007B42FF /* earlybirdMap.png */,
+				5094872114FD169B007B42FF /* earlybirdOverlayMap.png */,
+				5094871F14FD1671007B42FF /* earlyBirdCurves.png */,
 				5094871A14FD148B007B42FF /* lomoMap.png */,
 				5094871514FD12BA007B42FF /* sierraMap.png */,
 				5094871014FD0F76007B42FF /* xproMap.png */,
@@ -594,6 +611,10 @@
 				5094871114FD0F77007B42FF /* xproMap.png in Resources */,
 				5094871614FD12BA007B42FF /* sierraMap.png in Resources */,
 				5094871B14FD148C007B42FF /* lomoMap.png in Resources */,
+				5094872014FD1672007B42FF /* earlyBirdCurves.png in Resources */,
+				5094872214FD169C007B42FF /* earlybirdOverlayMap.png in Resources */,
+				5094872414FD16CE007B42FF /* earlybirdBlowout.png in Resources */,
+				5094872614FD16F4007B42FF /* earlybirdMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +650,7 @@
 				5094870F14FD0F27007B42FF /* IFXproIIFilter.m in Sources */,
 				5094871414FD11B9007B42FF /* IFSierraFilter.m in Sources */,
 				5094871914FD1372007B42FF /* IFLomofiFilter.m in Sources */,
+				5094871E14FD15D4007B42FF /* IFEarlybirdFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
