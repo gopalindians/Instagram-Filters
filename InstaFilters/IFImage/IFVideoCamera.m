@@ -178,6 +178,22 @@
             break;
         }
             
+        case IF_BRANNAN_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            self.sourcePicture2 = self.internalSourcePicture2;
+            self.sourcePicture3 = self.internalSourcePicture3;
+            self.sourcePicture4 = self.internalSourcePicture4;
+            self.sourcePicture5 = self.internalSourcePicture5;
+            
+            [self.sourcePicture1 addTarget:self.filter];
+            [self.sourcePicture2 addTarget:self.filter];
+            [self.sourcePicture3 addTarget:self.filter];
+            [self.sourcePicture4 addTarget:self.filter];
+            [self.sourcePicture5 addTarget:self.filter];
+            
+            break;
+        }
+            
         case IF_NORMAL_FILTER: {
             break;
         }
@@ -288,6 +304,18 @@
                 self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"toasterCurves" ofType:@"png"]]]; 
                 self.internalSourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"toasterOverlayMapWarm" ofType:@"png"]]];                
                 self.internalSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"toasterColorShift" ofType:@"png"]]];                
+                
+                
+                break;
+            }
+                
+            case IF_BRANNAN_FILTER: {
+                self.internalFilter = [[IFBrannanFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"brannanProcess" ofType:@"png"]]];
+                self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"brannanBlowout" ofType:@"png"]]];                
+                self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"brannanContrast" ofType:@"png"]]]; 
+                self.internalSourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"brannanLuma" ofType:@"png"]]];                
+                self.internalSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"brannanScreen" ofType:@"png"]]];                
                 
                 
                 break;
