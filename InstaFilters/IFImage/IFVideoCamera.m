@@ -108,6 +108,18 @@
             break;
         }
             
+        case IF_SIERRA_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            self.sourcePicture2 = self.internalSourcePicture2;
+            self.sourcePicture3 = self.internalSourcePicture3;
+            
+            [self.sourcePicture1 addTarget:self.filter];
+            [self.sourcePicture2 addTarget:self.filter];
+            [self.sourcePicture3 addTarget:self.filter];
+            
+            break;
+        }
+            
         case IF_NORMAL_FILTER: {
             break;
         }
@@ -165,6 +177,16 @@
                 self.internalFilter = [[IFXproIIFilter alloc] init];
                 self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"xproMap" ofType:@"png"]]];
                 self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vignetteMap" ofType:@"png"]]];
+                
+                break;
+            }
+
+            case IF_SIERRA_FILTER: {
+                self.internalFilter = [[IFSierraFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"blackboard1024" ofType:@"png"]]];
+                self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"overlayMap" ofType:@"png"]]];
+                self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sierraMap" ofType:@"png"]]];
+
                 
                 break;
             }
