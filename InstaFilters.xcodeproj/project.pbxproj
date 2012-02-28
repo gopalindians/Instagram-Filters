@@ -124,6 +124,8 @@
 		5094874114FD1B39007B42FF /* brannanContrast.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094873C14FD1B35007B42FF /* brannanContrast.png */; };
 		5094874214FD1B39007B42FF /* brannanLuma.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094873D14FD1B37007B42FF /* brannanLuma.png */; };
 		5094874314FD1B39007B42FF /* brannanScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094873E14FD1B39007B42FF /* brannanScreen.png */; };
+		5094874614FD1C91007B42FF /* IFInkwellFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094874514FD1C8F007B42FF /* IFInkwellFilter.m */; };
+		5094874814FD1D11007B42FF /* inkwellMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094874714FD1D0F007B42FF /* inkwellMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -276,6 +278,9 @@
 		5094873C14FD1B35007B42FF /* brannanContrast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brannanContrast.png; sourceTree = "<group>"; };
 		5094873D14FD1B37007B42FF /* brannanLuma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brannanLuma.png; sourceTree = "<group>"; };
 		5094873E14FD1B39007B42FF /* brannanScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brannanScreen.png; sourceTree = "<group>"; };
+		5094874414FD1C8E007B42FF /* IFInkwellFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFInkwellFilter.h; path = IFFilters/IFInkwellFilter.h; sourceTree = "<group>"; };
+		5094874514FD1C8F007B42FF /* IFInkwellFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFInkwellFilter.m; path = IFFilters/IFInkwellFilter.m; sourceTree = "<group>"; };
+		5094874714FD1D0F007B42FF /* inkwellMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inkwellMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +498,8 @@
 				5094872B14FD18E3007B42FF /* IFToasterFilter.m */,
 				5094873714FD1A81007B42FF /* IFBrannanFilter.h */,
 				5094873814FD1A82007B42FF /* IFBrannanFilter.m */,
+				5094874414FD1C8E007B42FF /* IFInkwellFilter.h */,
+				5094874514FD1C8F007B42FF /* IFInkwellFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -500,6 +507,7 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094874714FD1D0F007B42FF /* inkwellMap.png */,
 				5094873A14FD1B33007B42FF /* brannanProcess.png */,
 				5094873B14FD1B34007B42FF /* brannanBlowout.png */,
 				5094873C14FD1B35007B42FF /* brannanContrast.png */,
@@ -665,6 +673,7 @@
 				5094874114FD1B39007B42FF /* brannanContrast.png in Resources */,
 				5094874214FD1B39007B42FF /* brannanLuma.png in Resources */,
 				5094874314FD1B39007B42FF /* brannanScreen.png in Resources */,
+				5094874814FD1D11007B42FF /* inkwellMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +712,7 @@
 				5094871E14FD15D4007B42FF /* IFEarlybirdFilter.m in Sources */,
 				5094872C14FD18E4007B42FF /* IFToasterFilter.m in Sources */,
 				5094873914FD1A83007B42FF /* IFBrannanFilter.m in Sources */,
+				5094874614FD1C91007B42FF /* IFInkwellFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

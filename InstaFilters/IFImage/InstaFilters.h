@@ -18,6 +18,7 @@ typedef enum {
     IF_SUTRO_FILTER,
     IF_TOASTER_FILTER,
     IF_BRANNAN_FILTER,
+    IF_INKWELL_FILTER,
     IF_FILTER_TOTAL_NUMBER
 } IFFilterType; 
 
@@ -35,3 +36,4 @@ typedef enum {
 #import "IFEarlybirdFilter.h"
 #import "IFToasterFilter.h"
 #import "IFBrannanFilter.h"
+#import "IFInkwellFilter.h"
