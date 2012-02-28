@@ -239,6 +239,14 @@
             break;
         }
             
+        case IF_NASHVILLE_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            
+            [self.sourcePicture1 addTarget:self.filter];
+            
+            break;
+        }
+            
         case IF_NORMAL_FILTER: {
             break;
         }
@@ -397,6 +405,13 @@
                 self.internalFilter = [[IFValenciaFilter alloc] init];
                 self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"valenciaMap" ofType:@"png"]]];
                 self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"valenciaGradientMap" ofType:@"png"]]];                
+                
+                break;
+            }
+                
+            case IF_NASHVILLE_FILTER: {
+                self.internalFilter = [[IFNashvilleFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"nashvilleMap" ofType:@"png"]]];
                 
                 break;
             }

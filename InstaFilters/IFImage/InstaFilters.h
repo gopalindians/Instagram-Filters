@@ -22,6 +22,7 @@ typedef enum {
     IF_WALDEN_FILTER,
     IF_HEFE_FILTER,
     IF_VALENCIA_FILTER,
+    IF_NASHVILLE_FILTER,
     IF_FILTER_TOTAL_NUMBER
 } IFFilterType; 
 
@@ -43,3 +44,4 @@ typedef enum {
 #import "IFWaldenFilter.h"
 #import "IFHefeFilter.h"
 #import "IFValenciaFilter.h"
+#import "IFNashvilleFilter.h"
