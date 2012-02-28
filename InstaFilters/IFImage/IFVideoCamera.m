@@ -58,6 +58,7 @@
 #pragma mark - Switch Filter
 - (void)switchToNewFilter {
     
+    [self.rotationFilter removeTarget:self.filter];
     self.filter = self.internalFilter;
     [self.rotationFilter addTarget:self.filter];
     
@@ -453,8 +454,6 @@
                 break;
         }
         
-        [self.rotationFilter removeTarget:self.filter];
-
         [self performSelectorOnMainThread:@selector(switchToNewFilter) withObject:nil waitUntilDone:NO];
 
     });
