@@ -11,6 +11,7 @@
 #define kBlueDotImageViewOffset 25.0f
 #define kFilterCellHeight 72.0f 
 #define kBlueDotAnimationTime 0.2f
+#define kFilterTableViewAnimationTime 0.2f
 
 #import "IFFiltersViewController.h"
 
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) UITableView *filtersTableView;
 @property (nonatomic, strong) UIView *filterTableViewContainerView;
 @property (nonatomic, strong) UIImageView *blueDotImageView;
+@property (nonatomic, strong) UIImageView *cameraTrayImageView;
 
 - (void)backButtonPressed:(id)sender;
 - (void)toggleFiltersButtonPressed:(id)sender;
@@ -41,6 +43,7 @@
 @synthesize filtersTableView;
 @synthesize filterTableViewContainerView;
 @synthesize blueDotImageView;
+@synthesize cameraTrayImageView;
 
 #pragma mark - Filters TableView Delegate & Datasource methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -254,14 +257,19 @@
     self.blueDotImageView.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraSelectedFilter" ofType:@"png"]];
     self.blueDotImageView.transform = CGAffineTransformMakeRotation(-M_PI/2);
     [self.filtersTableView addSubview:self.blueDotImageView];
+    
+    self.cameraTrayImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 43, 320, 29)];
+    self.cameraTrayImageView.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraTray" ofType:@"png"]];
+    
+    [self.filterTableViewContainerView addSubview:self.cameraTrayImageView];
     [self.filterTableViewContainerView addSubview:self.filtersTableView];
     
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.cameraToolBarImageView];
     [self.view addSubview:self.backButton];
+    [self.view addSubview:self.filterTableViewContainerView];
     [self.view addSubview:self.cameraCaptureBarImageView];
     [self.view addSubview:self.toggleFiltersButton];
-    [self.view addSubview:self.filterTableViewContainerView];
 
 }
 
@@ -291,12 +299,39 @@
 }
 
 - (void)toggleFiltersButtonPressed:(id)sender {
+    
+    self.toggleFiltersButton.enabled = NO;
+    
     if (isFiltersTableViewVisible == YES) {
+        
         [self.toggleFiltersButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraShowFilters" ofType:@"png"]] forState:UIControlStateNormal];
         self.isFiltersTableViewVisible = NO;
+        
+        CGRect tempRect = self.filterTableViewContainerView.frame;
+        tempRect.origin.y = tempRect.origin.y + kFilterCellHeight;
+        
+        [UIView animateWithDuration:kFilterTableViewAnimationTime animations:^(){
+            self.filterTableViewContainerView.frame = tempRect;
+        }completion:^(BOOL finished) {
+            self.toggleFiltersButton.enabled = YES;
+        }];
+        
+
     } else {
+        
         [self.toggleFiltersButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraHideFilters" ofType:@"png"]] forState:UIControlStateNormal];
         self.isFiltersTableViewVisible = YES;
+        
+        CGRect tempRect = self.filterTableViewContainerView.frame;
+        tempRect.origin.y = tempRect.origin.y - kFilterCellHeight;
+        
+        [UIView animateWithDuration:kFilterTableViewAnimationTime animations:^(){
+            self.filterTableViewContainerView.frame = tempRect;
+        }completion:^(BOOL finished) {
+            self.toggleFiltersButton.enabled = YES;
+        }];
+        
+
     }
 }
 
