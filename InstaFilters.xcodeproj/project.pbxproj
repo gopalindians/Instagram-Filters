@@ -90,6 +90,7 @@
 		509486DB14FCDFC9007B42FF /* sutroMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486D914FCDFC9007B42FF /* sutroMetal.png */; };
 		509486DD14FCDFE5007B42FF /* softLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486DC14FCDFE5007B42FF /* softLight.png */; };
 		509486DF14FCDFFC007B42FF /* sutroCurves.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486DE14FCDFFC007B42FF /* sutroCurves.png */; };
+		509486E214FCE498007B42FF /* IFRotationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486E114FCE497007B42FF /* IFRotationFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +198,8 @@
 		509486D914FCDFC9007B42FF /* sutroMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sutroMetal.png; sourceTree = "<group>"; };
 		509486DC14FCDFE5007B42FF /* softLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = softLight.png; sourceTree = "<group>"; };
 		509486DE14FCDFFC007B42FF /* sutroCurves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sutroCurves.png; sourceTree = "<group>"; };
+		509486E014FCE497007B42FF /* IFRotationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFRotationFilter.h; path = IFFilters/IFRotationFilter.h; sourceTree = "<group>"; };
+		509486E114FCE497007B42FF /* IFRotationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFRotationFilter.m; path = IFFilters/IFRotationFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +395,8 @@
 			children = (
 				509486CB14FCDA33007B42FF /* IFSutroFilter.h */,
 				509486CC14FCDA33007B42FF /* IFSutroFilter.m */,
+				509486E014FCE497007B42FF /* IFRotationFilter.h */,
+				509486E114FCE497007B42FF /* IFRotationFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -545,6 +550,7 @@
 				509486C714FCD1E6007B42FF /* IFImageFilter.m in Sources */,
 				509486C814FCD1E6007B42FF /* IFVideoCamera.m in Sources */,
 				509486CD14FCDA33007B42FF /* IFSutroFilter.m in Sources */,
+				509486E214FCE498007B42FF /* IFRotationFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

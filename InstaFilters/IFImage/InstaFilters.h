@@ -9,3 +9,4 @@
 #import "IFImageFilter.h"
 #import "IFVideoCamera.h"
 #import "IFSutroFilter.h"
+#import "IFRotationFilter.h"

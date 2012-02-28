@@ -348,6 +348,7 @@
     //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
 }
 - (void)viewWillDisappear:(BOOL)animated {
+    [self.videoCamera stopCameraCapture];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }
 
