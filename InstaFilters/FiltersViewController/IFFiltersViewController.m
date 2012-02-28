@@ -273,10 +273,10 @@
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.cameraToolBarImageView];
     [self.view addSubview:self.backButton];
+    [self.view addSubview:self.videoCamera.gpuImageView];
     [self.view addSubview:self.filterTableViewContainerView];
     [self.view addSubview:self.cameraCaptureBarImageView];
     [self.view addSubview:self.toggleFiltersButton];
-    [self.view addSubview:self.videoCamera.gpuImageView];
     
     [self.videoCamera startCameraCapture];
 
