@@ -12,4 +12,6 @@
 
 @property (strong, readonly) GPUImageView *gpuImageView;
 
+- (void)switchFilter:(IFFilterType)type;
+
 @end

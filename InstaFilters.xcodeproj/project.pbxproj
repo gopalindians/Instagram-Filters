@@ -91,6 +91,10 @@
 		509486DD14FCDFE5007B42FF /* softLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486DC14FCDFE5007B42FF /* softLight.png */; };
 		509486DF14FCDFFC007B42FF /* sutroCurves.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486DE14FCDFFC007B42FF /* sutroCurves.png */; };
 		509486E214FCE498007B42FF /* IFRotationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486E114FCE497007B42FF /* IFRotationFilter.m */; };
+		509486E514FCF0FA007B42FF /* IFAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486E414FCF0FA007B42FF /* IFAmaroFilter.m */; };
+		509486E714FCF261007B42FF /* blackboard1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486E614FCF260007B42FF /* blackboard1024.png */; };
+		509486E914FCF278007B42FF /* overlayMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486E814FCF278007B42FF /* overlayMap.png */; };
+		509486EB14FCF29C007B42FF /* amaroMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486EA14FCF29C007B42FF /* amaroMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +204,11 @@
 		509486DE14FCDFFC007B42FF /* sutroCurves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sutroCurves.png; sourceTree = "<group>"; };
 		509486E014FCE497007B42FF /* IFRotationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFRotationFilter.h; path = IFFilters/IFRotationFilter.h; sourceTree = "<group>"; };
 		509486E114FCE497007B42FF /* IFRotationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFRotationFilter.m; path = IFFilters/IFRotationFilter.m; sourceTree = "<group>"; };
+		509486E314FCF0FA007B42FF /* IFAmaroFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFAmaroFilter.h; path = IFFilters/IFAmaroFilter.h; sourceTree = "<group>"; };
+		509486E414FCF0FA007B42FF /* IFAmaroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFAmaroFilter.m; path = IFFilters/IFAmaroFilter.m; sourceTree = "<group>"; };
+		509486E614FCF260007B42FF /* blackboard1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard1024.png; sourceTree = "<group>"; };
+		509486E814FCF278007B42FF /* overlayMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayMap.png; sourceTree = "<group>"; };
+		509486EA14FCF29C007B42FF /* amaroMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amaroMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +406,8 @@
 				509486CC14FCDA33007B42FF /* IFSutroFilter.m */,
 				509486E014FCE497007B42FF /* IFRotationFilter.h */,
 				509486E114FCE497007B42FF /* IFRotationFilter.m */,
+				509486E314FCF0FA007B42FF /* IFAmaroFilter.h */,
+				509486E414FCF0FA007B42FF /* IFAmaroFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -404,6 +415,9 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				509486EA14FCF29C007B42FF /* amaroMap.png */,
+				509486E814FCF278007B42FF /* overlayMap.png */,
+				509486E614FCF260007B42FF /* blackboard1024.png */,
 				509486DE14FCDFFC007B42FF /* sutroCurves.png */,
 				509486DC14FCDFE5007B42FF /* softLight.png */,
 				509486D814FCDFC9007B42FF /* sutroEdgeBurn.png */,
@@ -523,6 +537,9 @@
 				509486DB14FCDFC9007B42FF /* sutroMetal.png in Resources */,
 				509486DD14FCDFE5007B42FF /* softLight.png in Resources */,
 				509486DF14FCDFFC007B42FF /* sutroCurves.png in Resources */,
+				509486E714FCF261007B42FF /* blackboard1024.png in Resources */,
+				509486E914FCF278007B42FF /* overlayMap.png in Resources */,
+				509486EB14FCF29C007B42FF /* amaroMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +568,7 @@
 				509486C814FCD1E6007B42FF /* IFVideoCamera.m in Sources */,
 				509486CD14FCDA33007B42FF /* IFSutroFilter.m in Sources */,
 				509486E214FCE498007B42FF /* IFRotationFilter.m in Sources */,
+				509486E514FCF0FA007B42FF /* IFAmaroFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

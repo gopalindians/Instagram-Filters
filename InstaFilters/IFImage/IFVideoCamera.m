@@ -10,56 +10,139 @@
 
 @interface IFVideoCamera ()
 
-@property (nonatomic, strong) IFSutroFilter *sutroFilter;
-@property (nonatomic, strong) GPUImagePicture *sutroSourcePicture1;
-@property (nonatomic, strong) GPUImagePicture *sutroSourcePicture2;
-@property (nonatomic, strong) GPUImagePicture *sutroSourcePicture3;
-@property (nonatomic, strong) GPUImagePicture *sutroSourcePicture4;
-@property (nonatomic, strong) GPUImagePicture *sutroSourcePicture5;
+@property (nonatomic, strong) IFImageFilter *filter;
+@property (nonatomic, strong) GPUImagePicture *sourcePicture1;
+@property (nonatomic, strong) GPUImagePicture *sourcePicture2;
+@property (nonatomic, strong) GPUImagePicture *sourcePicture3;
+@property (nonatomic, strong) GPUImagePicture *sourcePicture4;
+@property (nonatomic, strong) GPUImagePicture *sourcePicture5;
+
+@property (nonatomic, strong) IFImageFilter *internalFilter;
+@property (nonatomic, strong) GPUImagePicture *internalSourcePicture1;
+@property (nonatomic, strong) GPUImagePicture *internalSourcePicture2;
+@property (nonatomic, strong) GPUImagePicture *internalSourcePicture3;
+@property (nonatomic, strong) GPUImagePicture *internalSourcePicture4;
+@property (nonatomic, strong) GPUImagePicture *internalSourcePicture5;
 
 @property (strong, readwrite) GPUImageView *gpuImageView;
 @property (nonatomic, strong) IFRotationFilter *rotationFilter;
+@property (nonatomic, unsafe_unretained) IFFilterType currentFilterType;
+
+@property (nonatomic, unsafe_unretained) dispatch_queue_t prepareFilterQueue;
+
+- (void)switchToNewFilter;
 
 @end
 
 @implementation IFVideoCamera
 
-@synthesize sutroFilter;
-@synthesize sutroSourcePicture1;
-@synthesize sutroSourcePicture2;
-@synthesize sutroSourcePicture3;
-@synthesize sutroSourcePicture4;
-@synthesize sutroSourcePicture5;
+@synthesize filter;
+@synthesize sourcePicture1;
+@synthesize sourcePicture2;
+@synthesize sourcePicture3;
+@synthesize sourcePicture4;
+@synthesize sourcePicture5;
+
+@synthesize internalFilter;
+@synthesize internalSourcePicture1;
+@synthesize internalSourcePicture2;
+@synthesize internalSourcePicture3;
+@synthesize internalSourcePicture4;
+@synthesize internalSourcePicture5;
 
 @synthesize gpuImageView;
 @synthesize rotationFilter;
+@synthesize currentFilterType;
+@synthesize prepareFilterQueue;
 
+#pragma mark - Switch Filter
+- (void)switchToNewFilter {
+    
+    self.filter = self.internalFilter;
+    [self.rotationFilter addTarget:self.filter];
+    
+    switch (currentFilterType) {
+        case IF_AMARO_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            self.sourcePicture2 = self.internalSourcePicture2;
+            self.sourcePicture3 = self.internalSourcePicture3;
+
+            [self.sourcePicture1 addTarget:self.filter];
+            [self.sourcePicture2 addTarget:self.filter];
+            [self.sourcePicture3 addTarget:self.filter];
+
+            [self.filter addTarget:self.gpuImageView];
+            break;
+        }
+            
+        default: {
+            break;
+        }
+    }
+    
+}
+
+- (void)switchFilter:(IFFilterType)type {
+    if (currentFilterType == type) {
+        return;
+    }
+    
+    currentFilterType = type;
+    
+    dispatch_async(prepareFilterQueue, ^{
+        switch (type) {
+            case IF_AMARO_FILTER: {
+                self.internalFilter = [[IFAmaroFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"blackboard1024" ofType:@"png"]]];
+                self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"overlayMap" ofType:@"png"]]];
+                self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"amaroMap" ofType:@"png"]]];
+                
+                [self.rotationFilter removeTarget:self.filter];
+
+                [self performSelectorOnMainThread:@selector(switchToNewFilter) withObject:nil waitUntilDone:NO];
+                break;
+            }
+                
+            default:
+                break;
+        }
+    });
+    
+}
+
+
+#pragma mark - init
 - (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition {
 	if (!(self = [super initWithSessionPreset:sessionPreset cameraPosition:cameraPosition]))
     {
 		return nil;
     }    
+    
+    prepareFilterQueue = dispatch_queue_create("com.diwublog.prepareFilterQueue", NULL);
+    
     rotationFilter = [[IFRotationFilter alloc] initWithRotation:kGPUImageRotateRight];
     [self addTarget:rotationFilter];
     
-    self.sutroFilter = [[IFSutroFilter alloc] init];
-    self.sutroSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vignetteMap" ofType:@"png"]]];
-    self.sutroSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroMetal" ofType:@"png"]]];
-    self.sutroSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"softLight" ofType:@"png"]]];
-    self.sutroSourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroEdgeBurn" ofType:@"png"]]];
-    self.sutroSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroCurves" ofType:@"png"]]];
+    self.filter = [[IFSutroFilter alloc] init];
+    self.sourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vignetteMap" ofType:@"png"]]];
+    self.sourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroMetal" ofType:@"png"]]];
+    self.sourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"softLight" ofType:@"png"]]];
+    self.sourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroEdgeBurn" ofType:@"png"]]];
+    self.sourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroCurves" ofType:@"png"]]];
     
-    [rotationFilter addTarget:sutroFilter];
-    [sutroSourcePicture1 addTarget:sutroFilter];
-    [sutroSourcePicture2 addTarget:sutroFilter];
-    [sutroSourcePicture3 addTarget:sutroFilter];
-    [sutroSourcePicture4 addTarget:sutroFilter];
-    [sutroSourcePicture5 addTarget:sutroFilter];
+    [rotationFilter addTarget:filter];
+    [sourcePicture1 addTarget:filter];
+    [sourcePicture2 addTarget:filter];
+    [sourcePicture3 addTarget:filter];
+    [sourcePicture4 addTarget:filter];
+    [sourcePicture5 addTarget:filter];
     
     gpuImageView = [[GPUImageView alloc] initWithFrame:CGRectMake(0, 50, 320, 320)];
     gpuImageView.layer.contentsScale = 1.0f;
-    [sutroFilter addTarget:gpuImageView];
+    [filter addTarget:gpuImageView];
 
+    
+    
     return self;
 }
 
