@@ -13,6 +13,11 @@
 		5009A26C14FC6861005E7073 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5009A26A14FC6861005E7073 /* InfoPlist.strings */; };
 		5009A26E14FC6861005E7073 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5009A26D14FC6861005E7073 /* main.m */; };
 		5009A27214FC6861005E7073 /* IFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5009A27114FC6861005E7073 /* IFAppDelegate.m */; };
+		5009A27A14FC6A19005E7073 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27814FC6A19005E7073 /* CoreMedia.framework */; };
+		5009A27B14FC6A19005E7073 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27914FC6A19005E7073 /* CoreVideo.framework */; };
+		5009A27D14FC6A36005E7073 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27C14FC6A36005E7073 /* OpenGLES.framework */; };
+		5009A27F14FC6A4C005E7073 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27E14FC6A4C005E7073 /* AVFoundation.framework */; };
+		5009A28114FC6A65005E7073 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A28014FC6A65005E7073 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		5009A26F14FC6861005E7073 /* InstaFilters-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaFilters-Prefix.pch"; sourceTree = "<group>"; };
 		5009A27014FC6861005E7073 /* IFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFAppDelegate.h; sourceTree = "<group>"; };
 		5009A27114FC6861005E7073 /* IFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFAppDelegate.m; sourceTree = "<group>"; };
+		5009A27814FC6A19005E7073 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		5009A27914FC6A19005E7073 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		5009A27C14FC6A36005E7073 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5009A27E14FC6A4C005E7073 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5009A28014FC6A65005E7073 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5009A28114FC6A65005E7073 /* QuartzCore.framework in Frameworks */,
+				5009A27F14FC6A4C005E7073 /* AVFoundation.framework in Frameworks */,
+				5009A27D14FC6A36005E7073 /* OpenGLES.framework in Frameworks */,
+				5009A27A14FC6A19005E7073 /* CoreMedia.framework in Frameworks */,
+				5009A27B14FC6A19005E7073 /* CoreVideo.framework in Frameworks */,
 				5009A26214FC6861005E7073 /* UIKit.framework in Frameworks */,
 				5009A26414FC6861005E7073 /* Foundation.framework in Frameworks */,
 				5009A26614FC6861005E7073 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +77,11 @@
 		5009A26014FC6861005E7073 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5009A28014FC6A65005E7073 /* QuartzCore.framework */,
+				5009A27E14FC6A4C005E7073 /* AVFoundation.framework */,
+				5009A27C14FC6A36005E7073 /* OpenGLES.framework */,
+				5009A27814FC6A19005E7073 /* CoreMedia.framework */,
+				5009A27914FC6A19005E7073 /* CoreVideo.framework */,
 				5009A26114FC6861005E7073 /* UIKit.framework */,
 				5009A26314FC6861005E7073 /* Foundation.framework */,
 				5009A26514FC6861005E7073 /* CoreGraphics.framework */,
