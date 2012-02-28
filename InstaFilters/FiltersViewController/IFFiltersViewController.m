@@ -12,7 +12,7 @@
 #define kFilterCellHeight 72.0f 
 #define kBlueDotAnimationTime 0.2f
 #define kFilterTableViewAnimationTime 0.2f
-
+#define kGPUImageViewAnimationOffset 27.0f
 #import "IFFiltersViewController.h"
 #import "InstaFilters.h"
 
@@ -319,8 +319,12 @@
         CGRect tempRect = self.filterTableViewContainerView.frame;
         tempRect.origin.y = tempRect.origin.y + kFilterCellHeight;
         
+        CGRect tempRectForGPUImageView = self.videoCamera.gpuImageView.frame;
+        tempRectForGPUImageView.origin.y = tempRectForGPUImageView.origin.y + kGPUImageViewAnimationOffset;
+
         [UIView animateWithDuration:kFilterTableViewAnimationTime animations:^(){
             self.filterTableViewContainerView.frame = tempRect;
+            self.videoCamera.gpuImageView.frame = tempRectForGPUImageView;
         }completion:^(BOOL finished) {
             self.toggleFiltersButton.enabled = YES;
         }];
@@ -334,8 +338,12 @@
         CGRect tempRect = self.filterTableViewContainerView.frame;
         tempRect.origin.y = tempRect.origin.y - kFilterCellHeight;
         
+        CGRect tempRectForGPUImageView = self.videoCamera.gpuImageView.frame;
+        tempRectForGPUImageView.origin.y = tempRectForGPUImageView.origin.y - kGPUImageViewAnimationOffset;
+        
         [UIView animateWithDuration:kFilterTableViewAnimationTime animations:^(){
             self.filterTableViewContainerView.frame = tempRect;
+            self.videoCamera.gpuImageView.frame = tempRectForGPUImageView;
         }completion:^(BOOL finished) {
             self.toggleFiltersButton.enabled = YES;
         }];

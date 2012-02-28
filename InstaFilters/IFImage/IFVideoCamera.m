@@ -473,21 +473,11 @@
     rotationFilter = [[IFRotationFilter alloc] initWithRotation:kGPUImageRotateRight];
     [self addTarget:rotationFilter];
     
-    self.filter = [[IFSutroFilter alloc] init];
-    self.sourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vignetteMap" ofType:@"png"]]];
-    self.sourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroMetal" ofType:@"png"]]];
-    self.sourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"softLight" ofType:@"png"]]];
-    self.sourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroEdgeBurn" ofType:@"png"]]];
-    self.sourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroCurves" ofType:@"png"]]];
-    
+    self.filter = [[IFNormalFilter alloc] init];
+
     [rotationFilter addTarget:filter];
-    [sourcePicture1 addTarget:filter];
-    [sourcePicture2 addTarget:filter];
-    [sourcePicture3 addTarget:filter];
-    [sourcePicture4 addTarget:filter];
-    [sourcePicture5 addTarget:filter];
     
-    gpuImageView = [[GPUImageView alloc] initWithFrame:CGRectMake(0, 50, 320, 320)];
+    gpuImageView = [[GPUImageView alloc] initWithFrame:CGRectMake(0, 45, 320, 320)];
     gpuImageView.layer.contentsScale = 1.0f;
     [filter addTarget:gpuImageView];
 
