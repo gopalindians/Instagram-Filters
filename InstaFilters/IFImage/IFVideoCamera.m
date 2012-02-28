@@ -257,6 +257,14 @@
             break;
         }
             
+        case IF_LORDKELVIN_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            
+            [self.sourcePicture1 addTarget:self.filter];
+            
+            break;
+        }
+            
         case IF_NORMAL_FILTER: {
             break;
         }
@@ -431,6 +439,13 @@
                 self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1977map" ofType:@"png"]]];
                 self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1977blowout" ofType:@"png"]]];                
 
+                break;
+            }
+                
+            case IF_LORDKELVIN_FILTER: {
+                self.internalFilter = [[IFLordKelvinFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"kelvinMap" ofType:@"png"]]];
+                
                 break;
             }
                 

@@ -142,6 +142,8 @@
 		5094876914FD259C007B42FF /* IF1977Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094876814FD259B007B42FF /* IF1977Filter.m */; };
 		5094876C14FD267C007B42FF /* 1977blowout.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094876A14FD2678007B42FF /* 1977blowout.png */; };
 		5094876D14FD267C007B42FF /* 1977map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094876B14FD267A007B42FF /* 1977map.png */; };
+		5094877014FD26E1007B42FF /* IFLordKelvinFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094876F14FD26DF007B42FF /* IFLordKelvinFilter.m */; };
+		5094877214FD27C5007B42FF /* kelvinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094877114FD27C4007B42FF /* kelvinMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -318,6 +320,9 @@
 		5094876814FD259B007B42FF /* IF1977Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IF1977Filter.m; path = IFFilters/IF1977Filter.m; sourceTree = "<group>"; };
 		5094876A14FD2678007B42FF /* 1977blowout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1977blowout.png; sourceTree = "<group>"; };
 		5094876B14FD267A007B42FF /* 1977map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1977map.png; sourceTree = "<group>"; };
+		5094876E14FD26DD007B42FF /* IFLordKelvinFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFLordKelvinFilter.h; path = IFFilters/IFLordKelvinFilter.h; sourceTree = "<group>"; };
+		5094876F14FD26DF007B42FF /* IFLordKelvinFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFLordKelvinFilter.m; path = IFFilters/IFLordKelvinFilter.m; sourceTree = "<group>"; };
+		5094877114FD27C4007B42FF /* kelvinMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kelvinMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -547,6 +552,8 @@
 				5094876314FD2461007B42FF /* IFNashvilleFilter.m */,
 				5094876714FD2599007B42FF /* IF1977Filter.h */,
 				5094876814FD259B007B42FF /* IF1977Filter.m */,
+				5094876E14FD26DD007B42FF /* IFLordKelvinFilter.h */,
+				5094876F14FD26DF007B42FF /* IFLordKelvinFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -554,6 +561,7 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094877114FD27C4007B42FF /* kelvinMap.png */,
 				5094876A14FD2678007B42FF /* 1977blowout.png */,
 				5094876B14FD267A007B42FF /* 1977map.png */,
 				5094876514FD2500007B42FF /* nashvilleMap.png */,
@@ -743,6 +751,7 @@
 				5094876614FD2502007B42FF /* nashvilleMap.png in Resources */,
 				5094876C14FD267C007B42FF /* 1977blowout.png in Resources */,
 				5094876D14FD267C007B42FF /* 1977map.png in Resources */,
+				5094877214FD27C5007B42FF /* kelvinMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,6 +796,7 @@
 				5094875D14FD2301007B42FF /* IFValenciaFilter.m in Sources */,
 				5094876414FD2463007B42FF /* IFNashvilleFilter.m in Sources */,
 				5094876914FD259C007B42FF /* IF1977Filter.m in Sources */,
+				5094877014FD26E1007B42FF /* IFLordKelvinFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
