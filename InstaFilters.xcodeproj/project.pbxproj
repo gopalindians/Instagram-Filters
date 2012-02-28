@@ -128,6 +128,12 @@
 		5094874814FD1D11007B42FF /* inkwellMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094874714FD1D0F007B42FF /* inkwellMap.png */; };
 		5094874B14FD1DA8007B42FF /* IFWaldenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094874A14FD1DA6007B42FF /* IFWaldenFilter.m */; };
 		5094874D14FD1EA3007B42FF /* waldenMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094874C14FD1EA1007B42FF /* waldenMap.png */; };
+		5094875014FD1F87007B42FF /* IFHefeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094874F14FD1F86007B42FF /* IFHefeFilter.m */; };
+		5094875214FD2087007B42FF /* edgeBurn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875114FD2085007B42FF /* edgeBurn.png */; };
+		5094875414FD20DE007B42FF /* hefeMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875314FD20DC007B42FF /* hefeMap.png */; };
+		5094875614FD2102007B42FF /* hefeGradientMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875514FD2100007B42FF /* hefeGradientMap.png */; };
+		5094875814FD211D007B42FF /* hefeSoftLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875714FD211C007B42FF /* hefeSoftLight.png */; };
+		5094875A14FD2142007B42FF /* hefeMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875914FD2140007B42FF /* hefeMetal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -286,6 +292,13 @@
 		5094874914FD1DA4007B42FF /* IFWaldenFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWaldenFilter.h; path = IFFilters/IFWaldenFilter.h; sourceTree = "<group>"; };
 		5094874A14FD1DA6007B42FF /* IFWaldenFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFWaldenFilter.m; path = IFFilters/IFWaldenFilter.m; sourceTree = "<group>"; };
 		5094874C14FD1EA1007B42FF /* waldenMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waldenMap.png; sourceTree = "<group>"; };
+		5094874E14FD1F84007B42FF /* IFHefeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFHefeFilter.h; path = IFFilters/IFHefeFilter.h; sourceTree = "<group>"; };
+		5094874F14FD1F86007B42FF /* IFHefeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFHefeFilter.m; path = IFFilters/IFHefeFilter.m; sourceTree = "<group>"; };
+		5094875114FD2085007B42FF /* edgeBurn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edgeBurn.png; sourceTree = "<group>"; };
+		5094875314FD20DC007B42FF /* hefeMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hefeMap.png; sourceTree = "<group>"; };
+		5094875514FD2100007B42FF /* hefeGradientMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hefeGradientMap.png; sourceTree = "<group>"; };
+		5094875714FD211C007B42FF /* hefeSoftLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hefeSoftLight.png; sourceTree = "<group>"; };
+		5094875914FD2140007B42FF /* hefeMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hefeMetal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +520,8 @@
 				5094874514FD1C8F007B42FF /* IFInkwellFilter.m */,
 				5094874914FD1DA4007B42FF /* IFWaldenFilter.h */,
 				5094874A14FD1DA6007B42FF /* IFWaldenFilter.m */,
+				5094874E14FD1F84007B42FF /* IFHefeFilter.h */,
+				5094874F14FD1F86007B42FF /* IFHefeFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -514,6 +529,11 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094875914FD2140007B42FF /* hefeMetal.png */,
+				5094875714FD211C007B42FF /* hefeSoftLight.png */,
+				5094875514FD2100007B42FF /* hefeGradientMap.png */,
+				5094875314FD20DC007B42FF /* hefeMap.png */,
+				5094875114FD2085007B42FF /* edgeBurn.png */,
 				5094874C14FD1EA1007B42FF /* waldenMap.png */,
 				5094874714FD1D0F007B42FF /* inkwellMap.png */,
 				5094873A14FD1B33007B42FF /* brannanProcess.png */,
@@ -683,6 +703,11 @@
 				5094874314FD1B39007B42FF /* brannanScreen.png in Resources */,
 				5094874814FD1D11007B42FF /* inkwellMap.png in Resources */,
 				5094874D14FD1EA3007B42FF /* waldenMap.png in Resources */,
+				5094875214FD2087007B42FF /* edgeBurn.png in Resources */,
+				5094875414FD20DE007B42FF /* hefeMap.png in Resources */,
+				5094875614FD2102007B42FF /* hefeGradientMap.png in Resources */,
+				5094875814FD211D007B42FF /* hefeSoftLight.png in Resources */,
+				5094875A14FD2142007B42FF /* hefeMetal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +748,7 @@
 				5094873914FD1A83007B42FF /* IFBrannanFilter.m in Sources */,
 				5094874614FD1C91007B42FF /* IFInkwellFilter.m in Sources */,
 				5094874B14FD1DA8007B42FF /* IFWaldenFilter.m in Sources */,
+				5094875014FD1F87007B42FF /* IFHefeFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

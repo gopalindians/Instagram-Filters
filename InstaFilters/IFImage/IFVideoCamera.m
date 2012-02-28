@@ -213,6 +213,22 @@
             break;
         }
             
+        case IF_HEFE_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            self.sourcePicture2 = self.internalSourcePicture2;
+            self.sourcePicture3 = self.internalSourcePicture3;
+            self.sourcePicture4 = self.internalSourcePicture4;
+            self.sourcePicture5 = self.internalSourcePicture5;
+            
+            [self.sourcePicture1 addTarget:self.filter];
+            [self.sourcePicture2 addTarget:self.filter];
+            [self.sourcePicture3 addTarget:self.filter];
+            [self.sourcePicture4 addTarget:self.filter];
+            [self.sourcePicture5 addTarget:self.filter];
+            
+            break;
+        }
+            
         case IF_NORMAL_FILTER: {
             break;
         }
@@ -351,6 +367,18 @@
                 self.internalFilter = [[IFWaldenFilter alloc] init];
                 self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"waldenMap" ofType:@"png"]]];
                 self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vignetteMap" ofType:@"png"]]];            
+                
+                break;
+            }
+                
+            case IF_HEFE_FILTER: {
+                self.internalFilter = [[IFHefeFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"edgeBurn" ofType:@"png"]]];
+                self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hefeMap" ofType:@"png"]]];                
+                self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hefeGradientMap" ofType:@"png"]]]; 
+                self.internalSourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hefeSoftLight" ofType:@"png"]]];                
+                self.internalSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hefeMetal" ofType:@"png"]]];                
+                
                 
                 break;
             }
