@@ -30,8 +30,16 @@
 @property (nonatomic, strong) UIImageView *blueDotImageView;
 @property (nonatomic, strong) UIImageView *cameraTrayImageView;
 @property (nonatomic, strong) IFVideoCamera *videoCamera;
+@property (nonatomic, strong) UIButton *photoAlbumButton;
+@property (nonatomic, strong) UIButton *shootButton;
+@property (nonatomic, strong) UIImageView *previewImageView;
 - (void)backButtonPressed:(id)sender;
 - (void)toggleFiltersButtonPressed:(id)sender;
+- (void)photoAlbumButtonPressed:(id)sender;
+- (void)shootButtonPressed:(id)sender;
+- (void)shootButtonTouched:(id)sender;
+- (void)shootButtonCancelled:(id)sender;
+
 @end
 
 @implementation IFFiltersViewController
@@ -48,6 +56,9 @@
 @synthesize blueDotImageView;
 @synthesize cameraTrayImageView;
 @synthesize videoCamera;
+@synthesize photoAlbumButton;
+@synthesize shootButton;
+@synthesize previewImageView;
 
 #pragma mark - Filters TableView Delegate & Datasource methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -251,8 +262,24 @@
     self.toggleFiltersButton.adjustsImageWhenHighlighted = NO;
     self.toggleFiltersButton.showsTouchWhenHighlighted = YES;
     [self.toggleFiltersButton addTarget:self action:@selector(toggleFiltersButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    self.isFiltersTableViewVisible = YES;
     
+    self.photoAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.photoAlbumButton.frame = CGRectMake(10, 433, 40, 40);
+    [self.photoAlbumButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraLibrary" ofType:@"png"]] forState:UIControlStateNormal];
+    self.photoAlbumButton.adjustsImageWhenHighlighted = NO;
+    self.photoAlbumButton.showsTouchWhenHighlighted = YES;
+    [self.photoAlbumButton addTarget:self action:@selector(photoAlbumButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.shootButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.shootButton.frame = CGRectMake(110, 433, 100, 40);
+    [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButton" ofType:@"png"]] forState:UIControlStateNormal];
+    self.shootButton.adjustsImageWhenHighlighted = NO;
+    [self.shootButton addTarget:self action:@selector(shootButtonTouched:) forControlEvents:UIControlEventTouchDown];
+    [self.shootButton addTarget:self action:@selector(shootButtonCancelled:) forControlEvents:UIControlEventTouchCancel | UIControlEventTouchDragOutside];
+    [self.shootButton addTarget:self action:@selector(shootButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    self.isFiltersTableViewVisible = YES;
     self.filterTableViewContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 354, 320, 72)];
     self.filterTableViewContainerView.backgroundColor = [UIColor clearColor];
     
@@ -284,6 +311,8 @@
     [self.view addSubview:self.videoCamera.gpuImageView];
     [self.view addSubview:self.filterTableViewContainerView];
     [self.view addSubview:self.cameraCaptureBarImageView];
+    [self.view addSubview:self.photoAlbumButton];
+    [self.view addSubview:self.shootButton];
     [self.view addSubview:self.toggleFiltersButton];
     
     [self.videoCamera startCameraCapture];
@@ -308,7 +337,21 @@
 }
 
 #pragma mark - Button methods
+- (void)shootButtonTouched:(id)sender {
+    [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButtonPressed" ofType:@"png"]] forState:UIControlStateNormal];
 
+}
+- (void)shootButtonCancelled:(id)sender {
+    [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButton" ofType:@"png"]] forState:UIControlStateNormal];
+
+}
+- (void)photoAlbumButtonPressed:(id)sender {
+    
+}
+- (void)shootButtonPressed:(id)sender {
+    [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButton" ofType:@"png"]] forState:UIControlStateNormal];
+
+}
 - (void)backButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^() {
         // do nothing

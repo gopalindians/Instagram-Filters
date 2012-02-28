@@ -148,6 +148,12 @@
 		509487CA14FD2D08007B42FF /* tabBar-camera-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */; };
 		509487CB14FD2D08007B42FF /* tabBar-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C714FD2D08007B42FF /* tabBar-camera.png */; };
 		509487CC14FD2D08007B42FF /* tabBar-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C814FD2D08007B42FF /* tabBar-camera@2x.png */; };
+		509487CF14FD3768007B42FF /* glCameraLibrary.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487CD14FD3768007B42FF /* glCameraLibrary.png */; };
+		509487D014FD3768007B42FF /* glCameraLibrary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487CE14FD3768007B42FF /* glCameraLibrary@2x.png */; };
+		509487D514FD37AB007B42FF /* glCameraCaptureButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D114FD37AA007B42FF /* glCameraCaptureButton.png */; };
+		509487D614FD37AB007B42FF /* glCameraCaptureButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D214FD37AA007B42FF /* glCameraCaptureButton@2x.png */; };
+		509487D714FD37AB007B42FF /* glCameraCaptureButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D314FD37AA007B42FF /* glCameraCaptureButtonPressed.png */; };
+		509487D814FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D414FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -331,6 +337,12 @@
 		509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on@2x.png"; sourceTree = "<group>"; };
 		509487C714FD2D08007B42FF /* tabBar-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera.png"; sourceTree = "<group>"; };
 		509487C814FD2D08007B42FF /* tabBar-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera@2x.png"; sourceTree = "<group>"; };
+		509487CD14FD3768007B42FF /* glCameraLibrary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraLibrary.png; sourceTree = "<group>"; };
+		509487CE14FD3768007B42FF /* glCameraLibrary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraLibrary@2x.png"; sourceTree = "<group>"; };
+		509487D114FD37AA007B42FF /* glCameraCaptureButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraCaptureButton.png; sourceTree = "<group>"; };
+		509487D214FD37AA007B42FF /* glCameraCaptureButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraCaptureButton@2x.png"; sourceTree = "<group>"; };
+		509487D314FD37AA007B42FF /* glCameraCaptureButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraCaptureButtonPressed.png; sourceTree = "<group>"; };
+		509487D414FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraCaptureButtonPressed@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +465,12 @@
 		509485E714FC8075007B42FF /* Resources for FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
+				509487D114FD37AA007B42FF /* glCameraCaptureButton.png */,
+				509487D214FD37AA007B42FF /* glCameraCaptureButton@2x.png */,
+				509487D314FD37AA007B42FF /* glCameraCaptureButtonPressed.png */,
+				509487D414FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png */,
+				509487CD14FD3768007B42FF /* glCameraLibrary.png */,
+				509487CE14FD3768007B42FF /* glCameraLibrary@2x.png */,
 				509487C514FD2D08007B42FF /* tabBar-camera-on.png */,
 				509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */,
 				509487C714FD2D08007B42FF /* tabBar-camera.png */,
@@ -768,6 +786,12 @@
 				509487CA14FD2D08007B42FF /* tabBar-camera-on@2x.png in Resources */,
 				509487CB14FD2D08007B42FF /* tabBar-camera.png in Resources */,
 				509487CC14FD2D08007B42FF /* tabBar-camera@2x.png in Resources */,
+				509487CF14FD3768007B42FF /* glCameraLibrary.png in Resources */,
+				509487D014FD3768007B42FF /* glCameraLibrary@2x.png in Resources */,
+				509487D514FD37AB007B42FF /* glCameraCaptureButton.png in Resources */,
+				509487D614FD37AB007B42FF /* glCameraCaptureButton@2x.png in Resources */,
+				509487D714FD37AB007B42FF /* glCameraCaptureButtonPressed.png in Resources */,
+				509487D814FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
