@@ -105,6 +105,8 @@
 		5094871114FD0F77007B42FF /* xproMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094871014FD0F76007B42FF /* xproMap.png */; };
 		5094871414FD11B9007B42FF /* IFSierraFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094871314FD11B8007B42FF /* IFSierraFilter.m */; };
 		5094871614FD12BA007B42FF /* sierraMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094871514FD12BA007B42FF /* sierraMap.png */; };
+		5094871914FD1372007B42FF /* IFLomofiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094871814FD1371007B42FF /* IFLomofiFilter.m */; };
+		5094871B14FD148C007B42FF /* lomoMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094871A14FD148B007B42FF /* lomoMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -234,6 +236,9 @@
 		5094871214FD11B8007B42FF /* IFSierraFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFSierraFilter.h; path = IFFilters/IFSierraFilter.h; sourceTree = "<group>"; };
 		5094871314FD11B8007B42FF /* IFSierraFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFSierraFilter.m; path = IFFilters/IFSierraFilter.m; sourceTree = "<group>"; };
 		5094871514FD12BA007B42FF /* sierraMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sierraMap.png; sourceTree = "<group>"; };
+		5094871714FD1371007B42FF /* IFLomofiFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFLomofiFilter.h; path = IFFilters/IFLomofiFilter.h; sourceTree = "<group>"; };
+		5094871814FD1371007B42FF /* IFLomofiFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFLomofiFilter.m; path = IFFilters/IFLomofiFilter.m; sourceTree = "<group>"; };
+		5094871A14FD148B007B42FF /* lomoMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lomoMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +448,8 @@
 				5094870E14FD0F26007B42FF /* IFXproIIFilter.m */,
 				5094871214FD11B8007B42FF /* IFSierraFilter.h */,
 				5094871314FD11B8007B42FF /* IFSierraFilter.m */,
+				5094871714FD1371007B42FF /* IFLomofiFilter.h */,
+				5094871814FD1371007B42FF /* IFLomofiFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -450,6 +457,7 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094871A14FD148B007B42FF /* lomoMap.png */,
 				5094871514FD12BA007B42FF /* sierraMap.png */,
 				5094871014FD0F76007B42FF /* xproMap.png */,
 				5094870B14FD097D007B42FF /* hudsonBackground.png */,
@@ -585,6 +593,7 @@
 				5094870C14FD097D007B42FF /* hudsonBackground.png in Resources */,
 				5094871114FD0F77007B42FF /* xproMap.png in Resources */,
 				5094871614FD12BA007B42FF /* sierraMap.png in Resources */,
+				5094871B14FD148C007B42FF /* lomoMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +628,7 @@
 				509486F614FD044E007B42FF /* IFHudsonFilter.m in Sources */,
 				5094870F14FD0F27007B42FF /* IFXproIIFilter.m in Sources */,
 				5094871414FD11B9007B42FF /* IFSierraFilter.m in Sources */,
+				5094871914FD1372007B42FF /* IFLomofiFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
