@@ -112,6 +112,12 @@
 		5094872214FD169C007B42FF /* earlybirdOverlayMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872114FD169B007B42FF /* earlybirdOverlayMap.png */; };
 		5094872414FD16CE007B42FF /* earlybirdBlowout.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872314FD16CC007B42FF /* earlybirdBlowout.png */; };
 		5094872614FD16F4007B42FF /* earlybirdMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872514FD16F3007B42FF /* earlybirdMap.png */; };
+		5094872C14FD18E4007B42FF /* IFToasterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094872B14FD18E3007B42FF /* IFToasterFilter.m */; };
+		5094873114FD19AC007B42FF /* toasterOverlayMapWarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872D14FD19A7007B42FF /* toasterOverlayMapWarm.png */; };
+		5094873214FD19AC007B42FF /* toasterSoftLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872E14FD19A8007B42FF /* toasterSoftLight.png */; };
+		5094873314FD19AC007B42FF /* toasterColorShift.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094872F14FD19A9007B42FF /* toasterColorShift.png */; };
+		5094873414FD19AC007B42FF /* toasterCurves.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094873014FD19AB007B42FF /* toasterCurves.png */; };
+		5094873614FD19BE007B42FF /* toasterMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094873514FD19BD007B42FF /* toasterMetal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +256,13 @@
 		5094872114FD169B007B42FF /* earlybirdOverlayMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlybirdOverlayMap.png; sourceTree = "<group>"; };
 		5094872314FD16CC007B42FF /* earlybirdBlowout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlybirdBlowout.png; sourceTree = "<group>"; };
 		5094872514FD16F3007B42FF /* earlybirdMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlybirdMap.png; sourceTree = "<group>"; };
+		5094872A14FD18E2007B42FF /* IFToasterFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFToasterFilter.h; path = IFFilters/IFToasterFilter.h; sourceTree = "<group>"; };
+		5094872B14FD18E3007B42FF /* IFToasterFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFToasterFilter.m; path = IFFilters/IFToasterFilter.m; sourceTree = "<group>"; };
+		5094872D14FD19A7007B42FF /* toasterOverlayMapWarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toasterOverlayMapWarm.png; sourceTree = "<group>"; };
+		5094872E14FD19A8007B42FF /* toasterSoftLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toasterSoftLight.png; sourceTree = "<group>"; };
+		5094872F14FD19A9007B42FF /* toasterColorShift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toasterColorShift.png; sourceTree = "<group>"; };
+		5094873014FD19AB007B42FF /* toasterCurves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toasterCurves.png; sourceTree = "<group>"; };
+		5094873514FD19BD007B42FF /* toasterMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toasterMetal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,6 +476,8 @@
 				5094871814FD1371007B42FF /* IFLomofiFilter.m */,
 				5094871C14FD15D2007B42FF /* IFEarlybirdFilter.h */,
 				5094871D14FD15D3007B42FF /* IFEarlybirdFilter.m */,
+				5094872A14FD18E2007B42FF /* IFToasterFilter.h */,
+				5094872B14FD18E3007B42FF /* IFToasterFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -470,6 +485,11 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094873514FD19BD007B42FF /* toasterMetal.png */,
+				5094872D14FD19A7007B42FF /* toasterOverlayMapWarm.png */,
+				5094872E14FD19A8007B42FF /* toasterSoftLight.png */,
+				5094872F14FD19A9007B42FF /* toasterColorShift.png */,
+				5094873014FD19AB007B42FF /* toasterCurves.png */,
 				5094872314FD16CC007B42FF /* earlybirdBlowout.png */,
 				5094872514FD16F3007B42FF /* earlybirdMap.png */,
 				5094872114FD169B007B42FF /* earlybirdOverlayMap.png */,
@@ -615,6 +635,11 @@
 				5094872214FD169C007B42FF /* earlybirdOverlayMap.png in Resources */,
 				5094872414FD16CE007B42FF /* earlybirdBlowout.png in Resources */,
 				5094872614FD16F4007B42FF /* earlybirdMap.png in Resources */,
+				5094873114FD19AC007B42FF /* toasterOverlayMapWarm.png in Resources */,
+				5094873214FD19AC007B42FF /* toasterSoftLight.png in Resources */,
+				5094873314FD19AC007B42FF /* toasterColorShift.png in Resources */,
+				5094873414FD19AC007B42FF /* toasterCurves.png in Resources */,
+				5094873614FD19BE007B42FF /* toasterMetal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +676,7 @@
 				5094871414FD11B9007B42FF /* IFSierraFilter.m in Sources */,
 				5094871914FD1372007B42FF /* IFLomofiFilter.m in Sources */,
 				5094871E14FD15D4007B42FF /* IFEarlybirdFilter.m in Sources */,
+				5094872C14FD18E4007B42FF /* IFToasterFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
