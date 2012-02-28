@@ -144,6 +144,10 @@
 		509487C214FD2929007B42FF /* vignetteMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094879914FD2929007B42FF /* vignetteMap.png */; };
 		509487C314FD2929007B42FF /* waldenMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094879A14FD2929007B42FF /* waldenMap.png */; };
 		509487C414FD2929007B42FF /* xproMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094879B14FD2929007B42FF /* xproMap.png */; };
+		509487C914FD2D08007B42FF /* tabBar-camera-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C514FD2D08007B42FF /* tabBar-camera-on.png */; };
+		509487CA14FD2D08007B42FF /* tabBar-camera-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */; };
+		509487CB14FD2D08007B42FF /* tabBar-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C714FD2D08007B42FF /* tabBar-camera.png */; };
+		509487CC14FD2D08007B42FF /* tabBar-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C814FD2D08007B42FF /* tabBar-camera@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -323,6 +327,10 @@
 		5094879914FD2929007B42FF /* vignetteMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vignetteMap.png; path = Resources_for_IF_Filters/vignetteMap.png; sourceTree = "<group>"; };
 		5094879A14FD2929007B42FF /* waldenMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = waldenMap.png; path = Resources_for_IF_Filters/waldenMap.png; sourceTree = "<group>"; };
 		5094879B14FD2929007B42FF /* xproMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xproMap.png; path = Resources_for_IF_Filters/xproMap.png; sourceTree = "<group>"; };
+		509487C514FD2D08007B42FF /* tabBar-camera-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on.png"; sourceTree = "<group>"; };
+		509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on@2x.png"; sourceTree = "<group>"; };
+		509487C714FD2D08007B42FF /* tabBar-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera.png"; sourceTree = "<group>"; };
+		509487C814FD2D08007B42FF /* tabBar-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +453,10 @@
 		509485E714FC8075007B42FF /* Resources for FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
+				509487C514FD2D08007B42FF /* tabBar-camera-on.png */,
+				509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */,
+				509487C714FD2D08007B42FF /* tabBar-camera.png */,
+				509487C814FD2D08007B42FF /* tabBar-camera@2x.png */,
 				5094865414FCCEC5007B42FF /* DSFilterTile1977.png */,
 				5094865514FCCEC5007B42FF /* DSFilterTile1977@2x.png */,
 				5094865614FCCEC5007B42FF /* DSFilterTileAmaro.png */,
@@ -752,6 +764,10 @@
 				509487C214FD2929007B42FF /* vignetteMap.png in Resources */,
 				509487C314FD2929007B42FF /* waldenMap.png in Resources */,
 				509487C414FD2929007B42FF /* xproMap.png in Resources */,
+				509487C914FD2D08007B42FF /* tabBar-camera-on.png in Resources */,
+				509487CA14FD2D08007B42FF /* tabBar-camera-on@2x.png in Resources */,
+				509487CB14FD2D08007B42FF /* tabBar-camera.png in Resources */,
+				509487CC14FD2D08007B42FF /* tabBar-camera@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

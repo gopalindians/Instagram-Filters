@@ -19,6 +19,7 @@
 @interface IFFiltersViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UIButton *backButton;
+@property (nonatomic, strong) UIButton *transparentBackButton;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *cameraToolBarImageView;
 @property (nonatomic, strong) UIImageView *cameraCaptureBarImageView;
@@ -36,6 +37,7 @@
 @implementation IFFiltersViewController
 
 @synthesize backButton;
+@synthesize transparentBackButton;
 @synthesize backgroundImageView;
 @synthesize cameraToolBarImageView;
 @synthesize cameraCaptureBarImageView;
@@ -235,11 +237,16 @@
     self.backButton.showsTouchWhenHighlighted = YES;
     [self.backButton addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
+    self.transparentBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.transparentBackButton.frame = CGRectMake(270, 0, 50, 50);
+    self.transparentBackButton.showsTouchWhenHighlighted = YES;
+    [self.transparentBackButton addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+
     self.cameraCaptureBarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 426, 320, 54)];
     self.cameraCaptureBarImageView.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureBar" ofType:@"png"]];
     
     self.toggleFiltersButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.toggleFiltersButton.frame = CGRectMake(270, 430, 40, 40);
+    self.toggleFiltersButton.frame = CGRectMake(270, 433, 40, 40);
     [self.toggleFiltersButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraHideFilters" ofType:@"png"]] forState:UIControlStateNormal];
     self.toggleFiltersButton.adjustsImageWhenHighlighted = NO;
     self.toggleFiltersButton.showsTouchWhenHighlighted = YES;
@@ -271,6 +278,7 @@
     self.videoCamera = [[IFVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetPhoto cameraPosition:AVCaptureDevicePositionBack];
     
     [self.view addSubview:self.backgroundImageView];
+    [self.view addSubview:self.transparentBackButton];
     [self.view addSubview:self.cameraToolBarImageView];
     [self.view addSubview:self.backButton];
     [self.view addSubview:self.videoCamera.gpuImageView];

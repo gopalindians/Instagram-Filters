@@ -14,7 +14,8 @@
 @property (nonatomic, strong) UIButton *startButton;
 
 - (void)startButtonPressed:(id)sender;
-
+- (void)startButtonTouched:(id)sender;
+- (void)startButtonTouchCancelled:(id)sender;
 @end
 
 @implementation IFRootViewController
@@ -35,11 +36,15 @@
     // If you create your views manually, you MUST override this method and use it to create your views.
     // If you use Interface Builder to create your views, then you must NOT override this method.
     self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-    self.view.backgroundColor = [UIColor blackColor];
-    self.startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.startButton.frame = CGRectMake(100, 100, 80, 40);
-    [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.startButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.startButton.frame = CGRectMake(128, 415, 64, 45);
+    [self.startButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tabBar-camera" ofType:@"png"]] forState:UIControlStateNormal];
+    self.startButton.adjustsImageWhenHighlighted = NO;
     [self.startButton addTarget:self action:@selector(startButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.startButton addTarget:self action:@selector(startButtonTouched:) forControlEvents:UIControlEventTouchDown];
+    [self.startButton addTarget:self action:@selector(startButtonTouchCancelled:) forControlEvents:UIControlEventTouchCancel | UIControlEventTouchDragOutside];
+
     [self.view addSubview:self.startButton];
 }
 
@@ -62,12 +67,24 @@
 
 #pragma mark - Start Button method
 - (void)startButtonPressed:(id)sender {
+
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     __block IFFiltersViewController *filtersViewController = [[IFFiltersViewController alloc] init];
     [self presentViewController:filtersViewController animated:YES completion:^(){
         filtersViewController = nil;
+        [self.startButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tabBar-camera" ofType:@"png"]] forState:UIControlStateNormal];
+
     }];
 }
+- (void)startButtonTouched:(id)sender {
+    [self.startButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tabBar-camera-on" ofType:@"png"]] forState:UIControlStateNormal];
+
+}
+- (void)startButtonTouchCancelled:(id)sender {
+    [self.startButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tabBar-camera" ofType:@"png"]] forState:UIControlStateNormal];
+
+}
+
 
 
 @end
