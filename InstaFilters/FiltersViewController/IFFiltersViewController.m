@@ -53,7 +53,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self.videoCamera switchFilter:IF_AMARO_FILTER];
+    [self.videoCamera switchFilter:[indexPath row]];
     
     CGRect cellRect = [tableView rectForRowAtIndexPath:indexPath];
     CGRect tempRect = self.blueDotImageView.frame;

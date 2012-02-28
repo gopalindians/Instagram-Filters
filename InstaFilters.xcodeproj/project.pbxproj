@@ -95,6 +95,7 @@
 		509486E714FCF261007B42FF /* blackboard1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486E614FCF260007B42FF /* blackboard1024.png */; };
 		509486E914FCF278007B42FF /* overlayMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486E814FCF278007B42FF /* overlayMap.png */; };
 		509486EB14FCF29C007B42FF /* amaroMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486EA14FCF29C007B42FF /* amaroMap.png */; };
+		509486EE14FCFEB1007B42FF /* IFNormalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486ED14FCFEB0007B42FF /* IFNormalFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -209,6 +210,8 @@
 		509486E614FCF260007B42FF /* blackboard1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard1024.png; sourceTree = "<group>"; };
 		509486E814FCF278007B42FF /* overlayMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayMap.png; sourceTree = "<group>"; };
 		509486EA14FCF29C007B42FF /* amaroMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amaroMap.png; sourceTree = "<group>"; };
+		509486EC14FCFEB0007B42FF /* IFNormalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFNormalFilter.h; path = IFFilters/IFNormalFilter.h; sourceTree = "<group>"; };
+		509486ED14FCFEB0007B42FF /* IFNormalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFNormalFilter.m; path = IFFilters/IFNormalFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +411,8 @@
 				509486E114FCE497007B42FF /* IFRotationFilter.m */,
 				509486E314FCF0FA007B42FF /* IFAmaroFilter.h */,
 				509486E414FCF0FA007B42FF /* IFAmaroFilter.m */,
+				509486EC14FCFEB0007B42FF /* IFNormalFilter.h */,
+				509486ED14FCFEB0007B42FF /* IFNormalFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 				509486CD14FCDA33007B42FF /* IFSutroFilter.m in Sources */,
 				509486E214FCE498007B42FF /* IFRotationFilter.m in Sources */,
 				509486E514FCF0FA007B42FF /* IFAmaroFilter.m in Sources */,
+				509486EE14FCFEB1007B42FF /* IFNormalFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

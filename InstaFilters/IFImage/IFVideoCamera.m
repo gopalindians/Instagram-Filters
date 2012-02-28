@@ -71,7 +71,10 @@
             [self.sourcePicture2 addTarget:self.filter];
             [self.sourcePicture3 addTarget:self.filter];
 
-            [self.filter addTarget:self.gpuImageView];
+            break;
+        }
+            
+        case IF_NORMAL_FILTER: {
             break;
         }
             
@@ -79,6 +82,8 @@
             break;
         }
     }
+    
+    [self.filter addTarget:self.gpuImageView];
     
 }
 
@@ -99,13 +104,21 @@
                 
                 [self.rotationFilter removeTarget:self.filter];
 
-                [self performSelectorOnMainThread:@selector(switchToNewFilter) withObject:nil waitUntilDone:NO];
+                break;
+            }
+                
+            case IF_NORMAL_FILTER: {
+                self.internalFilter = [[IFNormalFilter alloc] init];
+                [self.rotationFilter removeTarget:self.filter];
                 break;
             }
                 
             default:
                 break;
         }
+        
+        [self performSelectorOnMainThread:@selector(switchToNewFilter) withObject:nil waitUntilDone:NO];
+
     });
     
 }

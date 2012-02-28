@@ -18,3 +18,4 @@ typedef enum {
 #import "IFSutroFilter.h"
 #import "IFRotationFilter.h"
 #import "IFAmaroFilter.h"
+#import "IFNormalFilter.h"
