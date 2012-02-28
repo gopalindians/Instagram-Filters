@@ -30,6 +30,13 @@
 		509485D014FC6C95007B42FF /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485B214FC6C95007B42FF /* GPUImageView.m */; };
 		509485DF14FC6FBB007B42FF /* IFAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */; };
 		509485E214FC7132007B42FF /* IFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485E114FC7132007B42FF /* IFRootViewController.m */; };
+		509485E614FC78EE007B42FF /* IFFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485E514FC78EE007B42FF /* IFFiltersViewController.m */; };
+		509485EA14FC80A3007B42FF /* glCameraBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485E814FC80A3007B42FF /* glCameraBackground.png */; };
+		509485EB14FC80A3007B42FF /* glCameraBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485E914FC80A3007B42FF /* glCameraBackground@2x.png */; };
+		509485F214FC84E7007B42FF /* glCameraToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F014FC84E7007B42FF /* glCameraToolbar.png */; };
+		509485F314FC84E7007B42FF /* glCameraToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */; };
+		509485F614FC8648007B42FF /* glCameraIconCancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F414FC8648007B42FF /* glCameraIconCancel.png */; };
+		509485F714FC8648007B42FF /* glCameraIconCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +80,14 @@
 		509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFAmaroFilter.m; path = Filters/IFAmaroFilter.m; sourceTree = "<group>"; };
 		509485E014FC7132007B42FF /* IFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFRootViewController.h; sourceTree = "<group>"; };
 		509485E114FC7132007B42FF /* IFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFRootViewController.m; sourceTree = "<group>"; };
+		509485E414FC78EE007B42FF /* IFFiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFFiltersViewController.h; path = FiltersViewController/IFFiltersViewController.h; sourceTree = "<group>"; };
+		509485E514FC78EE007B42FF /* IFFiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFFiltersViewController.m; path = FiltersViewController/IFFiltersViewController.m; sourceTree = "<group>"; };
+		509485E814FC80A3007B42FF /* glCameraBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraBackground.png; sourceTree = "<group>"; };
+		509485E914FC80A3007B42FF /* glCameraBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraBackground@2x.png"; sourceTree = "<group>"; };
+		509485F014FC84E7007B42FF /* glCameraToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraToolbar.png; sourceTree = "<group>"; };
+		509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraToolbar@2x.png"; sourceTree = "<group>"; };
+		509485F414FC8648007B42FF /* glCameraIconCancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraIconCancel.png; sourceTree = "<group>"; };
+		509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraIconCancel@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +144,8 @@
 		5009A26714FC6861005E7073 /* InstaFilters */ = {
 			isa = PBXGroup;
 			children = (
+				509485E714FC8075007B42FF /* Resources for FiltersViewController */,
+				509485E314FC77FF007B42FF /* FiltersViewController */,
 				509485DC14FC6F58007B42FF /* Filters */,
 				5094857814FC6C58007B42FF /* GPUImage */,
 				5009A27014FC6861005E7073 /* IFAppDelegate.h */,
@@ -188,6 +205,28 @@
 			name = Filters;
 			sourceTree = "<group>";
 		};
+		509485E314FC77FF007B42FF /* FiltersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				509485E414FC78EE007B42FF /* IFFiltersViewController.h */,
+				509485E514FC78EE007B42FF /* IFFiltersViewController.m */,
+			);
+			name = FiltersViewController;
+			sourceTree = "<group>";
+		};
+		509485E714FC8075007B42FF /* Resources for FiltersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				509485F414FC8648007B42FF /* glCameraIconCancel.png */,
+				509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */,
+				509485F014FC84E7007B42FF /* glCameraToolbar.png */,
+				509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */,
+				509485E814FC80A3007B42FF /* glCameraBackground.png */,
+				509485E914FC80A3007B42FF /* glCameraBackground@2x.png */,
+			);
+			name = "Resources for FiltersViewController";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5009A26C14FC6861005E7073 /* InfoPlist.strings in Resources */,
+				509485EA14FC80A3007B42FF /* glCameraBackground.png in Resources */,
+				509485EB14FC80A3007B42FF /* glCameraBackground@2x.png in Resources */,
+				509485F214FC84E7007B42FF /* glCameraToolbar.png in Resources */,
+				509485F314FC84E7007B42FF /* glCameraToolbar@2x.png in Resources */,
+				509485F614FC8648007B42FF /* glCameraIconCancel.png in Resources */,
+				509485F714FC8648007B42FF /* glCameraIconCancel@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +310,7 @@
 				509485D014FC6C95007B42FF /* GPUImageView.m in Sources */,
 				509485DF14FC6FBB007B42FF /* IFAmaroFilter.m in Sources */,
 				509485E214FC7132007B42FF /* IFRootViewController.m in Sources */,
+				509485E614FC78EE007B42FF /* IFFiltersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

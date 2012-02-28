@@ -7,6 +7,7 @@
 //
 
 #import "IFRootViewController.h"
+#import "IFFiltersViewController.h"
 
 @interface IFRootViewController ()
 
@@ -34,7 +35,7 @@
     // If you create your views manually, you MUST override this method and use it to create your views.
     // If you use Interface Builder to create your views, then you must NOT override this method.
     self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor blackColor];
     self.startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.startButton.frame = CGRectMake(100, 100, 80, 40);
     [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
@@ -61,7 +62,11 @@
 
 #pragma mark - Start Button method
 - (void)startButtonPressed:(id)sender {
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    __block IFFiltersViewController *filtersViewController = [[IFFiltersViewController alloc] init];
+    [self presentViewController:filtersViewController animated:YES completion:^(){
+        filtersViewController = nil;
+    }];
 }
 
 
