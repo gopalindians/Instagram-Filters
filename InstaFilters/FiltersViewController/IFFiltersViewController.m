@@ -48,44 +48,25 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    CGRect cellRect = [tableView rectForRowAtIndexPath:indexPath];
+    CGRect tempRect = self.blueDotImageView.frame;
+    tempRect.origin.y = cellRect.origin.y + kBlueDotImageViewOffset;
+    
+    [UIView animateWithDuration:kBlueDotAnimationTime animations:^() {
+        self.blueDotImageView.frame = tempRect;
+    }completion:^(BOOL finished){
+        // do nothing
+    }];
+    
     if (([indexPath row] != [[[tableView indexPathsForVisibleRows] objectAtIndex:0] row]) && ([indexPath row] != [[[tableView indexPathsForVisibleRows] lastObject] row])) {
-        
-        CGRect cellRect = [tableView rectForRowAtIndexPath:indexPath];
-
-        CGRect tempRect = self.blueDotImageView.frame;
-        tempRect.origin.x = cellRect.origin.y - tableView.contentOffset.y + kBlueDotImageViewOffset;
-        
-        [UIView animateWithDuration:kBlueDotAnimationTime animations:^() {
-            self.blueDotImageView.frame = tempRect;
-        }completion:^(BOOL finished){
-            // do nothing
-        }];
         
         return;
     }
     
     if ([indexPath row] == [[[tableView indexPathsForVisibleRows] objectAtIndex:0] row]) {
         [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-        
-        CGRect tempRect = self.blueDotImageView.frame;
-        tempRect.origin.x = kBlueDotImageViewOffset;
-        
-        [UIView animateWithDuration:kBlueDotAnimationTime animations:^() {
-            self.blueDotImageView.frame = tempRect;
-        }completion:^(BOOL finished){
-            // do nothing
-        }];
     } else {
         [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-
-        CGRect tempRect = self.blueDotImageView.frame;
-        tempRect.origin.x = [[UIScreen mainScreen] applicationFrame].size.width - (kFilterCellHeight - kBlueDotImageViewOffset - tempRect.size.width) - tempRect.size.width;
-        
-        [UIView animateWithDuration:kBlueDotAnimationTime animations:^() {
-            self.blueDotImageView.frame = tempRect;
-        }completion:^(BOOL finished){
-            // do nothing
-        }];
     }
     
 }
@@ -269,10 +250,10 @@
     self.filtersTableView.dataSource = self;
     self.filtersTableView.transform	= CGAffineTransformMakeRotation(-M_PI/2);
     
-    self.blueDotImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kBlueDotImageViewOffset, 61, 21, 11)];
+    self.blueDotImageView = [[UIImageView alloc] initWithFrame:CGRectMake(-3, kBlueDotImageViewOffset + 4, 21, 11)];
     self.blueDotImageView.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraSelectedFilter" ofType:@"png"]];
-    
-    [self.filterTableViewContainerView addSubview:self.blueDotImageView];
+    self.blueDotImageView.transform = CGAffineTransformMakeRotation(-M_PI/2);
+    [self.filtersTableView addSubview:self.blueDotImageView];
     [self.filterTableViewContainerView addSubview:self.filtersTableView];
     
     [self.view addSubview:self.backgroundImageView];
