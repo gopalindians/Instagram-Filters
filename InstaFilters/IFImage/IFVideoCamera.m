@@ -146,6 +146,22 @@
             break;
         }
             
+        case IF_SUTRO_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            self.sourcePicture2 = self.internalSourcePicture2;
+            self.sourcePicture3 = self.internalSourcePicture3;
+            self.sourcePicture4 = self.internalSourcePicture4;
+            self.sourcePicture5 = self.internalSourcePicture5;
+            
+            [self.sourcePicture1 addTarget:self.filter];
+            [self.sourcePicture2 addTarget:self.filter];
+            [self.sourcePicture3 addTarget:self.filter];
+            [self.sourcePicture4 addTarget:self.filter];
+            [self.sourcePicture5 addTarget:self.filter];
+            
+            break;
+        }
+            
         case IF_NORMAL_FILTER: {
             break;
         }
@@ -234,6 +250,18 @@
                 self.internalSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"earlybirdMap" ofType:@"png"]]];                
 
 
+                break;
+            }
+                
+            case IF_SUTRO_FILTER: {
+                self.internalFilter = [[IFSutroFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vignetteMap" ofType:@"png"]]];
+                self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroMetal" ofType:@"png"]]];                
+                self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"softLight" ofType:@"png"]]]; 
+                self.internalSourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroEdgeBurn" ofType:@"png"]]];                
+                self.internalSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sutroCurves" ofType:@"png"]]];                
+                
+                
                 break;
             }
                 

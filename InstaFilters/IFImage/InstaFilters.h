@@ -15,6 +15,7 @@ typedef enum {
     IF_SIERRA_FILTER,
     IF_LOMOFI_FILTER,
     IF_EARLYBIRD_FILTER,
+    IF_SUTRO_FILTER,
     IF_FILTER_TOTAL_NUMBER
 } IFFilterType; 
 
