@@ -1,13 +1,13 @@
 //
-//  IFAmaroFilter.h
+//  IFSutroFilter.h
 //  InstaFilters
 //
 //  Created by Di Wu on 2/28/12.
 //  Copyright (c) 2012 twitter:@diwup. All rights reserved.
 //
 
-#import "GPUImageFilter.h"
+#import "IFImageFilter.h"
 
-@interface IFAmaroFilter : GPUImageFilter
+@interface IFSutroFilter : IFImageFilter
 
 @end

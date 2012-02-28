@@ -14,6 +14,7 @@
 #define kFilterTableViewAnimationTime 0.2f
 
 #import "IFFiltersViewController.h"
+#import "InstaFilters.h"
 
 @interface IFFiltersViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -27,7 +28,7 @@
 @property (nonatomic, strong) UIView *filterTableViewContainerView;
 @property (nonatomic, strong) UIImageView *blueDotImageView;
 @property (nonatomic, strong) UIImageView *cameraTrayImageView;
-
+@property (nonatomic, strong) IFVideoCamera *videoCamera;
 - (void)backButtonPressed:(id)sender;
 - (void)toggleFiltersButtonPressed:(id)sender;
 @end
@@ -44,6 +45,7 @@
 @synthesize filterTableViewContainerView;
 @synthesize blueDotImageView;
 @synthesize cameraTrayImageView;
+@synthesize videoCamera;
 
 #pragma mark - Filters TableView Delegate & Datasource methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -264,12 +266,17 @@
     [self.filterTableViewContainerView addSubview:self.cameraTrayImageView];
     [self.filterTableViewContainerView addSubview:self.filtersTableView];
     
+    self.videoCamera = [[IFVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetPhoto cameraPosition:AVCaptureDevicePositionBack];
+    
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.cameraToolBarImageView];
     [self.view addSubview:self.backButton];
     [self.view addSubview:self.filterTableViewContainerView];
     [self.view addSubview:self.cameraCaptureBarImageView];
     [self.view addSubview:self.toggleFiltersButton];
+    [self.view addSubview:self.videoCamera.gpuImageView];
+    
+    [self.videoCamera startCameraCapture];
 
 }
 

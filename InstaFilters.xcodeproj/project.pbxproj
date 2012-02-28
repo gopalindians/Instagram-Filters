@@ -28,7 +28,6 @@
 		509485C814FC6C95007B42FF /* GPUImageRotationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485A214FC6C95007B42FF /* GPUImageRotationFilter.m */; };
 		509485CF14FC6C95007B42FF /* GPUImageVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485B014FC6C95007B42FF /* GPUImageVideoCamera.m */; };
 		509485D014FC6C95007B42FF /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485B214FC6C95007B42FF /* GPUImageView.m */; };
-		509485DF14FC6FBB007B42FF /* IFAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */; };
 		509485E214FC7132007B42FF /* IFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485E114FC7132007B42FF /* IFRootViewController.m */; };
 		509485E614FC78EE007B42FF /* IFFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485E514FC78EE007B42FF /* IFFiltersViewController.m */; };
 		5094868814FCCEC5007B42FF /* DSFilterTile1977.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865414FCCEC5007B42FF /* DSFilterTile1977.png */; };
@@ -83,6 +82,14 @@
 		509486B914FCCEC5007B42FF /* glCameraToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868514FCCEC5007B42FF /* glCameraToolbar@2x.png */; };
 		509486BA14FCCEC5007B42FF /* glCameraTray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868614FCCEC5007B42FF /* glCameraTray.png */; };
 		509486BB14FCCEC5007B42FF /* glCameraTray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868714FCCEC5007B42FF /* glCameraTray@2x.png */; };
+		509486C714FCD1E6007B42FF /* IFImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486C414FCD1E6007B42FF /* IFImageFilter.m */; };
+		509486C814FCD1E6007B42FF /* IFVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486C614FCD1E6007B42FF /* IFVideoCamera.m */; };
+		509486CD14FCDA33007B42FF /* IFSutroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486CC14FCDA33007B42FF /* IFSutroFilter.m */; };
+		509486D714FCDFAA007B42FF /* vignetteMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486D614FCDFAA007B42FF /* vignetteMap.png */; };
+		509486DA14FCDFC9007B42FF /* sutroEdgeBurn.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486D814FCDFC9007B42FF /* sutroEdgeBurn.png */; };
+		509486DB14FCDFC9007B42FF /* sutroMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486D914FCDFC9007B42FF /* sutroMetal.png */; };
+		509486DD14FCDFE5007B42FF /* softLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486DC14FCDFE5007B42FF /* softLight.png */; };
+		509486DF14FCDFFC007B42FF /* sutroCurves.png in Resources */ = {isa = PBXBuildFile; fileRef = 509486DE14FCDFFC007B42FF /* sutroCurves.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,8 +129,6 @@
 		509485B014FC6C95007B42FF /* GPUImageVideoCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageVideoCamera.m; path = GPUImage/GPUImageVideoCamera.m; sourceTree = "<group>"; };
 		509485B114FC6C95007B42FF /* GPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageView.h; path = GPUImage/GPUImageView.h; sourceTree = "<group>"; };
 		509485B214FC6C95007B42FF /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageView.m; path = GPUImage/GPUImageView.m; sourceTree = "<group>"; };
-		509485DD14FC6FBB007B42FF /* IFAmaroFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFAmaroFilter.h; path = Filters/IFAmaroFilter.h; sourceTree = "<group>"; };
-		509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFAmaroFilter.m; path = Filters/IFAmaroFilter.m; sourceTree = "<group>"; };
 		509485E014FC7132007B42FF /* IFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFRootViewController.h; sourceTree = "<group>"; };
 		509485E114FC7132007B42FF /* IFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFRootViewController.m; sourceTree = "<group>"; };
 		509485E414FC78EE007B42FF /* IFFiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFFiltersViewController.h; path = FiltersViewController/IFFiltersViewController.h; sourceTree = "<group>"; };
@@ -180,6 +185,18 @@
 		5094868514FCCEC5007B42FF /* glCameraToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraToolbar@2x.png"; path = "Resources_for_FiltersViewController/glCameraToolbar@2x.png"; sourceTree = "<group>"; };
 		5094868614FCCEC5007B42FF /* glCameraTray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraTray.png; path = Resources_for_FiltersViewController/glCameraTray.png; sourceTree = "<group>"; };
 		5094868714FCCEC5007B42FF /* glCameraTray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraTray@2x.png"; path = "Resources_for_FiltersViewController/glCameraTray@2x.png"; sourceTree = "<group>"; };
+		509486C314FCD1E6007B42FF /* IFImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFImageFilter.h; path = IFImage/IFImageFilter.h; sourceTree = "<group>"; };
+		509486C414FCD1E6007B42FF /* IFImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFImageFilter.m; path = IFImage/IFImageFilter.m; sourceTree = "<group>"; };
+		509486C514FCD1E6007B42FF /* IFVideoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFVideoCamera.h; path = IFImage/IFVideoCamera.h; sourceTree = "<group>"; };
+		509486C614FCD1E6007B42FF /* IFVideoCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFVideoCamera.m; path = IFImage/IFVideoCamera.m; sourceTree = "<group>"; };
+		509486CB14FCDA33007B42FF /* IFSutroFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFSutroFilter.h; path = IFFilters/IFSutroFilter.h; sourceTree = "<group>"; };
+		509486CC14FCDA33007B42FF /* IFSutroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFSutroFilter.m; path = IFFilters/IFSutroFilter.m; sourceTree = "<group>"; };
+		509486CE14FCDB30007B42FF /* InstaFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstaFilters.h; path = IFImage/InstaFilters.h; sourceTree = "<group>"; };
+		509486D614FCDFAA007B42FF /* vignetteMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vignetteMap.png; sourceTree = "<group>"; };
+		509486D814FCDFC9007B42FF /* sutroEdgeBurn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sutroEdgeBurn.png; sourceTree = "<group>"; };
+		509486D914FCDFC9007B42FF /* sutroMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sutroMetal.png; sourceTree = "<group>"; };
+		509486DC14FCDFE5007B42FF /* softLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = softLight.png; sourceTree = "<group>"; };
+		509486DE14FCDFFC007B42FF /* sutroCurves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sutroCurves.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,9 +253,11 @@
 		5009A26714FC6861005E7073 /* InstaFilters */ = {
 			isa = PBXGroup;
 			children = (
+				509486D514FCDF8A007B42FF /* Resources for IFFilters */,
+				509486CA14FCDA0A007B42FF /* IF Filters */,
+				509486BC14FCD016007B42FF /* IFImage */,
 				509485E714FC8075007B42FF /* Resources for FiltersViewController */,
 				509485E314FC77FF007B42FF /* FiltersViewController */,
-				509485DC14FC6F58007B42FF /* Filters */,
 				5094857814FC6C58007B42FF /* GPUImage */,
 				5009A27014FC6861005E7073 /* IFAppDelegate.h */,
 				5009A27114FC6861005E7073 /* IFAppDelegate.m */,
@@ -286,15 +305,6 @@
 				509485B214FC6C95007B42FF /* GPUImageView.m */,
 			);
 			name = GPUImage;
-			sourceTree = "<group>";
-		};
-		509485DC14FC6F58007B42FF /* Filters */ = {
-			isa = PBXGroup;
-			children = (
-				509485DD14FC6FBB007B42FF /* IFAmaroFilter.h */,
-				509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */,
-			);
-			name = Filters;
 			sourceTree = "<group>";
 		};
 		509485E314FC77FF007B42FF /* FiltersViewController */ = {
@@ -363,6 +373,39 @@
 				5094868714FCCEC5007B42FF /* glCameraTray@2x.png */,
 			);
 			name = "Resources for FiltersViewController";
+			sourceTree = "<group>";
+		};
+		509486BC14FCD016007B42FF /* IFImage */ = {
+			isa = PBXGroup;
+			children = (
+				509486CE14FCDB30007B42FF /* InstaFilters.h */,
+				509486C314FCD1E6007B42FF /* IFImageFilter.h */,
+				509486C414FCD1E6007B42FF /* IFImageFilter.m */,
+				509486C514FCD1E6007B42FF /* IFVideoCamera.h */,
+				509486C614FCD1E6007B42FF /* IFVideoCamera.m */,
+			);
+			name = IFImage;
+			sourceTree = "<group>";
+		};
+		509486CA14FCDA0A007B42FF /* IF Filters */ = {
+			isa = PBXGroup;
+			children = (
+				509486CB14FCDA33007B42FF /* IFSutroFilter.h */,
+				509486CC14FCDA33007B42FF /* IFSutroFilter.m */,
+			);
+			name = "IF Filters";
+			sourceTree = "<group>";
+		};
+		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
+			isa = PBXGroup;
+			children = (
+				509486DE14FCDFFC007B42FF /* sutroCurves.png */,
+				509486DC14FCDFE5007B42FF /* softLight.png */,
+				509486D814FCDFC9007B42FF /* sutroEdgeBurn.png */,
+				509486D914FCDFC9007B42FF /* sutroMetal.png */,
+				509486D614FCDFAA007B42FF /* vignetteMap.png */,
+			);
+			name = "Resources for IFFilters";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +513,11 @@
 				509486B914FCCEC5007B42FF /* glCameraToolbar@2x.png in Resources */,
 				509486BA14FCCEC5007B42FF /* glCameraTray.png in Resources */,
 				509486BB14FCCEC5007B42FF /* glCameraTray@2x.png in Resources */,
+				509486D714FCDFAA007B42FF /* vignetteMap.png in Resources */,
+				509486DA14FCDFC9007B42FF /* sutroEdgeBurn.png in Resources */,
+				509486DB14FCDFC9007B42FF /* sutroMetal.png in Resources */,
+				509486DD14FCDFE5007B42FF /* softLight.png in Resources */,
+				509486DF14FCDFFC007B42FF /* sutroCurves.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,9 +540,11 @@
 				509485C814FC6C95007B42FF /* GPUImageRotationFilter.m in Sources */,
 				509485CF14FC6C95007B42FF /* GPUImageVideoCamera.m in Sources */,
 				509485D014FC6C95007B42FF /* GPUImageView.m in Sources */,
-				509485DF14FC6FBB007B42FF /* IFAmaroFilter.m in Sources */,
 				509485E214FC7132007B42FF /* IFRootViewController.m in Sources */,
 				509485E614FC78EE007B42FF /* IFFiltersViewController.m in Sources */,
+				509486C714FCD1E6007B42FF /* IFImageFilter.m in Sources */,
+				509486C814FCD1E6007B42FF /* IFVideoCamera.m in Sources */,
+				509486CD14FCDA33007B42FF /* IFSutroFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
