@@ -139,6 +139,9 @@
 		5094876114FD23CD007B42FF /* valenciaMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875F14FD23CB007B42FF /* valenciaMap.png */; };
 		5094876414FD2463007B42FF /* IFNashvilleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094876314FD2461007B42FF /* IFNashvilleFilter.m */; };
 		5094876614FD2502007B42FF /* nashvilleMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094876514FD2500007B42FF /* nashvilleMap.png */; };
+		5094876914FD259C007B42FF /* IF1977Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094876814FD259B007B42FF /* IF1977Filter.m */; };
+		5094876C14FD267C007B42FF /* 1977blowout.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094876A14FD2678007B42FF /* 1977blowout.png */; };
+		5094876D14FD267C007B42FF /* 1977map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094876B14FD267A007B42FF /* 1977map.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -311,6 +314,10 @@
 		5094876214FD245F007B42FF /* IFNashvilleFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFNashvilleFilter.h; path = IFFilters/IFNashvilleFilter.h; sourceTree = "<group>"; };
 		5094876314FD2461007B42FF /* IFNashvilleFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFNashvilleFilter.m; path = IFFilters/IFNashvilleFilter.m; sourceTree = "<group>"; };
 		5094876514FD2500007B42FF /* nashvilleMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nashvilleMap.png; sourceTree = "<group>"; };
+		5094876714FD2599007B42FF /* IF1977Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IF1977Filter.h; path = IFFilters/IF1977Filter.h; sourceTree = "<group>"; };
+		5094876814FD259B007B42FF /* IF1977Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IF1977Filter.m; path = IFFilters/IF1977Filter.m; sourceTree = "<group>"; };
+		5094876A14FD2678007B42FF /* 1977blowout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1977blowout.png; sourceTree = "<group>"; };
+		5094876B14FD267A007B42FF /* 1977map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1977map.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -538,6 +545,8 @@
 				5094875C14FD22FF007B42FF /* IFValenciaFilter.m */,
 				5094876214FD245F007B42FF /* IFNashvilleFilter.h */,
 				5094876314FD2461007B42FF /* IFNashvilleFilter.m */,
+				5094876714FD2599007B42FF /* IF1977Filter.h */,
+				5094876814FD259B007B42FF /* IF1977Filter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -545,6 +554,8 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094876A14FD2678007B42FF /* 1977blowout.png */,
+				5094876B14FD267A007B42FF /* 1977map.png */,
 				5094876514FD2500007B42FF /* nashvilleMap.png */,
 				5094875E14FD23C9007B42FF /* valenciaGradientMap.png */,
 				5094875F14FD23CB007B42FF /* valenciaMap.png */,
@@ -730,6 +741,8 @@
 				5094876014FD23CD007B42FF /* valenciaGradientMap.png in Resources */,
 				5094876114FD23CD007B42FF /* valenciaMap.png in Resources */,
 				5094876614FD2502007B42FF /* nashvilleMap.png in Resources */,
+				5094876C14FD267C007B42FF /* 1977blowout.png in Resources */,
+				5094876D14FD267C007B42FF /* 1977map.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +786,7 @@
 				5094875014FD1F87007B42FF /* IFHefeFilter.m in Sources */,
 				5094875D14FD2301007B42FF /* IFValenciaFilter.m in Sources */,
 				5094876414FD2463007B42FF /* IFNashvilleFilter.m in Sources */,
+				5094876914FD259C007B42FF /* IF1977Filter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
