@@ -18,6 +18,16 @@
 		5009A27D14FC6A36005E7073 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27C14FC6A36005E7073 /* OpenGLES.framework */; };
 		5009A27F14FC6A4C005E7073 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27E14FC6A4C005E7073 /* AVFoundation.framework */; };
 		5009A28114FC6A65005E7073 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A28014FC6A65005E7073 /* QuartzCore.framework */; };
+		509485B514FC6C95007B42FF /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094857B14FC6C95007B42FF /* GLProgram.m */; };
+		509485BC14FC6C95007B42FF /* GPUImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094858A14FC6C95007B42FF /* GPUImageFilter.m */; };
+		509485C014FC6C95007B42FF /* GPUImageMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094859214FC6C95007B42FF /* GPUImageMovie.m */; };
+		509485C214FC6C95007B42FF /* GPUImageOpenGLESContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094859614FC6C95007B42FF /* GPUImageOpenGLESContext.m */; };
+		509485C314FC6C95007B42FF /* GPUImageOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094859814FC6C95007B42FF /* GPUImageOutput.m */; };
+		509485C514FC6C95007B42FF /* GPUImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094859C14FC6C95007B42FF /* GPUImagePicture.m */; };
+		509485C714FC6C95007B42FF /* GPUImageRawData.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485A014FC6C95007B42FF /* GPUImageRawData.m */; };
+		509485C814FC6C95007B42FF /* GPUImageRotationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485A214FC6C95007B42FF /* GPUImageRotationFilter.m */; };
+		509485CF14FC6C95007B42FF /* GPUImageVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485B014FC6C95007B42FF /* GPUImageVideoCamera.m */; };
+		509485D014FC6C95007B42FF /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485B214FC6C95007B42FF /* GPUImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +46,27 @@
 		5009A27C14FC6A36005E7073 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5009A27E14FC6A4C005E7073 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5009A28014FC6A65005E7073 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5094857A14FC6C95007B42FF /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = GPUImage/GLProgram.h; sourceTree = "<group>"; };
+		5094857B14FC6C95007B42FF /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = GPUImage/GLProgram.m; sourceTree = "<group>"; };
+		5094857C14FC6C95007B42FF /* GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage.h; path = GPUImage/GPUImage.h; sourceTree = "<group>"; };
+		5094858914FC6C95007B42FF /* GPUImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageFilter.h; path = GPUImage/GPUImageFilter.h; sourceTree = "<group>"; };
+		5094858A14FC6C95007B42FF /* GPUImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageFilter.m; path = GPUImage/GPUImageFilter.m; sourceTree = "<group>"; };
+		5094859114FC6C95007B42FF /* GPUImageMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageMovie.h; path = GPUImage/GPUImageMovie.h; sourceTree = "<group>"; };
+		5094859214FC6C95007B42FF /* GPUImageMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageMovie.m; path = GPUImage/GPUImageMovie.m; sourceTree = "<group>"; };
+		5094859514FC6C95007B42FF /* GPUImageOpenGLESContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageOpenGLESContext.h; path = GPUImage/GPUImageOpenGLESContext.h; sourceTree = "<group>"; };
+		5094859614FC6C95007B42FF /* GPUImageOpenGLESContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageOpenGLESContext.m; path = GPUImage/GPUImageOpenGLESContext.m; sourceTree = "<group>"; };
+		5094859714FC6C95007B42FF /* GPUImageOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageOutput.h; path = GPUImage/GPUImageOutput.h; sourceTree = "<group>"; };
+		5094859814FC6C95007B42FF /* GPUImageOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageOutput.m; path = GPUImage/GPUImageOutput.m; sourceTree = "<group>"; };
+		5094859B14FC6C95007B42FF /* GPUImagePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImagePicture.h; path = GPUImage/GPUImagePicture.h; sourceTree = "<group>"; };
+		5094859C14FC6C95007B42FF /* GPUImagePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImagePicture.m; path = GPUImage/GPUImagePicture.m; sourceTree = "<group>"; };
+		5094859F14FC6C95007B42FF /* GPUImageRawData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageRawData.h; path = GPUImage/GPUImageRawData.h; sourceTree = "<group>"; };
+		509485A014FC6C95007B42FF /* GPUImageRawData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageRawData.m; path = GPUImage/GPUImageRawData.m; sourceTree = "<group>"; };
+		509485A114FC6C95007B42FF /* GPUImageRotationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageRotationFilter.h; path = GPUImage/GPUImageRotationFilter.h; sourceTree = "<group>"; };
+		509485A214FC6C95007B42FF /* GPUImageRotationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageRotationFilter.m; path = GPUImage/GPUImageRotationFilter.m; sourceTree = "<group>"; };
+		509485AF14FC6C95007B42FF /* GPUImageVideoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageVideoCamera.h; path = GPUImage/GPUImageVideoCamera.h; sourceTree = "<group>"; };
+		509485B014FC6C95007B42FF /* GPUImageVideoCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageVideoCamera.m; path = GPUImage/GPUImageVideoCamera.m; sourceTree = "<group>"; };
+		509485B114FC6C95007B42FF /* GPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageView.h; path = GPUImage/GPUImageView.h; sourceTree = "<group>"; };
+		509485B214FC6C95007B42FF /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageView.m; path = GPUImage/GPUImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +123,7 @@
 		5009A26714FC6861005E7073 /* InstaFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094857814FC6C58007B42FF /* GPUImage */,
 				5009A27014FC6861005E7073 /* IFAppDelegate.h */,
 				5009A27114FC6861005E7073 /* IFAppDelegate.m */,
 				5009A26814FC6861005E7073 /* Supporting Files */,
@@ -108,6 +140,34 @@
 				5009A26F14FC6861005E7073 /* InstaFilters-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5094857814FC6C58007B42FF /* GPUImage */ = {
+			isa = PBXGroup;
+			children = (
+				5094857A14FC6C95007B42FF /* GLProgram.h */,
+				5094857B14FC6C95007B42FF /* GLProgram.m */,
+				5094857C14FC6C95007B42FF /* GPUImage.h */,
+				5094858914FC6C95007B42FF /* GPUImageFilter.h */,
+				5094858A14FC6C95007B42FF /* GPUImageFilter.m */,
+				5094859114FC6C95007B42FF /* GPUImageMovie.h */,
+				5094859214FC6C95007B42FF /* GPUImageMovie.m */,
+				5094859514FC6C95007B42FF /* GPUImageOpenGLESContext.h */,
+				5094859614FC6C95007B42FF /* GPUImageOpenGLESContext.m */,
+				5094859714FC6C95007B42FF /* GPUImageOutput.h */,
+				5094859814FC6C95007B42FF /* GPUImageOutput.m */,
+				5094859B14FC6C95007B42FF /* GPUImagePicture.h */,
+				5094859C14FC6C95007B42FF /* GPUImagePicture.m */,
+				5094859F14FC6C95007B42FF /* GPUImageRawData.h */,
+				509485A014FC6C95007B42FF /* GPUImageRawData.m */,
+				509485A114FC6C95007B42FF /* GPUImageRotationFilter.h */,
+				509485A214FC6C95007B42FF /* GPUImageRotationFilter.m */,
+				509485AF14FC6C95007B42FF /* GPUImageVideoCamera.h */,
+				509485B014FC6C95007B42FF /* GPUImageVideoCamera.m */,
+				509485B114FC6C95007B42FF /* GPUImageView.h */,
+				509485B214FC6C95007B42FF /* GPUImageView.m */,
+			);
+			name = GPUImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +234,16 @@
 			files = (
 				5009A26E14FC6861005E7073 /* main.m in Sources */,
 				5009A27214FC6861005E7073 /* IFAppDelegate.m in Sources */,
+				509485B514FC6C95007B42FF /* GLProgram.m in Sources */,
+				509485BC14FC6C95007B42FF /* GPUImageFilter.m in Sources */,
+				509485C014FC6C95007B42FF /* GPUImageMovie.m in Sources */,
+				509485C214FC6C95007B42FF /* GPUImageOpenGLESContext.m in Sources */,
+				509485C314FC6C95007B42FF /* GPUImageOutput.m in Sources */,
+				509485C514FC6C95007B42FF /* GPUImagePicture.m in Sources */,
+				509485C714FC6C95007B42FF /* GPUImageRawData.m in Sources */,
+				509485C814FC6C95007B42FF /* GPUImageRotationFilter.m in Sources */,
+				509485CF14FC6C95007B42FF /* GPUImageVideoCamera.m in Sources */,
+				509485D014FC6C95007B42FF /* GPUImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +347,7 @@
 				5009A27714FC6861005E7073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
