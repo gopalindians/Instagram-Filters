@@ -11,6 +11,7 @@ typedef enum {
     IF_AMARO_FILTER,
     IF_RISE_FILTER,
     IF_HUDSON_FILTER,
+    IF_XPROII_FILTER,
     IF_FILTER_TOTAL_NUMBER
 } IFFilterType; 
 
@@ -22,3 +23,4 @@ typedef enum {
 #import "IFNormalFilter.h"
 #import "IFRiseFilter.h"
 #import "IFHudsonFilter.h"
+#import "IFXproIIFilter.h"

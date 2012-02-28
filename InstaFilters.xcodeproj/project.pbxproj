@@ -101,6 +101,8 @@
 		509486F614FD044E007B42FF /* IFHudsonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509486F514FD044E007B42FF /* IFHudsonFilter.m */; };
 		5094870A14FD096D007B42FF /* hudsonMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094870914FD096D007B42FF /* hudsonMap.png */; };
 		5094870C14FD097D007B42FF /* hudsonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094870B14FD097D007B42FF /* hudsonBackground.png */; };
+		5094870F14FD0F27007B42FF /* IFXproIIFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094870E14FD0F26007B42FF /* IFXproIIFilter.m */; };
+		5094871114FD0F77007B42FF /* xproMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094871014FD0F76007B42FF /* xproMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,6 +226,9 @@
 		509486F514FD044E007B42FF /* IFHudsonFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFHudsonFilter.m; path = IFFilters/IFHudsonFilter.m; sourceTree = "<group>"; };
 		5094870914FD096D007B42FF /* hudsonMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hudsonMap.png; sourceTree = "<group>"; };
 		5094870B14FD097D007B42FF /* hudsonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hudsonBackground.png; sourceTree = "<group>"; };
+		5094870D14FD0F26007B42FF /* IFXproIIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFXproIIFilter.h; path = IFFilters/IFXproIIFilter.h; sourceTree = "<group>"; };
+		5094870E14FD0F26007B42FF /* IFXproIIFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFXproIIFilter.m; path = IFFilters/IFXproIIFilter.m; sourceTree = "<group>"; };
+		5094871014FD0F76007B42FF /* xproMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xproMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,6 +434,8 @@
 				509486F014FD025C007B42FF /* IFRiseFilter.m */,
 				509486F414FD044D007B42FF /* IFHudsonFilter.h */,
 				509486F514FD044E007B42FF /* IFHudsonFilter.m */,
+				5094870D14FD0F26007B42FF /* IFXproIIFilter.h */,
+				5094870E14FD0F26007B42FF /* IFXproIIFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -436,6 +443,7 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094871014FD0F76007B42FF /* xproMap.png */,
 				5094870B14FD097D007B42FF /* hudsonBackground.png */,
 				5094870914FD096D007B42FF /* hudsonMap.png */,
 				509486F214FD031C007B42FF /* riseMap.png */,
@@ -567,6 +575,7 @@
 				509486F314FD031C007B42FF /* riseMap.png in Resources */,
 				5094870A14FD096D007B42FF /* hudsonMap.png in Resources */,
 				5094870C14FD097D007B42FF /* hudsonBackground.png in Resources */,
+				5094871114FD0F77007B42FF /* xproMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +608,7 @@
 				509486EE14FCFEB1007B42FF /* IFNormalFilter.m in Sources */,
 				509486F114FD025C007B42FF /* IFRiseFilter.m in Sources */,
 				509486F614FD044E007B42FF /* IFHudsonFilter.m in Sources */,
+				5094870F14FD0F27007B42FF /* IFXproIIFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
