@@ -37,6 +37,12 @@
 		509485F314FC84E7007B42FF /* glCameraToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */; };
 		509485F614FC8648007B42FF /* glCameraIconCancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F414FC8648007B42FF /* glCameraIconCancel.png */; };
 		509485F714FC8648007B42FF /* glCameraIconCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */; };
+		509485FA14FC8A74007B42FF /* glCameraCaptureBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F814FC8A74007B42FF /* glCameraCaptureBar.png */; };
+		509485FB14FC8A74007B42FF /* glCameraCaptureBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F914FC8A74007B42FF /* glCameraCaptureBar@2x.png */; };
+		509485FE14FC8B37007B42FF /* glCameraShowFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485FC14FC8B37007B42FF /* glCameraShowFilters.png */; };
+		509485FF14FC8B37007B42FF /* glCameraShowFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485FD14FC8B37007B42FF /* glCameraShowFilters@2x.png */; };
+		5094860214FC8B47007B42FF /* glCameraHideFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860014FC8B47007B42FF /* glCameraHideFilters.png */; };
+		5094860314FC8B47007B42FF /* glCameraHideFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860114FC8B47007B42FF /* glCameraHideFilters@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +94,12 @@
 		509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraToolbar@2x.png"; sourceTree = "<group>"; };
 		509485F414FC8648007B42FF /* glCameraIconCancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraIconCancel.png; sourceTree = "<group>"; };
 		509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraIconCancel@2x.png"; sourceTree = "<group>"; };
+		509485F814FC8A74007B42FF /* glCameraCaptureBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraCaptureBar.png; sourceTree = "<group>"; };
+		509485F914FC8A74007B42FF /* glCameraCaptureBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraCaptureBar@2x.png"; sourceTree = "<group>"; };
+		509485FC14FC8B37007B42FF /* glCameraShowFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraShowFilters.png; sourceTree = "<group>"; };
+		509485FD14FC8B37007B42FF /* glCameraShowFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraShowFilters@2x.png"; sourceTree = "<group>"; };
+		5094860014FC8B47007B42FF /* glCameraHideFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraHideFilters.png; sourceTree = "<group>"; };
+		5094860114FC8B47007B42FF /* glCameraHideFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraHideFilters@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +229,12 @@
 		509485E714FC8075007B42FF /* Resources for FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5094860014FC8B47007B42FF /* glCameraHideFilters.png */,
+				5094860114FC8B47007B42FF /* glCameraHideFilters@2x.png */,
+				509485FC14FC8B37007B42FF /* glCameraShowFilters.png */,
+				509485FD14FC8B37007B42FF /* glCameraShowFilters@2x.png */,
+				509485F814FC8A74007B42FF /* glCameraCaptureBar.png */,
+				509485F914FC8A74007B42FF /* glCameraCaptureBar@2x.png */,
 				509485F414FC8648007B42FF /* glCameraIconCancel.png */,
 				509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */,
 				509485F014FC84E7007B42FF /* glCameraToolbar.png */,
@@ -286,6 +304,12 @@
 				509485F314FC84E7007B42FF /* glCameraToolbar@2x.png in Resources */,
 				509485F614FC8648007B42FF /* glCameraIconCancel.png in Resources */,
 				509485F714FC8648007B42FF /* glCameraIconCancel@2x.png in Resources */,
+				509485FA14FC8A74007B42FF /* glCameraCaptureBar.png in Resources */,
+				509485FB14FC8A74007B42FF /* glCameraCaptureBar@2x.png in Resources */,
+				509485FE14FC8B37007B42FF /* glCameraShowFilters.png in Resources */,
+				509485FF14FC8B37007B42FF /* glCameraShowFilters@2x.png in Resources */,
+				5094860214FC8B47007B42FF /* glCameraHideFilters.png in Resources */,
+				5094860314FC8B47007B42FF /* glCameraHideFilters@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
