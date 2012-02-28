@@ -29,6 +29,7 @@
 		509485CF14FC6C95007B42FF /* GPUImageVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485B014FC6C95007B42FF /* GPUImageVideoCamera.m */; };
 		509485D014FC6C95007B42FF /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485B214FC6C95007B42FF /* GPUImageView.m */; };
 		509485DF14FC6FBB007B42FF /* IFAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */; };
+		509485E214FC7132007B42FF /* IFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485E114FC7132007B42FF /* IFRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		509485B214FC6C95007B42FF /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageView.m; path = GPUImage/GPUImageView.m; sourceTree = "<group>"; };
 		509485DD14FC6FBB007B42FF /* IFAmaroFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFAmaroFilter.h; path = Filters/IFAmaroFilter.h; sourceTree = "<group>"; };
 		509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFAmaroFilter.m; path = Filters/IFAmaroFilter.m; sourceTree = "<group>"; };
+		509485E014FC7132007B42FF /* IFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFRootViewController.h; sourceTree = "<group>"; };
+		509485E114FC7132007B42FF /* IFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				5094857814FC6C58007B42FF /* GPUImage */,
 				5009A27014FC6861005E7073 /* IFAppDelegate.h */,
 				5009A27114FC6861005E7073 /* IFAppDelegate.m */,
+				509485E014FC7132007B42FF /* IFRootViewController.h */,
+				509485E114FC7132007B42FF /* IFRootViewController.m */,
 				5009A26814FC6861005E7073 /* Supporting Files */,
 			);
 			path = InstaFilters;
@@ -259,6 +264,7 @@
 				509485CF14FC6C95007B42FF /* GPUImageVideoCamera.m in Sources */,
 				509485D014FC6C95007B42FF /* GPUImageView.m in Sources */,
 				509485DF14FC6FBB007B42FF /* IFAmaroFilter.m in Sources */,
+				509485E214FC7132007B42FF /* IFRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
