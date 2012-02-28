@@ -134,6 +134,9 @@
 		5094875614FD2102007B42FF /* hefeGradientMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875514FD2100007B42FF /* hefeGradientMap.png */; };
 		5094875814FD211D007B42FF /* hefeSoftLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875714FD211C007B42FF /* hefeSoftLight.png */; };
 		5094875A14FD2142007B42FF /* hefeMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875914FD2140007B42FF /* hefeMetal.png */; };
+		5094875D14FD2301007B42FF /* IFValenciaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094875C14FD22FF007B42FF /* IFValenciaFilter.m */; };
+		5094876014FD23CD007B42FF /* valenciaGradientMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875E14FD23C9007B42FF /* valenciaGradientMap.png */; };
+		5094876114FD23CD007B42FF /* valenciaMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094875F14FD23CB007B42FF /* valenciaMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,6 +302,10 @@
 		5094875514FD2100007B42FF /* hefeGradientMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hefeGradientMap.png; sourceTree = "<group>"; };
 		5094875714FD211C007B42FF /* hefeSoftLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hefeSoftLight.png; sourceTree = "<group>"; };
 		5094875914FD2140007B42FF /* hefeMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hefeMetal.png; sourceTree = "<group>"; };
+		5094875B14FD22FD007B42FF /* IFValenciaFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFValenciaFilter.h; path = IFFilters/IFValenciaFilter.h; sourceTree = "<group>"; };
+		5094875C14FD22FF007B42FF /* IFValenciaFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFValenciaFilter.m; path = IFFilters/IFValenciaFilter.m; sourceTree = "<group>"; };
+		5094875E14FD23C9007B42FF /* valenciaGradientMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valenciaGradientMap.png; sourceTree = "<group>"; };
+		5094875F14FD23CB007B42FF /* valenciaMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valenciaMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +529,8 @@
 				5094874A14FD1DA6007B42FF /* IFWaldenFilter.m */,
 				5094874E14FD1F84007B42FF /* IFHefeFilter.h */,
 				5094874F14FD1F86007B42FF /* IFHefeFilter.m */,
+				5094875B14FD22FD007B42FF /* IFValenciaFilter.h */,
+				5094875C14FD22FF007B42FF /* IFValenciaFilter.m */,
 			);
 			name = "IF Filters";
 			sourceTree = "<group>";
@@ -529,6 +538,8 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5094875E14FD23C9007B42FF /* valenciaGradientMap.png */,
+				5094875F14FD23CB007B42FF /* valenciaMap.png */,
 				5094875914FD2140007B42FF /* hefeMetal.png */,
 				5094875714FD211C007B42FF /* hefeSoftLight.png */,
 				5094875514FD2100007B42FF /* hefeGradientMap.png */,
@@ -708,6 +719,8 @@
 				5094875614FD2102007B42FF /* hefeGradientMap.png in Resources */,
 				5094875814FD211D007B42FF /* hefeSoftLight.png in Resources */,
 				5094875A14FD2142007B42FF /* hefeMetal.png in Resources */,
+				5094876014FD23CD007B42FF /* valenciaGradientMap.png in Resources */,
+				5094876114FD23CD007B42FF /* valenciaMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +762,7 @@
 				5094874614FD1C91007B42FF /* IFInkwellFilter.m in Sources */,
 				5094874B14FD1DA8007B42FF /* IFWaldenFilter.m in Sources */,
 				5094875014FD1F87007B42FF /* IFHefeFilter.m in Sources */,
+				5094875D14FD2301007B42FF /* IFValenciaFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

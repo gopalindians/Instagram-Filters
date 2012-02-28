@@ -229,6 +229,16 @@
             break;
         }
             
+        case IF_VALENCIA_FILTER: {
+            self.sourcePicture1 = self.internalSourcePicture1;
+            self.sourcePicture2 = self.internalSourcePicture2;
+
+            [self.sourcePicture1 addTarget:self.filter];
+            [self.sourcePicture2 addTarget:self.filter];
+ 
+            break;
+        }
+            
         case IF_NORMAL_FILTER: {
             break;
         }
@@ -379,6 +389,14 @@
                 self.internalSourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hefeSoftLight" ofType:@"png"]]];                
                 self.internalSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hefeMetal" ofType:@"png"]]];                
                 
+                
+                break;
+            }
+                
+            case IF_VALENCIA_FILTER: {
+                self.internalFilter = [[IFValenciaFilter alloc] init];
+                self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"valenciaMap" ofType:@"png"]]];
+                self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"valenciaGradientMap" ofType:@"png"]]];                
                 
                 break;
             }
