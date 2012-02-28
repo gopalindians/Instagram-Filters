@@ -31,58 +31,58 @@
 		509485DF14FC6FBB007B42FF /* IFAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485DE14FC6FBB007B42FF /* IFAmaroFilter.m */; };
 		509485E214FC7132007B42FF /* IFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485E114FC7132007B42FF /* IFRootViewController.m */; };
 		509485E614FC78EE007B42FF /* IFFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509485E514FC78EE007B42FF /* IFFiltersViewController.m */; };
-		509485EA14FC80A3007B42FF /* glCameraBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485E814FC80A3007B42FF /* glCameraBackground.png */; };
-		509485EB14FC80A3007B42FF /* glCameraBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485E914FC80A3007B42FF /* glCameraBackground@2x.png */; };
-		509485F214FC84E7007B42FF /* glCameraToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F014FC84E7007B42FF /* glCameraToolbar.png */; };
-		509485F314FC84E7007B42FF /* glCameraToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */; };
-		509485F614FC8648007B42FF /* glCameraIconCancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F414FC8648007B42FF /* glCameraIconCancel.png */; };
-		509485F714FC8648007B42FF /* glCameraIconCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */; };
-		509485FA14FC8A74007B42FF /* glCameraCaptureBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F814FC8A74007B42FF /* glCameraCaptureBar.png */; };
-		509485FB14FC8A74007B42FF /* glCameraCaptureBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485F914FC8A74007B42FF /* glCameraCaptureBar@2x.png */; };
-		509485FE14FC8B37007B42FF /* glCameraShowFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485FC14FC8B37007B42FF /* glCameraShowFilters.png */; };
-		509485FF14FC8B37007B42FF /* glCameraShowFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509485FD14FC8B37007B42FF /* glCameraShowFilters@2x.png */; };
-		5094860214FC8B47007B42FF /* glCameraHideFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860014FC8B47007B42FF /* glCameraHideFilters.png */; };
-		5094860314FC8B47007B42FF /* glCameraHideFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860114FC8B47007B42FF /* glCameraHideFilters@2x.png */; };
-		5094862814FC95A1007B42FF /* DSFilterTile1977.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860414FC959F007B42FF /* DSFilterTile1977.png */; };
-		5094862914FC95A1007B42FF /* DSFilterTile1977@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860514FC959F007B42FF /* DSFilterTile1977@2x.png */; };
-		5094862A14FC95A1007B42FF /* DSFilterTileAmaro.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860614FC959F007B42FF /* DSFilterTileAmaro.png */; };
-		5094862B14FC95A1007B42FF /* DSFilterTileAmaro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860714FC959F007B42FF /* DSFilterTileAmaro@2x.png */; };
-		5094862C14FC95A1007B42FF /* DSFilterTileBrannan.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860814FC959F007B42FF /* DSFilterTileBrannan.png */; };
-		5094862D14FC95A1007B42FF /* DSFilterTileBrannan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860914FC959F007B42FF /* DSFilterTileBrannan@2x.png */; };
-		5094862E14FC95A1007B42FF /* DSFilterTileEarlybird.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860A14FC95A0007B42FF /* DSFilterTileEarlybird.png */; };
-		5094862F14FC95A1007B42FF /* DSFilterTileEarlybird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860B14FC95A0007B42FF /* DSFilterTileEarlybird@2x.png */; };
-		5094863014FC95A1007B42FF /* DSFilterTileHefe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860C14FC95A0007B42FF /* DSFilterTileHefe.png */; };
-		5094863114FC95A1007B42FF /* DSFilterTileHefe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860D14FC95A0007B42FF /* DSFilterTileHefe@2x.png */; };
-		5094863214FC95A1007B42FF /* DSFilterTileHudson.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860E14FC95A0007B42FF /* DSFilterTileHudson.png */; };
-		5094863314FC95A1007B42FF /* DSFilterTileHudson@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094860F14FC95A0007B42FF /* DSFilterTileHudson@2x.png */; };
-		5094863414FC95A1007B42FF /* DSFilterTileInkwell.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861014FC95A0007B42FF /* DSFilterTileInkwell.png */; };
-		5094863514FC95A1007B42FF /* DSFilterTileInkwell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861114FC95A0007B42FF /* DSFilterTileInkwell@2x.png */; };
-		5094863614FC95A1007B42FF /* DSFilterTileLomoFi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861214FC95A0007B42FF /* DSFilterTileLomoFi.png */; };
-		5094863714FC95A1007B42FF /* DSFilterTileLomoFi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861314FC95A0007B42FF /* DSFilterTileLomoFi@2x.png */; };
-		5094863814FC95A1007B42FF /* DSFilterTileLordKelvin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861414FC95A0007B42FF /* DSFilterTileLordKelvin.png */; };
-		5094863914FC95A1007B42FF /* DSFilterTileLordKelvin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861514FC95A0007B42FF /* DSFilterTileLordKelvin@2x.png */; };
-		5094863A14FC95A1007B42FF /* DSFilterTileNashville.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861614FC95A0007B42FF /* DSFilterTileNashville.png */; };
-		5094863B14FC95A1007B42FF /* DSFilterTileNashville@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861714FC95A0007B42FF /* DSFilterTileNashville@2x.png */; };
-		5094863C14FC95A1007B42FF /* DSFilterTileNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861814FC95A0007B42FF /* DSFilterTileNormal.png */; };
-		5094863D14FC95A1007B42FF /* DSFilterTileNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861914FC95A0007B42FF /* DSFilterTileNormal@2x.png */; };
-		5094863E14FC95A1007B42FF /* DSFilterTileRise.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861A14FC95A0007B42FF /* DSFilterTileRise.png */; };
-		5094863F14FC95A1007B42FF /* DSFilterTileRise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861B14FC95A1007B42FF /* DSFilterTileRise@2x.png */; };
-		5094864014FC95A1007B42FF /* DSFilterTileSierra.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861C14FC95A1007B42FF /* DSFilterTileSierra.png */; };
-		5094864114FC95A1007B42FF /* DSFilterTileSierra@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861D14FC95A1007B42FF /* DSFilterTileSierra@2x.png */; };
-		5094864214FC95A1007B42FF /* DSFilterTileSutro.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861E14FC95A1007B42FF /* DSFilterTileSutro.png */; };
-		5094864314FC95A1007B42FF /* DSFilterTileSutro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094861F14FC95A1007B42FF /* DSFilterTileSutro@2x.png */; };
-		5094864414FC95A1007B42FF /* DSFilterTileToaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862014FC95A1007B42FF /* DSFilterTileToaster.png */; };
-		5094864514FC95A1007B42FF /* DSFilterTileToaster@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862114FC95A1007B42FF /* DSFilterTileToaster@2x.png */; };
-		5094864614FC95A1007B42FF /* DSFilterTileValencia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862214FC95A1007B42FF /* DSFilterTileValencia.png */; };
-		5094864714FC95A1007B42FF /* DSFilterTileValencia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862314FC95A1007B42FF /* DSFilterTileValencia@2x.png */; };
-		5094864814FC95A1007B42FF /* DSFilterTileWalden.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862414FC95A1007B42FF /* DSFilterTileWalden.png */; };
-		5094864914FC95A1007B42FF /* DSFilterTileWalden@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862514FC95A1007B42FF /* DSFilterTileWalden@2x.png */; };
-		5094864A14FC95A1007B42FF /* DSFilterTileXpro2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862614FC95A1007B42FF /* DSFilterTileXpro2.png */; };
-		5094864B14FC95A1007B42FF /* DSFilterTileXpro2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094862714FC95A1007B42FF /* DSFilterTileXpro2@2x.png */; };
-		5094864E14FCB1C6007B42FF /* glCameraSelectedFilter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094864C14FCB1C6007B42FF /* glCameraSelectedFilter.png */; };
-		5094864F14FCB1C6007B42FF /* glCameraSelectedFilter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094864D14FCB1C6007B42FF /* glCameraSelectedFilter@2x.png */; };
-		5094865214FCBE4D007B42FF /* glCameraTray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865014FCBE4C007B42FF /* glCameraTray@2x.png */; };
-		5094865314FCBE4D007B42FF /* glCameraTray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865114FCBE4C007B42FF /* glCameraTray.png */; };
+		5094868814FCCEC5007B42FF /* DSFilterTile1977.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865414FCCEC5007B42FF /* DSFilterTile1977.png */; };
+		5094868914FCCEC5007B42FF /* DSFilterTile1977@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865514FCCEC5007B42FF /* DSFilterTile1977@2x.png */; };
+		5094868A14FCCEC5007B42FF /* DSFilterTileAmaro.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865614FCCEC5007B42FF /* DSFilterTileAmaro.png */; };
+		5094868B14FCCEC5007B42FF /* DSFilterTileAmaro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865714FCCEC5007B42FF /* DSFilterTileAmaro@2x.png */; };
+		5094868C14FCCEC5007B42FF /* DSFilterTileBrannan.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865814FCCEC5007B42FF /* DSFilterTileBrannan.png */; };
+		5094868D14FCCEC5007B42FF /* DSFilterTileBrannan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865914FCCEC5007B42FF /* DSFilterTileBrannan@2x.png */; };
+		5094868E14FCCEC5007B42FF /* DSFilterTileEarlybird.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865A14FCCEC5007B42FF /* DSFilterTileEarlybird.png */; };
+		5094868F14FCCEC5007B42FF /* DSFilterTileEarlybird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865B14FCCEC5007B42FF /* DSFilterTileEarlybird@2x.png */; };
+		5094869014FCCEC5007B42FF /* DSFilterTileHefe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865C14FCCEC5007B42FF /* DSFilterTileHefe.png */; };
+		5094869114FCCEC5007B42FF /* DSFilterTileHefe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865D14FCCEC5007B42FF /* DSFilterTileHefe@2x.png */; };
+		5094869214FCCEC5007B42FF /* DSFilterTileHudson.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865E14FCCEC5007B42FF /* DSFilterTileHudson.png */; };
+		5094869314FCCEC5007B42FF /* DSFilterTileHudson@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094865F14FCCEC5007B42FF /* DSFilterTileHudson@2x.png */; };
+		5094869414FCCEC5007B42FF /* DSFilterTileInkwell.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866014FCCEC5007B42FF /* DSFilterTileInkwell.png */; };
+		5094869514FCCEC5007B42FF /* DSFilterTileInkwell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866114FCCEC5007B42FF /* DSFilterTileInkwell@2x.png */; };
+		5094869614FCCEC5007B42FF /* DSFilterTileLomoFi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866214FCCEC5007B42FF /* DSFilterTileLomoFi.png */; };
+		5094869714FCCEC5007B42FF /* DSFilterTileLomoFi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866314FCCEC5007B42FF /* DSFilterTileLomoFi@2x.png */; };
+		5094869814FCCEC5007B42FF /* DSFilterTileLordKelvin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866414FCCEC5007B42FF /* DSFilterTileLordKelvin.png */; };
+		5094869914FCCEC5007B42FF /* DSFilterTileLordKelvin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866514FCCEC5007B42FF /* DSFilterTileLordKelvin@2x.png */; };
+		5094869A14FCCEC5007B42FF /* DSFilterTileNashville.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866614FCCEC5007B42FF /* DSFilterTileNashville.png */; };
+		5094869B14FCCEC5007B42FF /* DSFilterTileNashville@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866714FCCEC5007B42FF /* DSFilterTileNashville@2x.png */; };
+		5094869C14FCCEC5007B42FF /* DSFilterTileNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866814FCCEC5007B42FF /* DSFilterTileNormal.png */; };
+		5094869D14FCCEC5007B42FF /* DSFilterTileNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866914FCCEC5007B42FF /* DSFilterTileNormal@2x.png */; };
+		5094869E14FCCEC5007B42FF /* DSFilterTileRise.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866A14FCCEC5007B42FF /* DSFilterTileRise.png */; };
+		5094869F14FCCEC5007B42FF /* DSFilterTileRise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866B14FCCEC5007B42FF /* DSFilterTileRise@2x.png */; };
+		509486A014FCCEC5007B42FF /* DSFilterTileSierra.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866C14FCCEC5007B42FF /* DSFilterTileSierra.png */; };
+		509486A114FCCEC5007B42FF /* DSFilterTileSierra@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866D14FCCEC5007B42FF /* DSFilterTileSierra@2x.png */; };
+		509486A214FCCEC5007B42FF /* DSFilterTileSutro.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866E14FCCEC5007B42FF /* DSFilterTileSutro.png */; };
+		509486A314FCCEC5007B42FF /* DSFilterTileSutro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094866F14FCCEC5007B42FF /* DSFilterTileSutro@2x.png */; };
+		509486A414FCCEC5007B42FF /* DSFilterTileToaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867014FCCEC5007B42FF /* DSFilterTileToaster.png */; };
+		509486A514FCCEC5007B42FF /* DSFilterTileToaster@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867114FCCEC5007B42FF /* DSFilterTileToaster@2x.png */; };
+		509486A614FCCEC5007B42FF /* DSFilterTileValencia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867214FCCEC5007B42FF /* DSFilterTileValencia.png */; };
+		509486A714FCCEC5007B42FF /* DSFilterTileValencia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867314FCCEC5007B42FF /* DSFilterTileValencia@2x.png */; };
+		509486A814FCCEC5007B42FF /* DSFilterTileWalden.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867414FCCEC5007B42FF /* DSFilterTileWalden.png */; };
+		509486A914FCCEC5007B42FF /* DSFilterTileWalden@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867514FCCEC5007B42FF /* DSFilterTileWalden@2x.png */; };
+		509486AA14FCCEC5007B42FF /* DSFilterTileXpro2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867614FCCEC5007B42FF /* DSFilterTileXpro2.png */; };
+		509486AB14FCCEC5007B42FF /* DSFilterTileXpro2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867714FCCEC5007B42FF /* DSFilterTileXpro2@2x.png */; };
+		509486AC14FCCEC5007B42FF /* glCameraBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867814FCCEC5007B42FF /* glCameraBackground.png */; };
+		509486AD14FCCEC5007B42FF /* glCameraBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867914FCCEC5007B42FF /* glCameraBackground@2x.png */; };
+		509486AE14FCCEC5007B42FF /* glCameraCaptureBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867A14FCCEC5007B42FF /* glCameraCaptureBar.png */; };
+		509486AF14FCCEC5007B42FF /* glCameraCaptureBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867B14FCCEC5007B42FF /* glCameraCaptureBar@2x.png */; };
+		509486B014FCCEC5007B42FF /* glCameraHideFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867C14FCCEC5007B42FF /* glCameraHideFilters.png */; };
+		509486B114FCCEC5007B42FF /* glCameraHideFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867D14FCCEC5007B42FF /* glCameraHideFilters@2x.png */; };
+		509486B214FCCEC5007B42FF /* glCameraIconCancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867E14FCCEC5007B42FF /* glCameraIconCancel.png */; };
+		509486B314FCCEC5007B42FF /* glCameraIconCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094867F14FCCEC5007B42FF /* glCameraIconCancel@2x.png */; };
+		509486B414FCCEC5007B42FF /* glCameraSelectedFilter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868014FCCEC5007B42FF /* glCameraSelectedFilter.png */; };
+		509486B514FCCEC5007B42FF /* glCameraSelectedFilter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868114FCCEC5007B42FF /* glCameraSelectedFilter@2x.png */; };
+		509486B614FCCEC5007B42FF /* glCameraShowFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868214FCCEC5007B42FF /* glCameraShowFilters.png */; };
+		509486B714FCCEC5007B42FF /* glCameraShowFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868314FCCEC5007B42FF /* glCameraShowFilters@2x.png */; };
+		509486B814FCCEC5007B42FF /* glCameraToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868414FCCEC5007B42FF /* glCameraToolbar.png */; };
+		509486B914FCCEC5007B42FF /* glCameraToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868514FCCEC5007B42FF /* glCameraToolbar@2x.png */; };
+		509486BA14FCCEC5007B42FF /* glCameraTray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868614FCCEC5007B42FF /* glCameraTray.png */; };
+		509486BB14FCCEC5007B42FF /* glCameraTray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094868714FCCEC5007B42FF /* glCameraTray@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,58 +128,58 @@
 		509485E114FC7132007B42FF /* IFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFRootViewController.m; sourceTree = "<group>"; };
 		509485E414FC78EE007B42FF /* IFFiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFFiltersViewController.h; path = FiltersViewController/IFFiltersViewController.h; sourceTree = "<group>"; };
 		509485E514FC78EE007B42FF /* IFFiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFFiltersViewController.m; path = FiltersViewController/IFFiltersViewController.m; sourceTree = "<group>"; };
-		509485E814FC80A3007B42FF /* glCameraBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraBackground.png; sourceTree = "<group>"; };
-		509485E914FC80A3007B42FF /* glCameraBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraBackground@2x.png"; sourceTree = "<group>"; };
-		509485F014FC84E7007B42FF /* glCameraToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraToolbar.png; sourceTree = "<group>"; };
-		509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraToolbar@2x.png"; sourceTree = "<group>"; };
-		509485F414FC8648007B42FF /* glCameraIconCancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraIconCancel.png; sourceTree = "<group>"; };
-		509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraIconCancel@2x.png"; sourceTree = "<group>"; };
-		509485F814FC8A74007B42FF /* glCameraCaptureBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraCaptureBar.png; sourceTree = "<group>"; };
-		509485F914FC8A74007B42FF /* glCameraCaptureBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraCaptureBar@2x.png"; sourceTree = "<group>"; };
-		509485FC14FC8B37007B42FF /* glCameraShowFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraShowFilters.png; sourceTree = "<group>"; };
-		509485FD14FC8B37007B42FF /* glCameraShowFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraShowFilters@2x.png"; sourceTree = "<group>"; };
-		5094860014FC8B47007B42FF /* glCameraHideFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraHideFilters.png; sourceTree = "<group>"; };
-		5094860114FC8B47007B42FF /* glCameraHideFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraHideFilters@2x.png"; sourceTree = "<group>"; };
-		5094860414FC959F007B42FF /* DSFilterTile1977.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTile1977.png; sourceTree = "<group>"; };
-		5094860514FC959F007B42FF /* DSFilterTile1977@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTile1977@2x.png"; sourceTree = "<group>"; };
-		5094860614FC959F007B42FF /* DSFilterTileAmaro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileAmaro.png; sourceTree = "<group>"; };
-		5094860714FC959F007B42FF /* DSFilterTileAmaro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileAmaro@2x.png"; sourceTree = "<group>"; };
-		5094860814FC959F007B42FF /* DSFilterTileBrannan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileBrannan.png; sourceTree = "<group>"; };
-		5094860914FC959F007B42FF /* DSFilterTileBrannan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileBrannan@2x.png"; sourceTree = "<group>"; };
-		5094860A14FC95A0007B42FF /* DSFilterTileEarlybird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileEarlybird.png; sourceTree = "<group>"; };
-		5094860B14FC95A0007B42FF /* DSFilterTileEarlybird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileEarlybird@2x.png"; sourceTree = "<group>"; };
-		5094860C14FC95A0007B42FF /* DSFilterTileHefe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileHefe.png; sourceTree = "<group>"; };
-		5094860D14FC95A0007B42FF /* DSFilterTileHefe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileHefe@2x.png"; sourceTree = "<group>"; };
-		5094860E14FC95A0007B42FF /* DSFilterTileHudson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileHudson.png; sourceTree = "<group>"; };
-		5094860F14FC95A0007B42FF /* DSFilterTileHudson@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileHudson@2x.png"; sourceTree = "<group>"; };
-		5094861014FC95A0007B42FF /* DSFilterTileInkwell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileInkwell.png; sourceTree = "<group>"; };
-		5094861114FC95A0007B42FF /* DSFilterTileInkwell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileInkwell@2x.png"; sourceTree = "<group>"; };
-		5094861214FC95A0007B42FF /* DSFilterTileLomoFi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileLomoFi.png; sourceTree = "<group>"; };
-		5094861314FC95A0007B42FF /* DSFilterTileLomoFi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileLomoFi@2x.png"; sourceTree = "<group>"; };
-		5094861414FC95A0007B42FF /* DSFilterTileLordKelvin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileLordKelvin.png; sourceTree = "<group>"; };
-		5094861514FC95A0007B42FF /* DSFilterTileLordKelvin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileLordKelvin@2x.png"; sourceTree = "<group>"; };
-		5094861614FC95A0007B42FF /* DSFilterTileNashville.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileNashville.png; sourceTree = "<group>"; };
-		5094861714FC95A0007B42FF /* DSFilterTileNashville@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileNashville@2x.png"; sourceTree = "<group>"; };
-		5094861814FC95A0007B42FF /* DSFilterTileNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileNormal.png; sourceTree = "<group>"; };
-		5094861914FC95A0007B42FF /* DSFilterTileNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileNormal@2x.png"; sourceTree = "<group>"; };
-		5094861A14FC95A0007B42FF /* DSFilterTileRise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileRise.png; sourceTree = "<group>"; };
-		5094861B14FC95A1007B42FF /* DSFilterTileRise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileRise@2x.png"; sourceTree = "<group>"; };
-		5094861C14FC95A1007B42FF /* DSFilterTileSierra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileSierra.png; sourceTree = "<group>"; };
-		5094861D14FC95A1007B42FF /* DSFilterTileSierra@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileSierra@2x.png"; sourceTree = "<group>"; };
-		5094861E14FC95A1007B42FF /* DSFilterTileSutro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileSutro.png; sourceTree = "<group>"; };
-		5094861F14FC95A1007B42FF /* DSFilterTileSutro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileSutro@2x.png"; sourceTree = "<group>"; };
-		5094862014FC95A1007B42FF /* DSFilterTileToaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileToaster.png; sourceTree = "<group>"; };
-		5094862114FC95A1007B42FF /* DSFilterTileToaster@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileToaster@2x.png"; sourceTree = "<group>"; };
-		5094862214FC95A1007B42FF /* DSFilterTileValencia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileValencia.png; sourceTree = "<group>"; };
-		5094862314FC95A1007B42FF /* DSFilterTileValencia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileValencia@2x.png"; sourceTree = "<group>"; };
-		5094862414FC95A1007B42FF /* DSFilterTileWalden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileWalden.png; sourceTree = "<group>"; };
-		5094862514FC95A1007B42FF /* DSFilterTileWalden@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileWalden@2x.png"; sourceTree = "<group>"; };
-		5094862614FC95A1007B42FF /* DSFilterTileXpro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSFilterTileXpro2.png; sourceTree = "<group>"; };
-		5094862714FC95A1007B42FF /* DSFilterTileXpro2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSFilterTileXpro2@2x.png"; sourceTree = "<group>"; };
-		5094864C14FCB1C6007B42FF /* glCameraSelectedFilter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraSelectedFilter.png; sourceTree = "<group>"; };
-		5094864D14FCB1C6007B42FF /* glCameraSelectedFilter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraSelectedFilter@2x.png"; sourceTree = "<group>"; };
-		5094865014FCBE4C007B42FF /* glCameraTray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraTray@2x.png"; sourceTree = "<group>"; };
-		5094865114FCBE4C007B42FF /* glCameraTray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraTray.png; sourceTree = "<group>"; };
+		5094865414FCCEC5007B42FF /* DSFilterTile1977.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTile1977.png; path = Resources_for_FiltersViewController/DSFilterTile1977.png; sourceTree = "<group>"; };
+		5094865514FCCEC5007B42FF /* DSFilterTile1977@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTile1977@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTile1977@2x.png"; sourceTree = "<group>"; };
+		5094865614FCCEC5007B42FF /* DSFilterTileAmaro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileAmaro.png; path = Resources_for_FiltersViewController/DSFilterTileAmaro.png; sourceTree = "<group>"; };
+		5094865714FCCEC5007B42FF /* DSFilterTileAmaro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileAmaro@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileAmaro@2x.png"; sourceTree = "<group>"; };
+		5094865814FCCEC5007B42FF /* DSFilterTileBrannan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileBrannan.png; path = Resources_for_FiltersViewController/DSFilterTileBrannan.png; sourceTree = "<group>"; };
+		5094865914FCCEC5007B42FF /* DSFilterTileBrannan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileBrannan@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileBrannan@2x.png"; sourceTree = "<group>"; };
+		5094865A14FCCEC5007B42FF /* DSFilterTileEarlybird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileEarlybird.png; path = Resources_for_FiltersViewController/DSFilterTileEarlybird.png; sourceTree = "<group>"; };
+		5094865B14FCCEC5007B42FF /* DSFilterTileEarlybird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileEarlybird@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileEarlybird@2x.png"; sourceTree = "<group>"; };
+		5094865C14FCCEC5007B42FF /* DSFilterTileHefe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileHefe.png; path = Resources_for_FiltersViewController/DSFilterTileHefe.png; sourceTree = "<group>"; };
+		5094865D14FCCEC5007B42FF /* DSFilterTileHefe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileHefe@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileHefe@2x.png"; sourceTree = "<group>"; };
+		5094865E14FCCEC5007B42FF /* DSFilterTileHudson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileHudson.png; path = Resources_for_FiltersViewController/DSFilterTileHudson.png; sourceTree = "<group>"; };
+		5094865F14FCCEC5007B42FF /* DSFilterTileHudson@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileHudson@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileHudson@2x.png"; sourceTree = "<group>"; };
+		5094866014FCCEC5007B42FF /* DSFilterTileInkwell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileInkwell.png; path = Resources_for_FiltersViewController/DSFilterTileInkwell.png; sourceTree = "<group>"; };
+		5094866114FCCEC5007B42FF /* DSFilterTileInkwell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileInkwell@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileInkwell@2x.png"; sourceTree = "<group>"; };
+		5094866214FCCEC5007B42FF /* DSFilterTileLomoFi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileLomoFi.png; path = Resources_for_FiltersViewController/DSFilterTileLomoFi.png; sourceTree = "<group>"; };
+		5094866314FCCEC5007B42FF /* DSFilterTileLomoFi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileLomoFi@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileLomoFi@2x.png"; sourceTree = "<group>"; };
+		5094866414FCCEC5007B42FF /* DSFilterTileLordKelvin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileLordKelvin.png; path = Resources_for_FiltersViewController/DSFilterTileLordKelvin.png; sourceTree = "<group>"; };
+		5094866514FCCEC5007B42FF /* DSFilterTileLordKelvin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileLordKelvin@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileLordKelvin@2x.png"; sourceTree = "<group>"; };
+		5094866614FCCEC5007B42FF /* DSFilterTileNashville.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileNashville.png; path = Resources_for_FiltersViewController/DSFilterTileNashville.png; sourceTree = "<group>"; };
+		5094866714FCCEC5007B42FF /* DSFilterTileNashville@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileNashville@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileNashville@2x.png"; sourceTree = "<group>"; };
+		5094866814FCCEC5007B42FF /* DSFilterTileNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileNormal.png; path = Resources_for_FiltersViewController/DSFilterTileNormal.png; sourceTree = "<group>"; };
+		5094866914FCCEC5007B42FF /* DSFilterTileNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileNormal@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileNormal@2x.png"; sourceTree = "<group>"; };
+		5094866A14FCCEC5007B42FF /* DSFilterTileRise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileRise.png; path = Resources_for_FiltersViewController/DSFilterTileRise.png; sourceTree = "<group>"; };
+		5094866B14FCCEC5007B42FF /* DSFilterTileRise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileRise@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileRise@2x.png"; sourceTree = "<group>"; };
+		5094866C14FCCEC5007B42FF /* DSFilterTileSierra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileSierra.png; path = Resources_for_FiltersViewController/DSFilterTileSierra.png; sourceTree = "<group>"; };
+		5094866D14FCCEC5007B42FF /* DSFilterTileSierra@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileSierra@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileSierra@2x.png"; sourceTree = "<group>"; };
+		5094866E14FCCEC5007B42FF /* DSFilterTileSutro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileSutro.png; path = Resources_for_FiltersViewController/DSFilterTileSutro.png; sourceTree = "<group>"; };
+		5094866F14FCCEC5007B42FF /* DSFilterTileSutro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileSutro@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileSutro@2x.png"; sourceTree = "<group>"; };
+		5094867014FCCEC5007B42FF /* DSFilterTileToaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileToaster.png; path = Resources_for_FiltersViewController/DSFilterTileToaster.png; sourceTree = "<group>"; };
+		5094867114FCCEC5007B42FF /* DSFilterTileToaster@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileToaster@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileToaster@2x.png"; sourceTree = "<group>"; };
+		5094867214FCCEC5007B42FF /* DSFilterTileValencia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileValencia.png; path = Resources_for_FiltersViewController/DSFilterTileValencia.png; sourceTree = "<group>"; };
+		5094867314FCCEC5007B42FF /* DSFilterTileValencia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileValencia@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileValencia@2x.png"; sourceTree = "<group>"; };
+		5094867414FCCEC5007B42FF /* DSFilterTileWalden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileWalden.png; path = Resources_for_FiltersViewController/DSFilterTileWalden.png; sourceTree = "<group>"; };
+		5094867514FCCEC5007B42FF /* DSFilterTileWalden@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileWalden@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileWalden@2x.png"; sourceTree = "<group>"; };
+		5094867614FCCEC5007B42FF /* DSFilterTileXpro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSFilterTileXpro2.png; path = Resources_for_FiltersViewController/DSFilterTileXpro2.png; sourceTree = "<group>"; };
+		5094867714FCCEC5007B42FF /* DSFilterTileXpro2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DSFilterTileXpro2@2x.png"; path = "Resources_for_FiltersViewController/DSFilterTileXpro2@2x.png"; sourceTree = "<group>"; };
+		5094867814FCCEC5007B42FF /* glCameraBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraBackground.png; path = Resources_for_FiltersViewController/glCameraBackground.png; sourceTree = "<group>"; };
+		5094867914FCCEC5007B42FF /* glCameraBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraBackground@2x.png"; path = "Resources_for_FiltersViewController/glCameraBackground@2x.png"; sourceTree = "<group>"; };
+		5094867A14FCCEC5007B42FF /* glCameraCaptureBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraCaptureBar.png; path = Resources_for_FiltersViewController/glCameraCaptureBar.png; sourceTree = "<group>"; };
+		5094867B14FCCEC5007B42FF /* glCameraCaptureBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraCaptureBar@2x.png"; path = "Resources_for_FiltersViewController/glCameraCaptureBar@2x.png"; sourceTree = "<group>"; };
+		5094867C14FCCEC5007B42FF /* glCameraHideFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraHideFilters.png; path = Resources_for_FiltersViewController/glCameraHideFilters.png; sourceTree = "<group>"; };
+		5094867D14FCCEC5007B42FF /* glCameraHideFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraHideFilters@2x.png"; path = "Resources_for_FiltersViewController/glCameraHideFilters@2x.png"; sourceTree = "<group>"; };
+		5094867E14FCCEC5007B42FF /* glCameraIconCancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraIconCancel.png; path = Resources_for_FiltersViewController/glCameraIconCancel.png; sourceTree = "<group>"; };
+		5094867F14FCCEC5007B42FF /* glCameraIconCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraIconCancel@2x.png"; path = "Resources_for_FiltersViewController/glCameraIconCancel@2x.png"; sourceTree = "<group>"; };
+		5094868014FCCEC5007B42FF /* glCameraSelectedFilter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraSelectedFilter.png; path = Resources_for_FiltersViewController/glCameraSelectedFilter.png; sourceTree = "<group>"; };
+		5094868114FCCEC5007B42FF /* glCameraSelectedFilter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraSelectedFilter@2x.png"; path = "Resources_for_FiltersViewController/glCameraSelectedFilter@2x.png"; sourceTree = "<group>"; };
+		5094868214FCCEC5007B42FF /* glCameraShowFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraShowFilters.png; path = Resources_for_FiltersViewController/glCameraShowFilters.png; sourceTree = "<group>"; };
+		5094868314FCCEC5007B42FF /* glCameraShowFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraShowFilters@2x.png"; path = "Resources_for_FiltersViewController/glCameraShowFilters@2x.png"; sourceTree = "<group>"; };
+		5094868414FCCEC5007B42FF /* glCameraToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraToolbar.png; path = Resources_for_FiltersViewController/glCameraToolbar.png; sourceTree = "<group>"; };
+		5094868514FCCEC5007B42FF /* glCameraToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraToolbar@2x.png"; path = "Resources_for_FiltersViewController/glCameraToolbar@2x.png"; sourceTree = "<group>"; };
+		5094868614FCCEC5007B42FF /* glCameraTray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraTray.png; path = Resources_for_FiltersViewController/glCameraTray.png; sourceTree = "<group>"; };
+		5094868714FCCEC5007B42FF /* glCameraTray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraTray@2x.png"; path = "Resources_for_FiltersViewController/glCameraTray@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,58 +309,58 @@
 		509485E714FC8075007B42FF /* Resources for FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5094865014FCBE4C007B42FF /* glCameraTray@2x.png */,
-				5094865114FCBE4C007B42FF /* glCameraTray.png */,
-				5094864C14FCB1C6007B42FF /* glCameraSelectedFilter.png */,
-				5094864D14FCB1C6007B42FF /* glCameraSelectedFilter@2x.png */,
-				5094860414FC959F007B42FF /* DSFilterTile1977.png */,
-				5094860514FC959F007B42FF /* DSFilterTile1977@2x.png */,
-				5094860614FC959F007B42FF /* DSFilterTileAmaro.png */,
-				5094860714FC959F007B42FF /* DSFilterTileAmaro@2x.png */,
-				5094860814FC959F007B42FF /* DSFilterTileBrannan.png */,
-				5094860914FC959F007B42FF /* DSFilterTileBrannan@2x.png */,
-				5094860A14FC95A0007B42FF /* DSFilterTileEarlybird.png */,
-				5094860B14FC95A0007B42FF /* DSFilterTileEarlybird@2x.png */,
-				5094860C14FC95A0007B42FF /* DSFilterTileHefe.png */,
-				5094860D14FC95A0007B42FF /* DSFilterTileHefe@2x.png */,
-				5094860E14FC95A0007B42FF /* DSFilterTileHudson.png */,
-				5094860F14FC95A0007B42FF /* DSFilterTileHudson@2x.png */,
-				5094861014FC95A0007B42FF /* DSFilterTileInkwell.png */,
-				5094861114FC95A0007B42FF /* DSFilterTileInkwell@2x.png */,
-				5094861214FC95A0007B42FF /* DSFilterTileLomoFi.png */,
-				5094861314FC95A0007B42FF /* DSFilterTileLomoFi@2x.png */,
-				5094861414FC95A0007B42FF /* DSFilterTileLordKelvin.png */,
-				5094861514FC95A0007B42FF /* DSFilterTileLordKelvin@2x.png */,
-				5094861614FC95A0007B42FF /* DSFilterTileNashville.png */,
-				5094861714FC95A0007B42FF /* DSFilterTileNashville@2x.png */,
-				5094861814FC95A0007B42FF /* DSFilterTileNormal.png */,
-				5094861914FC95A0007B42FF /* DSFilterTileNormal@2x.png */,
-				5094861A14FC95A0007B42FF /* DSFilterTileRise.png */,
-				5094861B14FC95A1007B42FF /* DSFilterTileRise@2x.png */,
-				5094861C14FC95A1007B42FF /* DSFilterTileSierra.png */,
-				5094861D14FC95A1007B42FF /* DSFilterTileSierra@2x.png */,
-				5094861E14FC95A1007B42FF /* DSFilterTileSutro.png */,
-				5094861F14FC95A1007B42FF /* DSFilterTileSutro@2x.png */,
-				5094862014FC95A1007B42FF /* DSFilterTileToaster.png */,
-				5094862114FC95A1007B42FF /* DSFilterTileToaster@2x.png */,
-				5094862214FC95A1007B42FF /* DSFilterTileValencia.png */,
-				5094862314FC95A1007B42FF /* DSFilterTileValencia@2x.png */,
-				5094862414FC95A1007B42FF /* DSFilterTileWalden.png */,
-				5094862514FC95A1007B42FF /* DSFilterTileWalden@2x.png */,
-				5094862614FC95A1007B42FF /* DSFilterTileXpro2.png */,
-				5094862714FC95A1007B42FF /* DSFilterTileXpro2@2x.png */,
-				5094860014FC8B47007B42FF /* glCameraHideFilters.png */,
-				5094860114FC8B47007B42FF /* glCameraHideFilters@2x.png */,
-				509485FC14FC8B37007B42FF /* glCameraShowFilters.png */,
-				509485FD14FC8B37007B42FF /* glCameraShowFilters@2x.png */,
-				509485F814FC8A74007B42FF /* glCameraCaptureBar.png */,
-				509485F914FC8A74007B42FF /* glCameraCaptureBar@2x.png */,
-				509485F414FC8648007B42FF /* glCameraIconCancel.png */,
-				509485F514FC8648007B42FF /* glCameraIconCancel@2x.png */,
-				509485F014FC84E7007B42FF /* glCameraToolbar.png */,
-				509485F114FC84E7007B42FF /* glCameraToolbar@2x.png */,
-				509485E814FC80A3007B42FF /* glCameraBackground.png */,
-				509485E914FC80A3007B42FF /* glCameraBackground@2x.png */,
+				5094865414FCCEC5007B42FF /* DSFilterTile1977.png */,
+				5094865514FCCEC5007B42FF /* DSFilterTile1977@2x.png */,
+				5094865614FCCEC5007B42FF /* DSFilterTileAmaro.png */,
+				5094865714FCCEC5007B42FF /* DSFilterTileAmaro@2x.png */,
+				5094865814FCCEC5007B42FF /* DSFilterTileBrannan.png */,
+				5094865914FCCEC5007B42FF /* DSFilterTileBrannan@2x.png */,
+				5094865A14FCCEC5007B42FF /* DSFilterTileEarlybird.png */,
+				5094865B14FCCEC5007B42FF /* DSFilterTileEarlybird@2x.png */,
+				5094865C14FCCEC5007B42FF /* DSFilterTileHefe.png */,
+				5094865D14FCCEC5007B42FF /* DSFilterTileHefe@2x.png */,
+				5094865E14FCCEC5007B42FF /* DSFilterTileHudson.png */,
+				5094865F14FCCEC5007B42FF /* DSFilterTileHudson@2x.png */,
+				5094866014FCCEC5007B42FF /* DSFilterTileInkwell.png */,
+				5094866114FCCEC5007B42FF /* DSFilterTileInkwell@2x.png */,
+				5094866214FCCEC5007B42FF /* DSFilterTileLomoFi.png */,
+				5094866314FCCEC5007B42FF /* DSFilterTileLomoFi@2x.png */,
+				5094866414FCCEC5007B42FF /* DSFilterTileLordKelvin.png */,
+				5094866514FCCEC5007B42FF /* DSFilterTileLordKelvin@2x.png */,
+				5094866614FCCEC5007B42FF /* DSFilterTileNashville.png */,
+				5094866714FCCEC5007B42FF /* DSFilterTileNashville@2x.png */,
+				5094866814FCCEC5007B42FF /* DSFilterTileNormal.png */,
+				5094866914FCCEC5007B42FF /* DSFilterTileNormal@2x.png */,
+				5094866A14FCCEC5007B42FF /* DSFilterTileRise.png */,
+				5094866B14FCCEC5007B42FF /* DSFilterTileRise@2x.png */,
+				5094866C14FCCEC5007B42FF /* DSFilterTileSierra.png */,
+				5094866D14FCCEC5007B42FF /* DSFilterTileSierra@2x.png */,
+				5094866E14FCCEC5007B42FF /* DSFilterTileSutro.png */,
+				5094866F14FCCEC5007B42FF /* DSFilterTileSutro@2x.png */,
+				5094867014FCCEC5007B42FF /* DSFilterTileToaster.png */,
+				5094867114FCCEC5007B42FF /* DSFilterTileToaster@2x.png */,
+				5094867214FCCEC5007B42FF /* DSFilterTileValencia.png */,
+				5094867314FCCEC5007B42FF /* DSFilterTileValencia@2x.png */,
+				5094867414FCCEC5007B42FF /* DSFilterTileWalden.png */,
+				5094867514FCCEC5007B42FF /* DSFilterTileWalden@2x.png */,
+				5094867614FCCEC5007B42FF /* DSFilterTileXpro2.png */,
+				5094867714FCCEC5007B42FF /* DSFilterTileXpro2@2x.png */,
+				5094867814FCCEC5007B42FF /* glCameraBackground.png */,
+				5094867914FCCEC5007B42FF /* glCameraBackground@2x.png */,
+				5094867A14FCCEC5007B42FF /* glCameraCaptureBar.png */,
+				5094867B14FCCEC5007B42FF /* glCameraCaptureBar@2x.png */,
+				5094867C14FCCEC5007B42FF /* glCameraHideFilters.png */,
+				5094867D14FCCEC5007B42FF /* glCameraHideFilters@2x.png */,
+				5094867E14FCCEC5007B42FF /* glCameraIconCancel.png */,
+				5094867F14FCCEC5007B42FF /* glCameraIconCancel@2x.png */,
+				5094868014FCCEC5007B42FF /* glCameraSelectedFilter.png */,
+				5094868114FCCEC5007B42FF /* glCameraSelectedFilter@2x.png */,
+				5094868214FCCEC5007B42FF /* glCameraShowFilters.png */,
+				5094868314FCCEC5007B42FF /* glCameraShowFilters@2x.png */,
+				5094868414FCCEC5007B42FF /* glCameraToolbar.png */,
+				5094868514FCCEC5007B42FF /* glCameraToolbar@2x.png */,
+				5094868614FCCEC5007B42FF /* glCameraTray.png */,
+				5094868714FCCEC5007B42FF /* glCameraTray@2x.png */,
 			);
 			name = "Resources for FiltersViewController";
 			sourceTree = "<group>";
@@ -418,58 +418,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				5009A26C14FC6861005E7073 /* InfoPlist.strings in Resources */,
-				509485EA14FC80A3007B42FF /* glCameraBackground.png in Resources */,
-				509485EB14FC80A3007B42FF /* glCameraBackground@2x.png in Resources */,
-				509485F214FC84E7007B42FF /* glCameraToolbar.png in Resources */,
-				509485F314FC84E7007B42FF /* glCameraToolbar@2x.png in Resources */,
-				509485F614FC8648007B42FF /* glCameraIconCancel.png in Resources */,
-				509485F714FC8648007B42FF /* glCameraIconCancel@2x.png in Resources */,
-				509485FA14FC8A74007B42FF /* glCameraCaptureBar.png in Resources */,
-				509485FB14FC8A74007B42FF /* glCameraCaptureBar@2x.png in Resources */,
-				509485FE14FC8B37007B42FF /* glCameraShowFilters.png in Resources */,
-				509485FF14FC8B37007B42FF /* glCameraShowFilters@2x.png in Resources */,
-				5094860214FC8B47007B42FF /* glCameraHideFilters.png in Resources */,
-				5094860314FC8B47007B42FF /* glCameraHideFilters@2x.png in Resources */,
-				5094862814FC95A1007B42FF /* DSFilterTile1977.png in Resources */,
-				5094862914FC95A1007B42FF /* DSFilterTile1977@2x.png in Resources */,
-				5094862A14FC95A1007B42FF /* DSFilterTileAmaro.png in Resources */,
-				5094862B14FC95A1007B42FF /* DSFilterTileAmaro@2x.png in Resources */,
-				5094862C14FC95A1007B42FF /* DSFilterTileBrannan.png in Resources */,
-				5094862D14FC95A1007B42FF /* DSFilterTileBrannan@2x.png in Resources */,
-				5094862E14FC95A1007B42FF /* DSFilterTileEarlybird.png in Resources */,
-				5094862F14FC95A1007B42FF /* DSFilterTileEarlybird@2x.png in Resources */,
-				5094863014FC95A1007B42FF /* DSFilterTileHefe.png in Resources */,
-				5094863114FC95A1007B42FF /* DSFilterTileHefe@2x.png in Resources */,
-				5094863214FC95A1007B42FF /* DSFilterTileHudson.png in Resources */,
-				5094863314FC95A1007B42FF /* DSFilterTileHudson@2x.png in Resources */,
-				5094863414FC95A1007B42FF /* DSFilterTileInkwell.png in Resources */,
-				5094863514FC95A1007B42FF /* DSFilterTileInkwell@2x.png in Resources */,
-				5094863614FC95A1007B42FF /* DSFilterTileLomoFi.png in Resources */,
-				5094863714FC95A1007B42FF /* DSFilterTileLomoFi@2x.png in Resources */,
-				5094863814FC95A1007B42FF /* DSFilterTileLordKelvin.png in Resources */,
-				5094863914FC95A1007B42FF /* DSFilterTileLordKelvin@2x.png in Resources */,
-				5094863A14FC95A1007B42FF /* DSFilterTileNashville.png in Resources */,
-				5094863B14FC95A1007B42FF /* DSFilterTileNashville@2x.png in Resources */,
-				5094863C14FC95A1007B42FF /* DSFilterTileNormal.png in Resources */,
-				5094863D14FC95A1007B42FF /* DSFilterTileNormal@2x.png in Resources */,
-				5094863E14FC95A1007B42FF /* DSFilterTileRise.png in Resources */,
-				5094863F14FC95A1007B42FF /* DSFilterTileRise@2x.png in Resources */,
-				5094864014FC95A1007B42FF /* DSFilterTileSierra.png in Resources */,
-				5094864114FC95A1007B42FF /* DSFilterTileSierra@2x.png in Resources */,
-				5094864214FC95A1007B42FF /* DSFilterTileSutro.png in Resources */,
-				5094864314FC95A1007B42FF /* DSFilterTileSutro@2x.png in Resources */,
-				5094864414FC95A1007B42FF /* DSFilterTileToaster.png in Resources */,
-				5094864514FC95A1007B42FF /* DSFilterTileToaster@2x.png in Resources */,
-				5094864614FC95A1007B42FF /* DSFilterTileValencia.png in Resources */,
-				5094864714FC95A1007B42FF /* DSFilterTileValencia@2x.png in Resources */,
-				5094864814FC95A1007B42FF /* DSFilterTileWalden.png in Resources */,
-				5094864914FC95A1007B42FF /* DSFilterTileWalden@2x.png in Resources */,
-				5094864A14FC95A1007B42FF /* DSFilterTileXpro2.png in Resources */,
-				5094864B14FC95A1007B42FF /* DSFilterTileXpro2@2x.png in Resources */,
-				5094864E14FCB1C6007B42FF /* glCameraSelectedFilter.png in Resources */,
-				5094864F14FCB1C6007B42FF /* glCameraSelectedFilter@2x.png in Resources */,
-				5094865214FCBE4D007B42FF /* glCameraTray@2x.png in Resources */,
-				5094865314FCBE4D007B42FF /* glCameraTray.png in Resources */,
+				5094868814FCCEC5007B42FF /* DSFilterTile1977.png in Resources */,
+				5094868914FCCEC5007B42FF /* DSFilterTile1977@2x.png in Resources */,
+				5094868A14FCCEC5007B42FF /* DSFilterTileAmaro.png in Resources */,
+				5094868B14FCCEC5007B42FF /* DSFilterTileAmaro@2x.png in Resources */,
+				5094868C14FCCEC5007B42FF /* DSFilterTileBrannan.png in Resources */,
+				5094868D14FCCEC5007B42FF /* DSFilterTileBrannan@2x.png in Resources */,
+				5094868E14FCCEC5007B42FF /* DSFilterTileEarlybird.png in Resources */,
+				5094868F14FCCEC5007B42FF /* DSFilterTileEarlybird@2x.png in Resources */,
+				5094869014FCCEC5007B42FF /* DSFilterTileHefe.png in Resources */,
+				5094869114FCCEC5007B42FF /* DSFilterTileHefe@2x.png in Resources */,
+				5094869214FCCEC5007B42FF /* DSFilterTileHudson.png in Resources */,
+				5094869314FCCEC5007B42FF /* DSFilterTileHudson@2x.png in Resources */,
+				5094869414FCCEC5007B42FF /* DSFilterTileInkwell.png in Resources */,
+				5094869514FCCEC5007B42FF /* DSFilterTileInkwell@2x.png in Resources */,
+				5094869614FCCEC5007B42FF /* DSFilterTileLomoFi.png in Resources */,
+				5094869714FCCEC5007B42FF /* DSFilterTileLomoFi@2x.png in Resources */,
+				5094869814FCCEC5007B42FF /* DSFilterTileLordKelvin.png in Resources */,
+				5094869914FCCEC5007B42FF /* DSFilterTileLordKelvin@2x.png in Resources */,
+				5094869A14FCCEC5007B42FF /* DSFilterTileNashville.png in Resources */,
+				5094869B14FCCEC5007B42FF /* DSFilterTileNashville@2x.png in Resources */,
+				5094869C14FCCEC5007B42FF /* DSFilterTileNormal.png in Resources */,
+				5094869D14FCCEC5007B42FF /* DSFilterTileNormal@2x.png in Resources */,
+				5094869E14FCCEC5007B42FF /* DSFilterTileRise.png in Resources */,
+				5094869F14FCCEC5007B42FF /* DSFilterTileRise@2x.png in Resources */,
+				509486A014FCCEC5007B42FF /* DSFilterTileSierra.png in Resources */,
+				509486A114FCCEC5007B42FF /* DSFilterTileSierra@2x.png in Resources */,
+				509486A214FCCEC5007B42FF /* DSFilterTileSutro.png in Resources */,
+				509486A314FCCEC5007B42FF /* DSFilterTileSutro@2x.png in Resources */,
+				509486A414FCCEC5007B42FF /* DSFilterTileToaster.png in Resources */,
+				509486A514FCCEC5007B42FF /* DSFilterTileToaster@2x.png in Resources */,
+				509486A614FCCEC5007B42FF /* DSFilterTileValencia.png in Resources */,
+				509486A714FCCEC5007B42FF /* DSFilterTileValencia@2x.png in Resources */,
+				509486A814FCCEC5007B42FF /* DSFilterTileWalden.png in Resources */,
+				509486A914FCCEC5007B42FF /* DSFilterTileWalden@2x.png in Resources */,
+				509486AA14FCCEC5007B42FF /* DSFilterTileXpro2.png in Resources */,
+				509486AB14FCCEC5007B42FF /* DSFilterTileXpro2@2x.png in Resources */,
+				509486AC14FCCEC5007B42FF /* glCameraBackground.png in Resources */,
+				509486AD14FCCEC5007B42FF /* glCameraBackground@2x.png in Resources */,
+				509486AE14FCCEC5007B42FF /* glCameraCaptureBar.png in Resources */,
+				509486AF14FCCEC5007B42FF /* glCameraCaptureBar@2x.png in Resources */,
+				509486B014FCCEC5007B42FF /* glCameraHideFilters.png in Resources */,
+				509486B114FCCEC5007B42FF /* glCameraHideFilters@2x.png in Resources */,
+				509486B214FCCEC5007B42FF /* glCameraIconCancel.png in Resources */,
+				509486B314FCCEC5007B42FF /* glCameraIconCancel@2x.png in Resources */,
+				509486B414FCCEC5007B42FF /* glCameraSelectedFilter.png in Resources */,
+				509486B514FCCEC5007B42FF /* glCameraSelectedFilter@2x.png in Resources */,
+				509486B614FCCEC5007B42FF /* glCameraShowFilters.png in Resources */,
+				509486B714FCCEC5007B42FF /* glCameraShowFilters@2x.png in Resources */,
+				509486B814FCCEC5007B42FF /* glCameraToolbar.png in Resources */,
+				509486B914FCCEC5007B42FF /* glCameraToolbar@2x.png in Resources */,
+				509486BA14FCCEC5007B42FF /* glCameraTray.png in Resources */,
+				509486BB14FCCEC5007B42FF /* glCameraTray@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
