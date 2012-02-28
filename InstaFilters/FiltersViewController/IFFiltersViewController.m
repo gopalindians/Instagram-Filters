@@ -8,6 +8,9 @@
 
 #define kFilterImageViewTag 9999
 #define kFilterImageViewContainerViewTag 9998
+#define kBlueDotImageViewOffset 25.0f
+#define kFilterCellHeight 72.0f 
+#define kBlueDotAnimationTime 0.2f
 
 #import "IFFiltersViewController.h"
 
@@ -21,6 +24,8 @@
 @property (nonatomic, unsafe_unretained) BOOL isFiltersTableViewVisible;
 @property (nonatomic, strong) UITableView *filtersTableView;
 @property (nonatomic, strong) UIView *filterTableViewContainerView;
+@property (nonatomic, strong) UIImageView *blueDotImageView;
+
 - (void)backButtonPressed:(id)sender;
 - (void)toggleFiltersButtonPressed:(id)sender;
 @end
@@ -35,22 +40,52 @@
 @synthesize isFiltersTableViewVisible;
 @synthesize filtersTableView;
 @synthesize filterTableViewContainerView;
+@synthesize blueDotImageView;
 
 #pragma mark - Filters TableView Delegate & Datasource methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 72.0f;
+    return kFilterCellHeight;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (([indexPath row] != [[[tableView indexPathsForVisibleRows] objectAtIndex:0] row]) && ([indexPath row] != [[[tableView indexPathsForVisibleRows] lastObject] row])) {
+        
+        CGRect cellRect = [tableView rectForRowAtIndexPath:indexPath];
+
+        CGRect tempRect = self.blueDotImageView.frame;
+        tempRect.origin.x = cellRect.origin.y - tableView.contentOffset.y + kBlueDotImageViewOffset;
+        
+        [UIView animateWithDuration:kBlueDotAnimationTime animations:^() {
+            self.blueDotImageView.frame = tempRect;
+        }completion:^(BOOL finished){
+            // do nothing
+        }];
+        
         return;
     }
     
     if ([indexPath row] == [[[tableView indexPathsForVisibleRows] objectAtIndex:0] row]) {
         [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-
+        
+        CGRect tempRect = self.blueDotImageView.frame;
+        tempRect.origin.x = kBlueDotImageViewOffset;
+        
+        [UIView animateWithDuration:kBlueDotAnimationTime animations:^() {
+            self.blueDotImageView.frame = tempRect;
+        }completion:^(BOOL finished){
+            // do nothing
+        }];
     } else {
         [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 
+        CGRect tempRect = self.blueDotImageView.frame;
+        tempRect.origin.x = [[UIScreen mainScreen] applicationFrame].size.width - (kFilterCellHeight - kBlueDotImageViewOffset - tempRect.size.width) - tempRect.size.width;
+        
+        [UIView animateWithDuration:kBlueDotAnimationTime animations:^() {
+            self.blueDotImageView.frame = tempRect;
+        }completion:^(BOOL finished){
+            // do nothing
+        }];
     }
     
 }
@@ -233,6 +268,11 @@
     self.filtersTableView.delegate = self;
     self.filtersTableView.dataSource = self;
     self.filtersTableView.transform	= CGAffineTransformMakeRotation(-M_PI/2);
+    
+    self.blueDotImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kBlueDotImageViewOffset, 61, 21, 11)];
+    self.blueDotImageView.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraSelectedFilter" ofType:@"png"]];
+    
+    [self.filterTableViewContainerView addSubview:self.blueDotImageView];
     [self.filterTableViewContainerView addSubview:self.filtersTableView];
     
     [self.view addSubview:self.backgroundImageView];
