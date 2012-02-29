@@ -471,8 +471,6 @@
     [self.view addSubview:self.cancelAlbumPhotoButton];
     [self.view addSubview:self.confirmAlbumPhotoButton];
     [self.view addSubview:self.toggleFiltersButton];
-    
-    [self.videoCamera startCameraCapture];
 
 }
 
@@ -480,6 +478,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.videoCamera startCameraCapture];
+
 }
 
 - (void)viewDidUnload
