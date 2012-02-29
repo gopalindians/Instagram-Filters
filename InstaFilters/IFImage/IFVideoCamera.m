@@ -34,6 +34,8 @@
 
 @property (nonatomic, strong) GPUImagePicture *stillImageSource;
 
+@property (nonatomic, strong) AVCaptureStillImageOutput *stillImageOutput;
+
 - (void)switchToNewFilter;
 - (void)forceSwitchToNewFilter:(IFFilterType)type;
 
@@ -62,6 +64,91 @@
 @synthesize prepareFilterQueue;
 @synthesize rawImage;
 @synthesize stillImageSource;
+
+@synthesize stillImageOutput;
+
+@synthesize delegate;
+
+#pragma mark - Proper Size For Resizing Large Image
+- (CGSize)properSizeForResizingLargeImage:(UIImage *)originaUIImage {
+    float originalWidth = originaUIImage.size.width;
+    float originalHeight = originaUIImage.size.height;
+    float smallerSide = 0.0f;
+    float scalingFactor = 0.0f;
+    
+    if (originalWidth < originalHeight) {
+        smallerSide = originalWidth;
+        scalingFactor = 640.0f / smallerSide;
+        return CGSizeMake(640.0f, originalHeight*scalingFactor);
+    } else {
+        smallerSide = originalHeight;
+        scalingFactor = 640.0f / smallerSide;
+        return CGSizeMake(originalWidth*scalingFactor, 640.0f);    
+    }
+}
+
+#pragma mark - Take photo
+- (void)takePhoto {
+    AVCaptureConnection *videoConnection;
+    for (AVCaptureConnection *connection in [[self stillImageOutput] connections]) {
+        for (AVCaptureInputPort *port in [connection inputPorts]) {
+            if ([[port mediaType] isEqual:AVMediaTypeVideo]) {
+                videoConnection = connection;
+                break;
+            }
+        }
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(IFVideoCameraWillStartCaptureStillImage:)]) {
+        [self.delegate IFVideoCameraWillStartCaptureStillImage:self];
+    }
+    
+    [self.stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+ 
+
+        
+        @autoreleasepool {
+            NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+            UIImage *image = [[UIImage alloc] initWithData:imageData];
+            
+            image = [image resizedImage:[self properSizeForResizingLargeImage:image] interpolationQuality:kCGInterpolationHigh];
+            image = [image imageRotatedByDegrees:90.0f];            
+            image = [image cropImageWithBounds:CGRectMake(0, 0, 640, 640)];
+            
+            self.rawImage = image;
+            [self switchFilter:currentFilterType];
+            
+            /*
+            ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+            [library writeImageToSavedPhotosAlbum:[image CGImage]
+                                      orientation:(ALAssetOrientation)[image imageOrientation]
+                                  completionBlock:^(NSURL *assetURL, NSError *error){
+                                      if (error) {
+                                          NSLog(@" save but error...");
+                                          
+                                          id delegate = [self delegate];
+                                          if ([delegate respondsToSelector:@selector(captureStillImageFailedWithError:)]) {
+                                              [delegate captureStillImageFailedWithError:error];
+                                          }                                                                                               
+                                      } else {
+                                          NSLog(@" save without error...");
+                                      }
+                                  }];
+            [library release];
+            [image release];
+             */
+
+        }  
+        
+        if ([self.delegate respondsToSelector:@selector(IFVideoCameraDidFinishCaptureStillImage:)]) {
+            [self.delegate IFVideoCameraDidFinishCaptureStillImage:self];
+        }
+
+        
+    }];
+
+}
+
 
 #pragma mark - Cancel album photo and go back to normal
 - (void)cancelAlbumPhotoAndGoBackToNormal {
@@ -523,6 +610,11 @@
     {
 		return nil;
     }    
+    
+    self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey,nil];
+    [self.stillImageOutput setOutputSettings:outputSettings];
+    [self.captureSession addOutput:stillImageOutput];
     
     prepareFilterQueue = dispatch_queue_create("com.diwublog.prepareFilterQueue", NULL);
     

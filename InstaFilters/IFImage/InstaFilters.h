@@ -28,6 +28,7 @@ typedef enum {
     IF_FILTER_TOTAL_NUMBER
 } IFFilterType; 
 
+#import "UIImage+IF.h"
 #import "IFImageFilter.h"
 #import "IFVideoCamera.h"
 #import "IFSutroFilter.h"

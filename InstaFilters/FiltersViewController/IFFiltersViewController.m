@@ -17,7 +17,7 @@
 #import "InstaFilters.h"
 #import "UIImage+IF.h"
 
-@interface IFFiltersViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface IFFiltersViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, IFVideoCameraDelegate>
 
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *transparentBackButton;
@@ -66,6 +66,21 @@
 @synthesize currentType;
 @synthesize cancelAlbumPhotoButton;
 @synthesize confirmAlbumPhotoButton;
+
+#pragma mark - Video Camera Delegate
+- (void)IFVideoCameraWillStartCaptureStillImage:(IFVideoCamera *)videoCamera {
+    
+    self.shootButton.hidden = YES;
+    [self.cancelAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraRejectDisabled" ofType:@"png"]] forState:UIControlStateNormal];
+    [self.confirmAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraAcceptDisabled" ofType:@"png"]] forState:UIControlStateNormal];
+    self.cancelAlbumPhotoButton.hidden = NO;
+    self.confirmAlbumPhotoButton.hidden = NO;
+}
+- (void)IFVideoCameraDidFinishCaptureStillImage:(IFVideoCamera *)videoCamera {
+    [self.cancelAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraReject" ofType:@"png"]] forState:UIControlStateNormal];
+    [self.confirmAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraAccept" ofType:@"png"]] forState:UIControlStateNormal];
+}
+
 
 #pragma mark - Process Album Photo from Image Pick
 - (UIImage *)processAlbumPhoto:(NSDictionary *)info {
@@ -442,6 +457,7 @@
     [self.filterTableViewContainerView addSubview:self.filtersTableView];
     
     self.videoCamera = [[IFVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetPhoto cameraPosition:AVCaptureDevicePositionBack];
+    self.videoCamera.delegate = self;
     
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.transparentBackButton];
@@ -509,7 +525,7 @@
 }
 - (void)shootButtonPressed:(id)sender {
     [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButton" ofType:@"png"]] forState:UIControlStateNormal];
-
+    [self.videoCamera takePhoto];
 }
 - (void)backButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^() {
