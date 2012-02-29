@@ -25,12 +25,17 @@
 @property (nonatomic, strong) GPUImagePicture *internalSourcePicture5;
 
 @property (strong, readwrite) GPUImageView *gpuImageView;
+@property (strong, readwrite) GPUImageView *gpuImageView_HD;
+
 @property (nonatomic, strong) IFRotationFilter *rotationFilter;
 @property (nonatomic, unsafe_unretained) IFFilterType currentFilterType;
 
 @property (nonatomic, unsafe_unretained) dispatch_queue_t prepareFilterQueue;
 
+@property (nonatomic, strong) GPUImagePicture *stillImageSource;
+
 - (void)switchToNewFilter;
+- (void)forceSwitchToNewFilter:(IFFilterType)type;
 
 @end
 
@@ -51,17 +56,47 @@
 @synthesize internalSourcePicture5;
 
 @synthesize gpuImageView;
+@synthesize gpuImageView_HD;
 @synthesize rotationFilter;
 @synthesize currentFilterType;
 @synthesize prepareFilterQueue;
+@synthesize rawImage;
+@synthesize stillImageSource;
+
+#pragma mark - Cancel album photo and go back to normal
+- (void)cancelAlbumPhotoAndGoBackToNormal {
+    
+    /*
+    [self.filter removeTarget:self.gpuImageView_HD];
+    [self.filter addTarget:self.gpuImageView];
+    [self.stillImageSource removeTarget:self.filter];
+    */
+
+    [self.rotationFilter addTarget:self.filter];
+
+    self.stillImageSource = nil;
+    self.rawImage = nil;  
+    self.gpuImageView_HD.hidden = YES;
+
+    [self forceSwitchToNewFilter:currentFilterType];
+    [self startCameraCapture];
+
+}
+
 
 #pragma mark - Switch Filter
 - (void)switchToNewFilter {
-    
-    [self.rotationFilter removeTarget:self.filter];
-    self.filter = self.internalFilter;
-    [self.rotationFilter addTarget:self.filter];
-    
+
+    if (self.stillImageSource == nil) {
+        [self.rotationFilter removeTarget:self.filter];
+        self.filter = self.internalFilter;
+        [self.rotationFilter addTarget:self.filter];
+    } else {
+        [self.stillImageSource removeTarget:self.filter];
+        self.filter = self.internalFilter;
+        [self.stillImageSource addTarget:self.filter];
+    }
+
     switch (currentFilterType) {
         case IF_AMARO_FILTER: {
             self.sourcePicture1 = self.internalSourcePicture1;
@@ -275,14 +310,18 @@
         }
     }
     
-    [self.filter addTarget:self.gpuImageView];
-    
-}
 
-- (void)switchFilter:(IFFilterType)type {
-    if (currentFilterType == type) {
-        return;
+    if (self.stillImageSource != nil) {
+        self.gpuImageView_HD.hidden = NO;
+        [self.filter addTarget:self.gpuImageView_HD];
+        [self.stillImageSource processImage];
+
+    } else {
+        [self.filter addTarget:self.gpuImageView];
+
     }
+}
+- (void)forceSwitchToNewFilter:(IFFilterType)type {
     
     currentFilterType = type;
     
@@ -318,7 +357,7 @@
                 
                 break;
             }
-            
+                
             case IF_XPROII_FILTER: {
                 self.internalFilter = [[IFXproIIFilter alloc] init];
                 self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"xproMap" ofType:@"png"]]];
@@ -326,13 +365,13 @@
                 
                 break;
             }
-
+                
             case IF_SIERRA_FILTER: {
                 self.internalFilter = [[IFSierraFilter alloc] init];
                 self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"blackboard1024" ofType:@"png"]]];
                 self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"overlayMap" ofType:@"png"]]];
                 self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sierraMap" ofType:@"png"]]];
-
+                
                 
                 break;
             }
@@ -352,8 +391,8 @@
                 self.internalSourcePicture3 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"vignetteMap" ofType:@"png"]]]; 
                 self.internalSourcePicture4 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"earlybirdBlowout" ofType:@"png"]]];                
                 self.internalSourcePicture5 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"earlybirdMap" ofType:@"png"]]];                
-
-
+                
+                
                 break;
             }
                 
@@ -439,7 +478,7 @@
                 self.internalFilter = [[IF1977Filter alloc] init];
                 self.internalSourcePicture1 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1977map" ofType:@"png"]]];
                 self.internalSourcePicture2 = [[GPUImagePicture alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1977blowout" ofType:@"png"]]];                
-
+                
                 break;
             }
                 
@@ -455,9 +494,26 @@
         }
         
         [self performSelectorOnMainThread:@selector(switchToNewFilter) withObject:nil waitUntilDone:NO];
-
+        
     });
-    
+}
+
+- (void)switchFilter:(IFFilterType)type {
+
+    if ((self.rawImage != nil) && (self.stillImageSource == nil)) {
+
+        // This is the state when we just switched from live view to album photo view
+        [self.rotationFilter removeTarget:self.filter];
+        self.stillImageSource = [[GPUImagePicture alloc] initWithImage:self.rawImage];
+        [self.stillImageSource addTarget:self.filter];
+    } else {
+
+        if (currentFilterType == type) {
+            return;
+        }
+    }
+
+    [self forceSwitchToNewFilter:type];
 }
 
 
@@ -474,6 +530,7 @@
     [self addTarget:rotationFilter];
     
     self.filter = [[IFNormalFilter alloc] init];
+    self.internalFilter = self.filter;
 
     [rotationFilter addTarget:filter];
     
@@ -481,7 +538,9 @@
     gpuImageView.layer.contentsScale = 1.0f;
     [filter addTarget:gpuImageView];
 
-    
+    gpuImageView_HD = [[GPUImageView alloc] initWithFrame:[gpuImageView bounds]];
+    gpuImageView_HD.hidden = YES;
+    [gpuImageView addSubview:gpuImageView_HD];
     
     return self;
 }

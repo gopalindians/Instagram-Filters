@@ -18,6 +18,11 @@
 		5009A27D14FC6A36005E7073 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27C14FC6A36005E7073 /* OpenGLES.framework */; };
 		5009A27F14FC6A4C005E7073 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27E14FC6A4C005E7073 /* AVFoundation.framework */; };
 		5009A28114FC6A65005E7073 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A28014FC6A65005E7073 /* QuartzCore.framework */; };
+		5060FDAE14FDF4EF0018587E /* UIImage+IF.m in Sources */ = {isa = PBXBuildFile; fileRef = 5060FDAD14FDF4EF0018587E /* UIImage+IF.m */; };
+		5060FDB114FE0F500018587E /* glCameraReject.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDAF14FE0F500018587E /* glCameraReject.png */; };
+		5060FDB214FE0F500018587E /* glCameraReject@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDB014FE0F500018587E /* glCameraReject@2x.png */; };
+		5060FDB514FE0F660018587E /* glCameraAccept.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDB314FE0F660018587E /* glCameraAccept.png */; };
+		5060FDB614FE0F660018587E /* glCameraAccept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDB414FE0F660018587E /* glCameraAccept@2x.png */; };
 		509485B514FC6C95007B42FF /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094857B14FC6C95007B42FF /* GLProgram.m */; };
 		509485BC14FC6C95007B42FF /* GPUImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094858A14FC6C95007B42FF /* GPUImageFilter.m */; };
 		509485C014FC6C95007B42FF /* GPUImageMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094859214FC6C95007B42FF /* GPUImageMovie.m */; };
@@ -172,6 +177,12 @@
 		5009A27C14FC6A36005E7073 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5009A27E14FC6A4C005E7073 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5009A28014FC6A65005E7073 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5060FDAC14FDF4EF0018587E /* UIImage+IF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+IF.h"; path = "UIImage_Category/UIImage+IF.h"; sourceTree = "<group>"; };
+		5060FDAD14FDF4EF0018587E /* UIImage+IF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IF.m"; path = "UIImage_Category/UIImage+IF.m"; sourceTree = "<group>"; };
+		5060FDAF14FE0F500018587E /* glCameraReject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraReject.png; sourceTree = "<group>"; };
+		5060FDB014FE0F500018587E /* glCameraReject@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraReject@2x.png"; sourceTree = "<group>"; };
+		5060FDB314FE0F660018587E /* glCameraAccept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraAccept.png; sourceTree = "<group>"; };
+		5060FDB414FE0F660018587E /* glCameraAccept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraAccept@2x.png"; sourceTree = "<group>"; };
 		5094857A14FC6C95007B42FF /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = GPUImage/GLProgram.h; sourceTree = "<group>"; };
 		5094857B14FC6C95007B42FF /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = GPUImage/GLProgram.m; sourceTree = "<group>"; };
 		5094857C14FC6C95007B42FF /* GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage.h; path = GPUImage/GPUImage.h; sourceTree = "<group>"; };
@@ -399,6 +410,7 @@
 		5009A26714FC6861005E7073 /* InstaFilters */ = {
 			isa = PBXGroup;
 			children = (
+				5060FDAA14FDF4C30018587E /* UIImage Category */,
 				509486D514FCDF8A007B42FF /* Resources for IFFilters */,
 				509486CA14FCDA0A007B42FF /* IF Filters */,
 				509486BC14FCD016007B42FF /* IFImage */,
@@ -423,6 +435,15 @@
 				5009A26F14FC6861005E7073 /* InstaFilters-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5060FDAA14FDF4C30018587E /* UIImage Category */ = {
+			isa = PBXGroup;
+			children = (
+				5060FDAC14FDF4EF0018587E /* UIImage+IF.h */,
+				5060FDAD14FDF4EF0018587E /* UIImage+IF.m */,
+			);
+			name = "UIImage Category";
 			sourceTree = "<group>";
 		};
 		5094857814FC6C58007B42FF /* GPUImage */ = {
@@ -465,6 +486,10 @@
 		509485E714FC8075007B42FF /* Resources for FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5060FDB314FE0F660018587E /* glCameraAccept.png */,
+				5060FDB414FE0F660018587E /* glCameraAccept@2x.png */,
+				5060FDAF14FE0F500018587E /* glCameraReject.png */,
+				5060FDB014FE0F500018587E /* glCameraReject@2x.png */,
 				509487D114FD37AA007B42FF /* glCameraCaptureButton.png */,
 				509487D214FD37AA007B42FF /* glCameraCaptureButton@2x.png */,
 				509487D314FD37AA007B42FF /* glCameraCaptureButtonPressed.png */,
@@ -792,6 +817,10 @@
 				509487D614FD37AB007B42FF /* glCameraCaptureButton@2x.png in Resources */,
 				509487D714FD37AB007B42FF /* glCameraCaptureButtonPressed.png in Resources */,
 				509487D814FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png in Resources */,
+				5060FDB114FE0F500018587E /* glCameraReject.png in Resources */,
+				5060FDB214FE0F500018587E /* glCameraReject@2x.png in Resources */,
+				5060FDB514FE0F660018587E /* glCameraAccept.png in Resources */,
+				5060FDB614FE0F660018587E /* glCameraAccept@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,6 +866,7 @@
 				5094876414FD2463007B42FF /* IFNashvilleFilter.m in Sources */,
 				5094876914FD259C007B42FF /* IF1977Filter.m in Sources */,
 				5094877014FD26E1007B42FF /* IFLordKelvinFilter.m in Sources */,
+				5060FDAE14FDF4EF0018587E /* UIImage+IF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

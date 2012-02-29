@@ -15,6 +15,7 @@
 #define kGPUImageViewAnimationOffset 27.0f
 #import "IFFiltersViewController.h"
 #import "InstaFilters.h"
+#import "UIImage+IF.h"
 
 @interface IFFiltersViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -32,13 +33,17 @@
 @property (nonatomic, strong) IFVideoCamera *videoCamera;
 @property (nonatomic, strong) UIButton *photoAlbumButton;
 @property (nonatomic, strong) UIButton *shootButton;
-@property (nonatomic, strong) UIImageView *previewImageView;
+@property (nonatomic, unsafe_unretained) IFFilterType currentType;
+@property (nonatomic, strong) UIButton *cancelAlbumPhotoButton;
+@property (nonatomic, strong) UIButton *confirmAlbumPhotoButton;
 - (void)backButtonPressed:(id)sender;
 - (void)toggleFiltersButtonPressed:(id)sender;
 - (void)photoAlbumButtonPressed:(id)sender;
 - (void)shootButtonPressed:(id)sender;
 - (void)shootButtonTouched:(id)sender;
 - (void)shootButtonCancelled:(id)sender;
+- (void)cancelAlbumPhotoButtonPressed:(id)sender;
+- (void)confirmAlbumPhotoButtonPressed:(id)sender;
 
 @end
 
@@ -58,14 +63,113 @@
 @synthesize videoCamera;
 @synthesize photoAlbumButton;
 @synthesize shootButton;
-@synthesize previewImageView;
+@synthesize currentType;
+@synthesize cancelAlbumPhotoButton;
+@synthesize confirmAlbumPhotoButton;
+
+#pragma mark - Process Album Photo from Image Pick
+- (UIImage *)processAlbumPhoto:(NSDictionary *)info {
+    UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    float original_width = originalImage.size.width;
+    float original_height = originalImage.size.height;
+    
+    if ([info objectForKey:UIImagePickerControllerCropRect] == nil) {
+        if (original_width < original_height) {
+            /*
+             UIGraphicsBeginImageContext(mask.size);
+             [ori drawAtPoint:CGPointMake(0,0)];
+             [mask drawAtPoint:CGPointMake(0,0)];
+             
+             UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+             UIGraphicsEndImageContext();
+             return newImage;
+             */
+            return nil;
+        } else {
+            return nil;
+        }
+    } else {
+        CGRect crop_rect = [[info objectForKey:UIImagePickerControllerCropRect] CGRectValue];
+        float crop_width = crop_rect.size.width;
+        float crop_height = crop_rect.size.height;
+        float crop_x = crop_rect.origin.x;
+        float crop_y = crop_rect.origin.y;
+        float remaining_width = original_width - crop_x;
+        float remaining_height = original_height - crop_y;
+        
+        // due to a bug in iOS
+        if ( (crop_x + crop_width) > original_width) {
+            NSLog(@" - a bug in x direction occurred! now we fix it!");
+            crop_width = original_width - crop_x;
+        }
+        if ( (crop_y + crop_height) > original_height) {
+            NSLog(@" - a bug in y direction occurred! now we fix it!");
+            
+            crop_height = original_height - crop_y;
+        }
+        
+        float crop_longer_side = 0.0f;
+        
+        if (crop_width > crop_height) {
+            crop_longer_side = crop_width;
+        } else {
+            crop_longer_side = crop_height;
+        }
+        //NSLog(@" - ow = %g, oh = %g", original_width, original_height);
+        //NSLog(@" - cx = %g, cy = %g, cw = %g, ch = %g", crop_x, crop_y, crop_width, crop_height);
+        //NSLog(@" - cls=%g, rw = %g, rh = %g", crop_longer_side, remaining_width, remaining_height);
+        if ( (crop_longer_side <= remaining_width) && (crop_longer_side <= remaining_height) ) {
+            UIImage *tmpImage = [originalImage cropImageWithBounds:CGRectMake(crop_x, crop_y, crop_longer_side, crop_longer_side)];
+            
+            return tmpImage;
+        } else if ( (crop_longer_side <= remaining_width) && (crop_longer_side > remaining_height) ) {
+            UIImage *tmpImage = [originalImage cropImageWithBounds:CGRectMake(crop_x, crop_y, crop_longer_side, remaining_height)];
+            
+            float new_y = (crop_longer_side - remaining_height) / 2.0f;
+            //UIGraphicsBeginImageContext(CGSizeMake(crop_longer_side, crop_longer_side));
+            UIGraphicsBeginImageContextWithOptions(CGSizeMake(crop_longer_side, crop_longer_side), YES, 1.0f);
+            [tmpImage drawAtPoint:CGPointMake(0.0f,new_y)];
+            
+            UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            return newImage;
+        } else if ( (crop_longer_side > remaining_width) && (crop_longer_side <= remaining_height) ) {
+            UIImage *tmpImage = [originalImage cropImageWithBounds:CGRectMake(crop_x, crop_y, remaining_width, crop_longer_side)];
+            
+            float new_x = (crop_longer_side - remaining_width) / 2.0f;
+            //UIGraphicsBeginImageContext(CGSizeMake(crop_longer_side, crop_longer_side));
+            UIGraphicsBeginImageContextWithOptions(CGSizeMake(crop_longer_side, crop_longer_side), YES, 1.0f);
+            [tmpImage drawAtPoint:CGPointMake(new_x,0.0f)];
+            
+            UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            return newImage;
+        } else {
+            return nil;
+        }
+        
+    }
+}
 
 #pragma mark - UIImagePicker Delegate methods
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
 
+    self.videoCamera.rawImage = [self processAlbumPhoto:info];
+    [self.videoCamera switchFilter:currentType];
+    self.shootButton.hidden = YES;
+    self.cancelAlbumPhotoButton.hidden = NO;
+    self.confirmAlbumPhotoButton.hidden = NO;
+    
+    if (isFiltersTableViewVisible == YES) {
+        [self toggleFiltersButtonPressed:nil];
+    }
+    
     [self dismissViewControllerAnimated:YES completion:^(){
-        // do something
+        if (isFiltersTableViewVisible == NO) {
+            [self toggleFiltersButtonPressed:nil];
+        }
     }];
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -83,6 +187,8 @@
     return kFilterCellHeight;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.currentType = [indexPath row];
     
     [self.videoCamera switchFilter:[indexPath row]];
     
@@ -296,7 +402,22 @@
     [self.shootButton addTarget:self action:@selector(shootButtonCancelled:) forControlEvents:UIControlEventTouchCancel | UIControlEventTouchDragOutside];
     [self.shootButton addTarget:self action:@selector(shootButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    self.cancelAlbumPhotoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.cancelAlbumPhotoButton.frame = CGRectMake(100, 433, 40, 40);
+    [self.cancelAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraReject" ofType:@"png"]] forState:UIControlStateNormal];
+    self.cancelAlbumPhotoButton.adjustsImageWhenHighlighted = NO;
+    self.cancelAlbumPhotoButton.showsTouchWhenHighlighted = YES;
+    self.cancelAlbumPhotoButton.hidden = YES;
+    [self.cancelAlbumPhotoButton addTarget:self action:@selector(cancelAlbumPhotoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.confirmAlbumPhotoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.confirmAlbumPhotoButton.frame = CGRectMake(160, 433, 40, 40);
+    [self.confirmAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraAccept" ofType:@"png"]] forState:UIControlStateNormal];
+    self.confirmAlbumPhotoButton.adjustsImageWhenHighlighted = NO;
+    self.confirmAlbumPhotoButton.showsTouchWhenHighlighted = YES;
+    self.confirmAlbumPhotoButton.hidden = YES;
+    [self.confirmAlbumPhotoButton addTarget:self action:@selector(confirmAlbumPhotoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+
     self.isFiltersTableViewVisible = YES;
     self.filterTableViewContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 354, 320, 72)];
     self.filterTableViewContainerView.backgroundColor = [UIColor clearColor];
@@ -331,6 +452,8 @@
     [self.view addSubview:self.cameraCaptureBarImageView];
     [self.view addSubview:self.photoAlbumButton];
     [self.view addSubview:self.shootButton];
+    [self.view addSubview:self.cancelAlbumPhotoButton];
+    [self.view addSubview:self.confirmAlbumPhotoButton];
     [self.view addSubview:self.toggleFiltersButton];
     
     [self.videoCamera startCameraCapture];
@@ -355,6 +478,16 @@
 }
 
 #pragma mark - Button methods
+- (void)cancelAlbumPhotoButtonPressed:(id)sender {
+    self.cancelAlbumPhotoButton.hidden = YES;
+    self.confirmAlbumPhotoButton.hidden = YES;
+    self.shootButton.hidden = NO;
+    [self.videoCamera cancelAlbumPhotoAndGoBackToNormal];
+}
+- (void)confirmAlbumPhotoButtonPressed:(id)sender {
+    
+}
+
 - (void)shootButtonTouched:(id)sender {
     [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButtonPressed" ofType:@"png"]] forState:UIControlStateNormal];
 
