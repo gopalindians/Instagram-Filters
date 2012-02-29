@@ -36,6 +36,7 @@
 @property (nonatomic, unsafe_unretained) IFFilterType currentType;
 @property (nonatomic, strong) UIButton *cancelAlbumPhotoButton;
 @property (nonatomic, strong) UIButton *confirmAlbumPhotoButton;
+
 - (void)backButtonPressed:(id)sender;
 - (void)toggleFiltersButtonPressed:(id)sender;
 - (void)photoAlbumButtonPressed:(id)sender;
@@ -79,6 +80,15 @@
 - (void)IFVideoCameraDidFinishCaptureStillImage:(IFVideoCamera *)videoCamera {
     [self.cancelAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraReject" ofType:@"png"]] forState:UIControlStateNormal];
     [self.confirmAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraAccept" ofType:@"png"]] forState:UIControlStateNormal];
+}
+- (BOOL)canIFVideoCameraStartRecordingMovie:(IFVideoCamera *)videoCamera {
+    if (shootButton.hidden == YES) {
+        return NO;
+    } else if (self.videoCamera.isRecordingMovie == YES) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 
@@ -524,8 +534,29 @@
     }];
 }
 - (void)shootButtonPressed:(id)sender {
+    
+    if (self.videoCamera.isRecordingMovie == NO) {
+        NSLog(@" - starts...");
+        
+        self.toggleFiltersButton.enabled = NO;
+        self.filtersTableView.userInteractionEnabled = NO;
+        if (self.isFiltersTableViewVisible == YES) {
+            [self toggleFiltersButtonPressed:nil];
+        }
+
+        [self.videoCamera startRecordingMovie];
+    } else {
+        NSLog(@" - stops...");
+        [self.videoCamera stopRecordingMovie];
+        self.toggleFiltersButton.enabled = YES;
+        self.filtersTableView.userInteractionEnabled = YES;
+
+    }
+    
+    /*
     [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButton" ofType:@"png"]] forState:UIControlStateNormal];
     [self.videoCamera takePhoto];
+     */
 }
 - (void)backButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^() {
@@ -534,6 +565,8 @@
 }
 
 - (void)toggleFiltersButtonPressed:(id)sender {
+    
+    BOOL originalEnabledValue = self.toggleFiltersButton.enabled;
     
     self.toggleFiltersButton.enabled = NO;
     
@@ -552,7 +585,7 @@
             self.filterTableViewContainerView.frame = tempRect;
             self.videoCamera.gpuImageView.frame = tempRectForGPUImageView;
         }completion:^(BOOL finished) {
-            self.toggleFiltersButton.enabled = YES;
+            self.toggleFiltersButton.enabled = originalEnabledValue;
         }];
         
 
@@ -571,7 +604,7 @@
             self.filterTableViewContainerView.frame = tempRect;
             self.videoCamera.gpuImageView.frame = tempRectForGPUImageView;
         }completion:^(BOOL finished) {
-            self.toggleFiltersButton.enabled = YES;
+            self.toggleFiltersButton.enabled = originalEnabledValue;
         }];
         
 

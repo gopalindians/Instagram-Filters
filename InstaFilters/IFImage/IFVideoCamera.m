@@ -36,9 +36,16 @@
 
 @property (nonatomic, strong) AVCaptureStillImageOutput *stillImageOutput;
 
+@property (nonatomic, strong) GPUImageMovieWriter *movieWriter;
+
+@property (nonatomic, unsafe_unretained, readwrite) BOOL isRecordingMovie;
+
 - (void)switchToNewFilter;
 - (void)forceSwitchToNewFilter:(IFFilterType)type;
 
+- (BOOL)canStartRecordingMovie;
+- (void)removeFile:(NSURL *)fileURL;
+- (NSURL *)fileURLForTempMovie;
 @end
 
 @implementation IFVideoCamera
@@ -68,6 +75,61 @@
 @synthesize stillImageOutput;
 
 @synthesize delegate;
+
+@synthesize movieWriter;
+@synthesize isRecordingMovie;
+
+#pragma mark - Movie Writing methods
+- (BOOL)canStartRecordingMovie {
+    
+    if ([self.delegate respondsToSelector:@selector(canIFVideoCameraStartRecordingMovie:)]) {
+        return [self.delegate canIFVideoCameraStartRecordingMovie:self];
+    } else {
+        return NO;
+    }
+}
+- (void)startRecordingMovie {
+    if ([self canStartRecordingMovie] == NO) {
+        return;
+    }
+    if (self.isRecordingMovie == YES) {
+        return;
+    }
+    self.isRecordingMovie = YES;
+    [self removeFile:[self fileURLForTempMovie]];
+    self.movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[self fileURLForTempMovie] size:CGSizeMake(480.0f, 480.0f)];
+    [self.filter addTarget:movieWriter];
+    [self.movieWriter startRecording];
+}
+- (void)stopRecordingMovie {
+    [self.filter removeTarget:self.movieWriter];
+    [self.movieWriter finishRecording];
+    self.isRecordingMovie = NO;
+}
+- (void)removeFile:(NSURL *)fileURL
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *filePath = [fileURL path];
+    if ([fileManager fileExistsAtPath:filePath]) {
+        NSError *error;
+        BOOL success = [fileManager removeItemAtPath:filePath error:&error];
+		if (!success) {
+            NSLog(@" - Remove file failed...");
+        }
+    }
+}
+- (NSURL *)fileURLForTempMovie {
+    static NSURL *tempMoviewURL = nil;
+    
+    @synchronized(self) {
+        if (tempMoviewURL == nil) {
+            tempMoviewURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"temp.m4v"]];
+        }
+    }
+    
+    return tempMoviewURL;
+}
+
 
 #pragma mark - Proper Size For Resizing Large Image
 - (CGSize)properSizeForResizingLargeImage:(UIImage *)originaUIImage {

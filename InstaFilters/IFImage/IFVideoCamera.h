@@ -14,6 +14,7 @@
 
 - (void)IFVideoCameraWillStartCaptureStillImage:(IFVideoCamera *)videoCamera;
 - (void)IFVideoCameraDidFinishCaptureStillImage:(IFVideoCamera *)videoCamera;
+- (BOOL)canIFVideoCameraStartRecordingMovie:(IFVideoCamera *)videoCamera;
 
 @end
 
@@ -23,8 +24,12 @@
 @property (strong, readonly) GPUImageView *gpuImageView_HD;
 @property (nonatomic, strong) UIImage *rawImage;
 @property (nonatomic, unsafe_unretained) id delegate;
+@property (nonatomic, unsafe_unretained, readonly) BOOL isRecordingMovie;
 
 - (void)switchFilter:(IFFilterType)type;
 - (void)cancelAlbumPhotoAndGoBackToNormal;
 - (void)takePhoto;
+- (void)startRecordingMovie;
+- (void)stopRecordingMovie;
+
 @end
