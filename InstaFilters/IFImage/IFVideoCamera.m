@@ -40,12 +40,19 @@
 
 @property (nonatomic, unsafe_unretained, readwrite) BOOL isRecordingMovie;
 
+@property (nonatomic, strong) AVAudioRecorder *soundRecorder;
+
 - (void)switchToNewFilter;
 - (void)forceSwitchToNewFilter:(IFFilterType)type;
 
 - (BOOL)canStartRecordingMovie;
 - (void)removeFile:(NSURL *)fileURL;
 - (NSURL *)fileURLForTempMovie;
+
+- (void)initializeSoundRecorder;
+- (NSURL *)fileURLForTempSound;
+- (void)startRecordingSound;
+- (void)stopRecordingSound;
 @end
 
 @implementation IFVideoCamera
@@ -78,6 +85,64 @@
 
 @synthesize movieWriter;
 @synthesize isRecordingMovie;
+@synthesize soundRecorder;
+
+#pragma mark - Sound Writing methods
+- (void)initializeSoundRecorder {
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    //audioSession.delegate = self;
+    [audioSession setActive: YES error: nil];
+    
+}
+- (NSURL *)fileURLForTempSound {
+    static NSURL *tempSoundURL = nil;
+    
+    @synchronized(self) {
+        if (tempSoundURL == nil) {
+            tempSoundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"tempSound.caf"]];
+        }
+    }
+    
+    return tempSoundURL;
+}
+- (void)startRecordingSound {
+    
+    [self removeFile:[self fileURLForTempSound]];
+    
+    [self initializeSoundRecorder];
+    
+    [[AVAudioSession sharedInstance]
+     setCategory: AVAudioSessionCategoryRecord
+     error: nil];
+    
+    NSDictionary *recordSettings =
+    [[NSDictionary alloc] initWithObjectsAndKeys:
+     [NSNumber numberWithFloat: 44100.0], AVSampleRateKey,
+     [NSNumber numberWithInt: kAudioFormatAppleLossless], AVFormatIDKey,
+     [NSNumber numberWithInt: 1], AVNumberOfChannelsKey,
+     [NSNumber numberWithInt: AVAudioQualityMax],
+     AVEncoderAudioQualityKey,
+     nil];
+    
+    AVAudioRecorder *newRecorder =
+    [[AVAudioRecorder alloc] initWithURL: [self fileURLForTempSound]
+                                settings: recordSettings
+                                   error: nil];
+
+    self.soundRecorder = newRecorder;
+    
+    //soundRecorder.delegate = self;
+    [soundRecorder prepareToRecord];
+    [soundRecorder record];
+
+}
+- (void)stopRecordingSound {
+    [self.soundRecorder stop];
+    self.soundRecorder = nil;
+
+    [[AVAudioSession sharedInstance] setActive: NO error: nil];
+}
 
 #pragma mark - Movie Writing methods
 - (BOOL)canStartRecordingMovie {
@@ -100,10 +165,12 @@
     self.movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[self fileURLForTempMovie] size:CGSizeMake(480.0f, 480.0f)];
     [self.filter addTarget:movieWriter];
     [self.movieWriter startRecording];
+    [self startRecordingSound];
 }
 - (void)stopRecordingMovie {
     [self.filter removeTarget:self.movieWriter];
     [self.movieWriter finishRecording];
+    [self stopRecordingSound];
     self.isRecordingMovie = NO;
 }
 - (void)removeFile:(NSURL *)fileURL
