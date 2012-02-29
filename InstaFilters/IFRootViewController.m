@@ -38,7 +38,8 @@
     self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     self.view.backgroundColor = [UIColor whiteColor];
     self.startButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.startButton.frame = CGRectMake(128, 415, 64, 45);
+    //self.startButton.frame = CGRectMake(128, 415, 64, 45);
+    self.startButton.frame = CGRectMake(128, 250, 64, 45);
     [self.startButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tabBar-camera" ofType:@"png"]] forState:UIControlStateNormal];
     self.startButton.adjustsImageWhenHighlighted = NO;
     [self.startButton addTarget:self action:@selector(startButtonPressed:) forControlEvents:UIControlEventTouchUpInside];

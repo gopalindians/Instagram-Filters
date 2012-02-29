@@ -16,7 +16,7 @@
 #import "IFFiltersViewController.h"
 #import "InstaFilters.h"
 
-@interface IFFiltersViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface IFFiltersViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *transparentBackButton;
@@ -59,6 +59,24 @@
 @synthesize photoAlbumButton;
 @synthesize shootButton;
 @synthesize previewImageView;
+
+#pragma mark - UIImagePicker Delegate methods
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+
+    [self dismissViewControllerAnimated:YES completion:^(){
+        // do something
+    }];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+
+    [self dismissViewControllerAnimated:YES completion:^(){
+
+        [self.videoCamera startCameraCapture];
+        
+    }];
+}
 
 #pragma mark - Filters TableView Delegate & Datasource methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -346,7 +364,15 @@
 
 }
 - (void)photoAlbumButtonPressed:(id)sender {
+    __block UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
+    [self presentViewController:picker animated:YES completion:^(){
+        // do nothing
+        picker = nil;
+    }];
 }
 - (void)shootButtonPressed:(id)sender {
     [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButton" ofType:@"png"]] forState:UIControlStateNormal];
