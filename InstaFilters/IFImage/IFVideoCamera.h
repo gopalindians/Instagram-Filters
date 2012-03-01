@@ -14,6 +14,7 @@
 
 - (void)IFVideoCameraWillStartCaptureStillImage:(IFVideoCamera *)videoCamera;
 - (void)IFVideoCameraDidFinishCaptureStillImage:(IFVideoCamera *)videoCamera;
+- (void)IFVideoCameraDidSaveStillImage:(IFVideoCamera *)videoCamera;
 - (BOOL)canIFVideoCameraStartRecordingMovie:(IFVideoCamera *)videoCamera;
 - (void)IFVideoCameraWillStartProcessingMovie:(IFVideoCamera *)videoCamera;
 - (void)IFVideoCameraDidFinishProcessingMovie:(IFVideoCamera *)videoCamera;
@@ -33,5 +34,6 @@
 - (void)takePhoto;
 - (void)startRecordingMovie;
 - (void)stopRecordingMovie;
+- (void)saveCurrentStillImage;
 
 @end

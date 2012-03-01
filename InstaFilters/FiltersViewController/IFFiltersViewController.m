@@ -86,6 +86,13 @@
     [self.cancelAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraReject" ofType:@"png"]] forState:UIControlStateNormal];
     [self.confirmAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraAccept" ofType:@"png"]] forState:UIControlStateNormal];
 }
+- (void)IFVideoCameraDidSaveStillImage:(IFVideoCamera *)videoCamera {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Saved" message:@"Your image was saved in Camera Roll." delegate:nil cancelButtonTitle:@"Sweet" otherButtonTitles:nil];
+    [alertView show];
+    
+    [self cancelAlbumPhotoButtonPressed:nil];
+}
+
 - (BOOL)canIFVideoCameraStartRecordingMovie:(IFVideoCamera *)videoCamera {
     if (shootButton.hidden == YES) {
         return NO;
@@ -544,7 +551,7 @@
     [self.videoCamera cancelAlbumPhotoAndGoBackToNormal];
 }
 - (void)confirmAlbumPhotoButtonPressed:(id)sender {
-    
+    [self.videoCamera saveCurrentStillImage];
 }
 
 - (void)shootButtonTouched:(id)sender {

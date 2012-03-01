@@ -55,9 +55,10 @@
 - (void)combineSoundAndMovie;
 - (NSURL *)fileURLForFinalMixedAsset;
 
-- (void) focusAndLockAtPoint:(CGPoint)point;
-- (void) focusAndAutoContinuousFocusAtPoint:(CGPoint)point;
-- (void) video: (NSString *) videoPath didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo;
+- (void)focusAndLockAtPoint:(CGPoint)point;
+- (void)focusAndAutoContinuousFocusAtPoint:(CGPoint)point;
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
 @end
 
 @implementation IFVideoCamera
@@ -93,6 +94,16 @@
 @synthesize soundRecorder;
 @synthesize mutableComposition;
 @synthesize assetExportSession;
+
+#pragma mark - Save current image
+- (void)saveCurrentStillImage {
+    if (self.rawImage == nil) {
+        return;
+    }
+    // If without the rorating 0 degree action, the image will be left hand 90 degrees rorated.
+    UIImageWriteToSavedPhotosAlbum([[self.filter imageFromCurrentlyProcessedOutput] imageRotatedByDegrees:0], self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
 
 #pragma mark - Focus
 // Switch to continuous auto focus mode at the specified point
@@ -235,8 +246,8 @@
 
 }
 
-#pragma mark - Movie did saved
-- (void) video: (NSString *) videoPath didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo {
+#pragma mark - Movie & image did saved callback
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *) error contextInfo:(void *) contextInfo {
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Saved" message:@"The video was saved in Camera Roll." delegate:nil cancelButtonTitle:@"Sweet" otherButtonTitles:nil];
     [alertView show];
@@ -245,6 +256,11 @@
     }
     [self startCameraCapture];
     [self focusAndAutoContinuousFocusAtPoint:CGPointMake(.5f, .5f)];
+}
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if ([self.delegate respondsToSelector:@selector(IFVideoCameraDidSaveStillImage:)]) {
+        [self.delegate IFVideoCameraDidSaveStillImage:self];
+    }
 }
 
 
