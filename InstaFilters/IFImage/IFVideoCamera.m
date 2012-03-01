@@ -33,14 +33,13 @@
 @property (nonatomic, unsafe_unretained) dispatch_queue_t prepareFilterQueue;
 
 @property (nonatomic, strong) GPUImagePicture *stillImageSource;
-
 @property (nonatomic, strong) AVCaptureStillImageOutput *stillImageOutput;
 
 @property (nonatomic, strong) GPUImageMovieWriter *movieWriter;
-
 @property (nonatomic, unsafe_unretained, readwrite) BOOL isRecordingMovie;
-
 @property (nonatomic, strong) AVAudioRecorder *soundRecorder;
+@property (nonatomic, strong) AVMutableComposition *mutableComposition;
+@property (nonatomic, strong) AVAssetExportSession *assetExportSession;
 
 - (void)switchToNewFilter;
 - (void)forceSwitchToNewFilter:(IFFilterType)type;
@@ -48,11 +47,14 @@
 - (BOOL)canStartRecordingMovie;
 - (void)removeFile:(NSURL *)fileURL;
 - (NSURL *)fileURLForTempMovie;
-
 - (void)initializeSoundRecorder;
 - (NSURL *)fileURLForTempSound;
 - (void)startRecordingSound;
+- (void)prepareToRecordSound;
 - (void)stopRecordingSound;
+- (void)combineSoundAndMovie;
+- (NSURL *)fileURLForFinalMixedAsset;
+
 @end
 
 @implementation IFVideoCamera
@@ -86,6 +88,87 @@
 @synthesize movieWriter;
 @synthesize isRecordingMovie;
 @synthesize soundRecorder;
+@synthesize mutableComposition;
+@synthesize assetExportSession;
+
+#pragma mark - Mixed sound and movie asset url
+- (NSURL *)fileURLForFinalMixedAsset {
+    static NSURL *tempMixedAssetURL = nil;
+
+    @synchronized(self) {
+        if (tempMixedAssetURL == nil) {
+            tempMixedAssetURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"tempMix.m4v"]];
+        }
+    }
+    
+    return tempMixedAssetURL;
+}
+
+
+#pragma mark - Combine sound and movie
+- (void)combineSoundAndMovie {
+    self.mutableComposition = [AVMutableComposition composition];
+    
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], AVURLAssetPreferPreciseDurationAndTimingKey, nil];
+    
+    AVURLAsset *movieURLAsset = [[AVURLAsset alloc] initWithURL:[self fileURLForTempMovie] options:options];
+    AVURLAsset *soundURLAsset = [[AVURLAsset alloc] initWithURL:[self fileURLForTempSound] options:options];
+    
+    NSError *soundError = nil;
+    AVMutableCompositionTrack *soundTrack = [self.mutableComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
+    BOOL soundResult = [soundTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, soundURLAsset.duration) ofTrack:[[soundURLAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0] atTime:kCMTimeZero error:&soundError];
+    
+    if (soundError != nil) {
+        NSLog(@" - sound track error...");
+    }
+    
+    if (soundResult == NO) {
+        NSLog(@" - sound result = NO...");
+    }
+    
+    NSError *movieError = nil;
+    AVMutableCompositionTrack *movieTrack = [self.mutableComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+    BOOL movieResult = [movieTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, movieURLAsset.duration) ofTrack:[[movieURLAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:kCMTimeZero error:&movieError];
+    
+    if (movieError != nil) {
+        NSLog(@" - movie track error...");
+    }
+    
+    if (movieResult == NO) {
+        NSLog(@" - movie result = NO...");
+    }
+
+    self.assetExportSession = [[AVAssetExportSession alloc] initWithAsset:self.mutableComposition presetName:AVAssetExportPresetPassthrough];
+    
+    [self removeFile:[self fileURLForFinalMixedAsset]];
+
+    self.assetExportSession.outputURL = [self fileURLForFinalMixedAsset];
+    self.assetExportSession.outputFileType = AVFileTypeAppleM4V;
+        
+    [self.assetExportSession exportAsynchronouslyWithCompletionHandler:^{
+        
+        switch (self.assetExportSession.status) {
+            case AVAssetExportSessionStatusFailed: {
+                NSLog(@" - Export failed...");
+                break;
+            }
+            case AVAssetExportSessionStatusCompleted: {
+                NSLog(@" - Expoart successed...");
+                NSString *path = [NSString stringWithString:[self.assetExportSession.outputURL path]];
+                if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (path)) {
+                    UISaveVideoAtPathToSavedPhotosAlbum (path, nil, nil, nil);
+                }
+                
+                break;
+            }
+            default: {
+                break;
+            }
+        };
+    }];
+
+}
+
 
 #pragma mark - Sound Writing methods
 - (void)initializeSoundRecorder {
@@ -107,7 +190,11 @@
     return tempSoundURL;
 }
 - (void)startRecordingSound {
-    
+
+    [soundRecorder record];
+
+}
+- (void)prepareToRecordSound {
     [self removeFile:[self fileURLForTempSound]];
     
     [self initializeSoundRecorder];
@@ -129,19 +216,20 @@
     [[AVAudioRecorder alloc] initWithURL: [self fileURLForTempSound]
                                 settings: recordSettings
                                    error: nil];
-
+    
     self.soundRecorder = newRecorder;
     
     //soundRecorder.delegate = self;
     [soundRecorder prepareToRecord];
-    [soundRecorder record];
-
 }
+
 - (void)stopRecordingSound {
     [self.soundRecorder stop];
     self.soundRecorder = nil;
 
     [[AVAudioSession sharedInstance] setActive: NO error: nil];
+    
+    [self combineSoundAndMovie];
 }
 
 #pragma mark - Movie Writing methods
@@ -164,6 +252,7 @@
     [self removeFile:[self fileURLForTempMovie]];
     self.movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[self fileURLForTempMovie] size:CGSizeMake(480.0f, 480.0f)];
     [self.filter addTarget:movieWriter];
+    [self prepareToRecordSound];
     [self.movieWriter startRecording];
     [self startRecordingSound];
 }
