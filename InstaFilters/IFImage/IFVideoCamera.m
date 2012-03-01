@@ -55,6 +55,9 @@
 - (void)combineSoundAndMovie;
 - (NSURL *)fileURLForFinalMixedAsset;
 
+- (void) focusAndLockAtPoint:(CGPoint)point;
+- (void) focusAndAutoContinuousFocusAtPoint:(CGPoint)point;
+
 @end
 
 @implementation IFVideoCamera
@@ -90,6 +93,59 @@
 @synthesize soundRecorder;
 @synthesize mutableComposition;
 @synthesize assetExportSession;
+
+#pragma mark - Focus
+// Switch to continuous auto focus mode at the specified point
+- (void) focusAndLockAtPoint:(CGPoint)point
+{
+    AVCaptureDevice *device = nil;
+    for (AVCaptureInput *anInput in self.captureSession.inputs) {
+        if ([anInput isKindOfClass:[AVCaptureDeviceInput class]]) {
+            device = [((AVCaptureDeviceInput *)anInput) device];
+            break;
+        }
+    }
+    
+    if (device == nil) {
+        return;
+    }
+	
+    if ([device isFocusPointOfInterestSupported] && [device isFocusModeSupported:AVCaptureFocusModeContinuousAutoFocus]) {
+		NSError *error;
+		if ([device lockForConfiguration:&error]) {
+			[device setFocusPointOfInterest:point];
+			[device setFocusMode:AVCaptureFocusModeLocked];
+			[device unlockForConfiguration];
+		} else {
+			// do nothing here...
+		}
+	}
+}
+- (void) focusAndAutoContinuousFocusAtPoint:(CGPoint)point {
+    AVCaptureDevice *device = nil;
+    for (AVCaptureInput *anInput in self.captureSession.inputs) {
+        if ([anInput isKindOfClass:[AVCaptureDeviceInput class]]) {
+            device = [((AVCaptureDeviceInput *)anInput) device];
+            break;
+        }
+    }
+    
+    if (device == nil) {
+        return;
+    }
+	
+    if ([device isFocusPointOfInterestSupported] && [device isFocusModeSupported:AVCaptureFocusModeContinuousAutoFocus]) {
+		NSError *error;
+		if ([device lockForConfiguration:&error]) {
+			[device setFocusPointOfInterest:point];
+			[device setFocusMode:AVCaptureFocusModeContinuousAutoFocus];
+			[device unlockForConfiguration];
+		} else {
+			// do nothing here...
+		}
+	}
+}
+
 
 #pragma mark - Mixed sound and movie asset url
 - (NSURL *)fileURLForFinalMixedAsset {
@@ -249,6 +305,7 @@
         return;
     }
     self.isRecordingMovie = YES;
+    [self focusAndLockAtPoint:CGPointMake(.5f, .5f)];
     [self removeFile:[self fileURLForTempMovie]];
     self.movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[self fileURLForTempMovie] size:CGSizeMake(480.0f, 480.0f)];
     [self.filter addTarget:movieWriter];
@@ -261,6 +318,7 @@
     [self.movieWriter finishRecording];
     [self stopRecordingSound];
     self.isRecordingMovie = NO;
+    [self focusAndAutoContinuousFocusAtPoint:CGPointMake(.5f, .5f)];
 }
 - (void)removeFile:(NSURL *)fileURL
 {
