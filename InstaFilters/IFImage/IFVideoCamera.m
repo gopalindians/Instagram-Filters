@@ -220,7 +220,7 @@
                 break;
             }
             case AVAssetExportSessionStatusCompleted: {
-                NSLog(@" - Export successed...");
+                NSLog(@" - Export ok...");
                 NSString *path = [NSString stringWithString:[self.assetExportSession.outputURL path]];
                 if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (path)) {
                     UISaveVideoAtPathToSavedPhotosAlbum (path, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
