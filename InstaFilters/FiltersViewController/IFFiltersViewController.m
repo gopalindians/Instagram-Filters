@@ -95,7 +95,18 @@
         return YES;
     }
 }
+- (void)IFVideoCameraWillStartProcessingMovie:(IFVideoCamera *)videoCamera {
+    NSLog(@" - 1 -");
+    [self.shootButton setTitle:@"Processing" forState:UIControlStateNormal];
+    self.shootButton.enabled = NO;
+}
+- (void)IFVideoCameraDidFinishProcessingMovie:(IFVideoCamera *)videoCamera {
+    NSLog(@" - 2 -");
 
+    self.shootButton.enabled = YES;
+    [self.shootButton setTitle:@"Record" forState:UIControlStateNormal];
+
+}
 
 #pragma mark - Process Album Photo from Image Pick
 - (UIImage *)processAlbumPhoto:(NSDictionary *)info {
@@ -421,12 +432,14 @@
     self.toggleFiltersButton.showsTouchWhenHighlighted = YES;
     [self.toggleFiltersButton addTarget:self action:@selector(toggleFiltersButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.photoAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.photoAlbumButton.frame = CGRectMake(10, 433, 40, 40);
-    [self.photoAlbumButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraLibrary" ofType:@"png"]] forState:UIControlStateNormal];
-    self.photoAlbumButton.adjustsImageWhenHighlighted = NO;
-    self.photoAlbumButton.showsTouchWhenHighlighted = YES;
-    [self.photoAlbumButton addTarget:self action:@selector(photoAlbumButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    if (self.isInVideoRecorderMode == NO) {
+        self.photoAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.photoAlbumButton.frame = CGRectMake(10, 433, 40, 40);
+        [self.photoAlbumButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraLibrary" ofType:@"png"]] forState:UIControlStateNormal];
+        self.photoAlbumButton.adjustsImageWhenHighlighted = NO;
+        self.photoAlbumButton.showsTouchWhenHighlighted = YES;
+        [self.photoAlbumButton addTarget:self action:@selector(photoAlbumButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    }
     
     if (self.isInVideoRecorderMode == NO) {
         self.shootButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -574,8 +587,6 @@
             self.toggleFiltersButton.enabled = YES;
             self.filtersTableView.userInteractionEnabled = YES;
             
-            [self.shootButton setTitle:@"Record" forState:UIControlStateNormal];
-
         }
     } else {
          [self.shootButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraCaptureButton" ofType:@"png"]] forState:UIControlStateNormal];
@@ -585,6 +596,11 @@
 
 }
 - (void)backButtonPressed:(id)sender {
+    
+    if (self.videoCamera.isRecordingMovie == YES) {
+        return;
+    }
+    
     [self dismissViewControllerAnimated:YES completion:^() {
         // do nothing
     }];
@@ -643,6 +659,11 @@
     //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
 }
 - (void)viewWillDisappear:(BOOL)animated {
+    
+    if ([self.videoCamera isRecordingMovie] == YES) {
+        [self.videoCamera stopRecordingMovie];
+    }
+    
     [self.videoCamera stopCameraCapture];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }

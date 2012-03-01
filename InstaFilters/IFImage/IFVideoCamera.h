@@ -15,7 +15,8 @@
 - (void)IFVideoCameraWillStartCaptureStillImage:(IFVideoCamera *)videoCamera;
 - (void)IFVideoCameraDidFinishCaptureStillImage:(IFVideoCamera *)videoCamera;
 - (BOOL)canIFVideoCameraStartRecordingMovie:(IFVideoCamera *)videoCamera;
-
+- (void)IFVideoCameraWillStartProcessingMovie:(IFVideoCamera *)videoCamera;
+- (void)IFVideoCameraDidFinishProcessingMovie:(IFVideoCamera *)videoCamera;
 @end
 
 @interface IFVideoCamera : GPUImageVideoCamera

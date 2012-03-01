@@ -57,7 +57,7 @@
 
 - (void) focusAndLockAtPoint:(CGPoint)point;
 - (void) focusAndAutoContinuousFocusAtPoint:(CGPoint)point;
-
+- (void) video: (NSString *) videoPath didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo;
 @end
 
 @implementation IFVideoCamera
@@ -209,20 +209,42 @@
                 break;
             }
             case AVAssetExportSessionStatusCompleted: {
-                NSLog(@" - Expoart successed...");
+                NSLog(@" - Export successed...");
                 NSString *path = [NSString stringWithString:[self.assetExportSession.outputURL path]];
                 if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (path)) {
-                    UISaveVideoAtPathToSavedPhotosAlbum (path, nil, nil, nil);
+                    UISaveVideoAtPathToSavedPhotosAlbum (path, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
+
+                } else {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"Was trying to save the movie but failed." delegate:nil cancelButtonTitle:@"Oh ok" otherButtonTitles:nil];
+                    [alertView show];
+                    if ([self.delegate respondsToSelector:@selector(IFVideoCameraDidFinishProcessingMovie:)]) {
+                        [self.delegate IFVideoCameraDidFinishProcessingMovie:self];
+                    }
+                    [self startCameraCapture];
+                    [self focusAndAutoContinuousFocusAtPoint:CGPointMake(.5f, .5f)];
                 }
-                
+
                 break;
             }
             default: {
                 break;
             }
         };
+
     }];
 
+}
+
+#pragma mark - Movie did saved
+- (void) video: (NSString *) videoPath didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo {
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Saved" message:@"The video was saved in Camera Roll." delegate:nil cancelButtonTitle:@"Sweet" otherButtonTitles:nil];
+    [alertView show];
+    if ([self.delegate respondsToSelector:@selector(IFVideoCameraDidFinishProcessingMovie:)]) {
+        [self.delegate IFVideoCameraDidFinishProcessingMovie:self];
+    }
+    [self startCameraCapture];
+    [self focusAndAutoContinuousFocusAtPoint:CGPointMake(.5f, .5f)];
 }
 
 
@@ -313,12 +335,15 @@
     [self startRecordingSound];
 }
 - (void)stopRecordingMovie {
+    if ([self.delegate respondsToSelector:@selector(IFVideoCameraWillStartProcessingMovie:)]) {
+        [self.delegate IFVideoCameraWillStartProcessingMovie:self];
+    }
     [self.filter removeTarget:self.movieWriter];
     [self.movieWriter finishRecording];
     [self stopRecordingSound];
+    [self stopCameraCapture];
     [self combineSoundAndMovie];
     self.isRecordingMovie = NO;
-    [self focusAndAutoContinuousFocusAtPoint:CGPointMake(.5f, .5f)];
 }
 - (void)removeFile:(NSURL *)fileURL
 {
