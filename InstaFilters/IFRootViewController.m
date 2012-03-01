@@ -200,7 +200,7 @@
         [alertView show];
     } else {
         TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
-        [tweetViewController setInitialText:@"Instagram filters hacked and open sourced. Supports both photo and video. https://github.com/diwu/InstaFilters"];
+        [tweetViewController setInitialText:@"Instagram filters hacked and open sourced. Supports both photo and video. via @diwup https://github.com/diwu/InstaFilters"];
         
         [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
             // do nothing
