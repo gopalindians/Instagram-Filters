@@ -285,7 +285,6 @@
 
     [[AVAudioSession sharedInstance] setActive: NO error: nil];
     
-    [self combineSoundAndMovie];
 }
 
 #pragma mark - Movie Writing methods
@@ -317,6 +316,7 @@
     [self.filter removeTarget:self.movieWriter];
     [self.movieWriter finishRecording];
     [self stopRecordingSound];
+    [self combineSoundAndMovie];
     self.isRecordingMovie = NO;
     [self focusAndAutoContinuousFocusAtPoint:CGPointMake(.5f, .5f)];
 }
