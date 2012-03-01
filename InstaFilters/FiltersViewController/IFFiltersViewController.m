@@ -600,7 +600,7 @@
         if (self.videoCamera.isRecordingMovie == NO) {
             NSLog(@" - starts...");
             
-            [self.shootButton setTitle:@"ing..." forState:UIControlStateNormal];
+            [self.shootButton setTitle:@"STOP" forState:UIControlStateNormal];
             
             self.toggleFiltersButton.enabled = NO;
             self.filtersTableView.userInteractionEnabled = NO;
