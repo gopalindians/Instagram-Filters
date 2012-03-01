@@ -10,4 +10,7 @@
 
 @interface IFFiltersViewController : UIViewController
 
+@property (nonatomic, unsafe_unretained) BOOL shouldLaunchAsAVideoRecorder;
+@property (nonatomic, unsafe_unretained) BOOL shouldLaunchAshighQualityVideo;
+
 @end

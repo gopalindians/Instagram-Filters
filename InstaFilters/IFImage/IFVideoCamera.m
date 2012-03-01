@@ -881,7 +881,7 @@
 
 
 #pragma mark - init
-- (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition {
+- (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition highVideoQuality:(BOOL)isHighQuality {
 	if (!(self = [super initWithSessionPreset:sessionPreset cameraPosition:cameraPosition]))
     {
 		return nil;
@@ -903,7 +903,11 @@
     [rotationFilter addTarget:filter];
     
     gpuImageView = [[GPUImageView alloc] initWithFrame:CGRectMake(0, 45, 320, 320)];
-    gpuImageView.layer.contentsScale = 1.0f;
+    if (isHighQuality == YES) {
+        gpuImageView.layer.contentsScale = 2.0f;
+    } else {
+        gpuImageView.layer.contentsScale = 1.0f;
+    }
     [filter addTarget:gpuImageView];
 
     gpuImageView_HD = [[GPUImageView alloc] initWithFrame:[gpuImageView bounds]];

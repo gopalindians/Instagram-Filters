@@ -26,6 +26,7 @@
 @property (nonatomic, unsafe_unretained) id delegate;
 @property (nonatomic, unsafe_unretained, readonly) BOOL isRecordingMovie;
 
+- (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition highVideoQuality:(BOOL)isHighQuality;
 - (void)switchFilter:(IFFilterType)type;
 - (void)cancelAlbumPhotoAndGoBackToNormal;
 - (void)takePhoto;
