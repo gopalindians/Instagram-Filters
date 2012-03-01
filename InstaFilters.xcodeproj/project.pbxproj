@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		500521BF14FF99090039FAC1 /* sierraVignette.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521BD14FF99090039FAC1 /* sierraVignette.png */; };
 		500521C614FF9AE20039FAC1 /* sierraMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521C514FF9AE20039FAC1 /* sierraMap.png */; };
+		500521CA14FFC4440039FAC1 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500521C914FFC4430039FAC1 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		500521D014FFCB710039FAC1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500521CF14FFCB700039FAC1 /* MessageUI.framework */; };
 		5009A26214FC6861005E7073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A26114FC6861005E7073 /* UIKit.framework */; };
 		5009A26414FC6861005E7073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A26314FC6861005E7073 /* Foundation.framework */; };
 		5009A26614FC6861005E7073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A26514FC6861005E7073 /* CoreGraphics.framework */; };
@@ -170,6 +172,8 @@
 /* Begin PBXFileReference section */
 		500521BD14FF99090039FAC1 /* sierraVignette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sierraVignette.png; sourceTree = "<group>"; };
 		500521C514FF9AE20039FAC1 /* sierraMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sierraMap.png; sourceTree = "<group>"; };
+		500521C914FFC4430039FAC1 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		500521CF14FFCB700039FAC1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5009A25D14FC6861005E7073 /* InstaFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5009A26114FC6861005E7073 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5009A26314FC6861005E7073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -374,6 +378,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500521D014FFCB710039FAC1 /* MessageUI.framework in Frameworks */,
+				500521CA14FFC4440039FAC1 /* Twitter.framework in Frameworks */,
 				5009A28114FC6A65005E7073 /* QuartzCore.framework in Frameworks */,
 				5009A27F14FC6A4C005E7073 /* AVFoundation.framework in Frameworks */,
 				5009A27D14FC6A36005E7073 /* OpenGLES.framework in Frameworks */,
@@ -391,6 +397,8 @@
 		5009A25214FC6861005E7073 = {
 			isa = PBXGroup;
 			children = (
+				500521CF14FFCB700039FAC1 /* MessageUI.framework */,
+				500521C914FFC4430039FAC1 /* Twitter.framework */,
 				5009A26714FC6861005E7073 /* InstaFilters */,
 				5009A26014FC6861005E7073 /* Frameworks */,
 				5009A25E14FC6861005E7073 /* Products */,
