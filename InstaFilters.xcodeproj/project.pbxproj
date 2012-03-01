@@ -7,10 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500521BF14FF99090039FAC1 /* sierraVignette.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521BD14FF99090039FAC1 /* sierraVignette.png */; };
-		500521C614FF9AE20039FAC1 /* sierraMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521C514FF9AE20039FAC1 /* sierraMap.png */; };
 		500521CA14FFC4440039FAC1 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500521C914FFC4430039FAC1 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		500521D014FFCB710039FAC1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500521CF14FFCB700039FAC1 /* MessageUI.framework */; };
+		500521D3150006A30039FAC1 /* sierraMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521D1150006A00039FAC1 /* sierraMap.png */; };
+		500521D4150006A30039FAC1 /* sierraVignette.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521D2150006A20039FAC1 /* sierraVignette.png */; };
+		500521E7150006D70039FAC1 /* glCameraAccept.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521D5150006D70039FAC1 /* glCameraAccept.png */; };
+		500521E8150006D70039FAC1 /* glCameraAccept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521D6150006D70039FAC1 /* glCameraAccept@2x.png */; };
+		500521E9150006D70039FAC1 /* glCameraAcceptDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521D7150006D70039FAC1 /* glCameraAcceptDisabled.png */; };
+		500521EA150006D70039FAC1 /* glCameraAcceptDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521D8150006D70039FAC1 /* glCameraAcceptDisabled@2x.png */; };
+		500521EB150006D70039FAC1 /* glCameraCaptureButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521D9150006D70039FAC1 /* glCameraCaptureButton.png */; };
+		500521EC150006D70039FAC1 /* glCameraCaptureButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521DA150006D70039FAC1 /* glCameraCaptureButton@2x.png */; };
+		500521ED150006D70039FAC1 /* glCameraCaptureButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521DB150006D70039FAC1 /* glCameraCaptureButtonPressed.png */; };
+		500521EE150006D70039FAC1 /* glCameraCaptureButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521DC150006D70039FAC1 /* glCameraCaptureButtonPressed@2x.png */; };
+		500521EF150006D70039FAC1 /* glCameraLibrary.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521DD150006D70039FAC1 /* glCameraLibrary.png */; };
+		500521F0150006D70039FAC1 /* glCameraLibrary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521DE150006D70039FAC1 /* glCameraLibrary@2x.png */; };
+		500521F1150006D70039FAC1 /* glCameraReject.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521DF150006D70039FAC1 /* glCameraReject.png */; };
+		500521F2150006D70039FAC1 /* glCameraReject@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521E0150006D70039FAC1 /* glCameraReject@2x.png */; };
+		500521F3150006D70039FAC1 /* glCameraRejectDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521E1150006D70039FAC1 /* glCameraRejectDisabled.png */; };
+		500521F4150006D70039FAC1 /* glCameraRejectDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521E2150006D70039FAC1 /* glCameraRejectDisabled@2x.png */; };
+		500521F5150006D70039FAC1 /* tabBar-camera-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521E3150006D70039FAC1 /* tabBar-camera-on.png */; };
+		500521F6150006D70039FAC1 /* tabBar-camera-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521E4150006D70039FAC1 /* tabBar-camera-on@2x.png */; };
+		500521F7150006D70039FAC1 /* tabBar-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521E5150006D70039FAC1 /* tabBar-camera.png */; };
+		500521F8150006D70039FAC1 /* tabBar-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500521E6150006D70039FAC1 /* tabBar-camera@2x.png */; };
 		5009A26214FC6861005E7073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A26114FC6861005E7073 /* UIKit.framework */; };
 		5009A26414FC6861005E7073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A26314FC6861005E7073 /* Foundation.framework */; };
 		5009A26614FC6861005E7073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A26514FC6861005E7073 /* CoreGraphics.framework */; };
@@ -23,14 +41,6 @@
 		5009A27F14FC6A4C005E7073 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A27E14FC6A4C005E7073 /* AVFoundation.framework */; };
 		5009A28114FC6A65005E7073 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5009A28014FC6A65005E7073 /* QuartzCore.framework */; };
 		5060FDAE14FDF4EF0018587E /* UIImage+IF.m in Sources */ = {isa = PBXBuildFile; fileRef = 5060FDAD14FDF4EF0018587E /* UIImage+IF.m */; };
-		5060FDB114FE0F500018587E /* glCameraReject.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDAF14FE0F500018587E /* glCameraReject.png */; };
-		5060FDB214FE0F500018587E /* glCameraReject@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDB014FE0F500018587E /* glCameraReject@2x.png */; };
-		5060FDB514FE0F660018587E /* glCameraAccept.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDB314FE0F660018587E /* glCameraAccept.png */; };
-		5060FDB614FE0F660018587E /* glCameraAccept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5060FDB414FE0F660018587E /* glCameraAccept@2x.png */; };
-		5073FC6214FE5DA900D0C1F2 /* glCameraAcceptDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 5073FC6014FE5DA900D0C1F2 /* glCameraAcceptDisabled.png */; };
-		5073FC6314FE5DA900D0C1F2 /* glCameraAcceptDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5073FC6114FE5DA900D0C1F2 /* glCameraAcceptDisabled@2x.png */; };
-		5073FC6714FE5DC000D0C1F2 /* glCameraRejectDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 5073FC6514FE5DC000D0C1F2 /* glCameraRejectDisabled.png */; };
-		5073FC6814FE5DC000D0C1F2 /* glCameraRejectDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5073FC6614FE5DC000D0C1F2 /* glCameraRejectDisabled@2x.png */; };
 		5073FC7514FE69EC00D0C1F2 /* GPUImageMovieWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5073FC7414FE69EC00D0C1F2 /* GPUImageMovieWriter.m */; };
 		509485B514FC6C95007B42FF /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094857B14FC6C95007B42FF /* GLProgram.m */; };
 		509485BC14FC6C95007B42FF /* GPUImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5094858A14FC6C95007B42FF /* GPUImageFilter.m */; };
@@ -157,23 +167,31 @@
 		509487C214FD2929007B42FF /* vignetteMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094879914FD2929007B42FF /* vignetteMap.png */; };
 		509487C314FD2929007B42FF /* waldenMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094879A14FD2929007B42FF /* waldenMap.png */; };
 		509487C414FD2929007B42FF /* xproMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5094879B14FD2929007B42FF /* xproMap.png */; };
-		509487C914FD2D08007B42FF /* tabBar-camera-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C514FD2D08007B42FF /* tabBar-camera-on.png */; };
-		509487CA14FD2D08007B42FF /* tabBar-camera-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */; };
-		509487CB14FD2D08007B42FF /* tabBar-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C714FD2D08007B42FF /* tabBar-camera.png */; };
-		509487CC14FD2D08007B42FF /* tabBar-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487C814FD2D08007B42FF /* tabBar-camera@2x.png */; };
-		509487CF14FD3768007B42FF /* glCameraLibrary.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487CD14FD3768007B42FF /* glCameraLibrary.png */; };
-		509487D014FD3768007B42FF /* glCameraLibrary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487CE14FD3768007B42FF /* glCameraLibrary@2x.png */; };
-		509487D514FD37AB007B42FF /* glCameraCaptureButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D114FD37AA007B42FF /* glCameraCaptureButton.png */; };
-		509487D614FD37AB007B42FF /* glCameraCaptureButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D214FD37AA007B42FF /* glCameraCaptureButton@2x.png */; };
-		509487D714FD37AB007B42FF /* glCameraCaptureButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D314FD37AA007B42FF /* glCameraCaptureButtonPressed.png */; };
-		509487D814FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 509487D414FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		500521BD14FF99090039FAC1 /* sierraVignette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sierraVignette.png; sourceTree = "<group>"; };
-		500521C514FF9AE20039FAC1 /* sierraMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sierraMap.png; sourceTree = "<group>"; };
 		500521C914FFC4430039FAC1 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		500521CF14FFCB700039FAC1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		500521D1150006A00039FAC1 /* sierraMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sierraMap.png; path = Resources_for_IF_Filters/sierraMap.png; sourceTree = "<group>"; };
+		500521D2150006A20039FAC1 /* sierraVignette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sierraVignette.png; path = Resources_for_IF_Filters/sierraVignette.png; sourceTree = "<group>"; };
+		500521D5150006D70039FAC1 /* glCameraAccept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraAccept.png; path = Resources_for_FiltersViewController/glCameraAccept.png; sourceTree = "<group>"; };
+		500521D6150006D70039FAC1 /* glCameraAccept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraAccept@2x.png"; path = "Resources_for_FiltersViewController/glCameraAccept@2x.png"; sourceTree = "<group>"; };
+		500521D7150006D70039FAC1 /* glCameraAcceptDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraAcceptDisabled.png; path = Resources_for_FiltersViewController/glCameraAcceptDisabled.png; sourceTree = "<group>"; };
+		500521D8150006D70039FAC1 /* glCameraAcceptDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraAcceptDisabled@2x.png"; path = "Resources_for_FiltersViewController/glCameraAcceptDisabled@2x.png"; sourceTree = "<group>"; };
+		500521D9150006D70039FAC1 /* glCameraCaptureButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraCaptureButton.png; path = Resources_for_FiltersViewController/glCameraCaptureButton.png; sourceTree = "<group>"; };
+		500521DA150006D70039FAC1 /* glCameraCaptureButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraCaptureButton@2x.png"; path = "Resources_for_FiltersViewController/glCameraCaptureButton@2x.png"; sourceTree = "<group>"; };
+		500521DB150006D70039FAC1 /* glCameraCaptureButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraCaptureButtonPressed.png; path = Resources_for_FiltersViewController/glCameraCaptureButtonPressed.png; sourceTree = "<group>"; };
+		500521DC150006D70039FAC1 /* glCameraCaptureButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraCaptureButtonPressed@2x.png"; path = "Resources_for_FiltersViewController/glCameraCaptureButtonPressed@2x.png"; sourceTree = "<group>"; };
+		500521DD150006D70039FAC1 /* glCameraLibrary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraLibrary.png; path = Resources_for_FiltersViewController/glCameraLibrary.png; sourceTree = "<group>"; };
+		500521DE150006D70039FAC1 /* glCameraLibrary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraLibrary@2x.png"; path = "Resources_for_FiltersViewController/glCameraLibrary@2x.png"; sourceTree = "<group>"; };
+		500521DF150006D70039FAC1 /* glCameraReject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraReject.png; path = Resources_for_FiltersViewController/glCameraReject.png; sourceTree = "<group>"; };
+		500521E0150006D70039FAC1 /* glCameraReject@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraReject@2x.png"; path = "Resources_for_FiltersViewController/glCameraReject@2x.png"; sourceTree = "<group>"; };
+		500521E1150006D70039FAC1 /* glCameraRejectDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glCameraRejectDisabled.png; path = Resources_for_FiltersViewController/glCameraRejectDisabled.png; sourceTree = "<group>"; };
+		500521E2150006D70039FAC1 /* glCameraRejectDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "glCameraRejectDisabled@2x.png"; path = "Resources_for_FiltersViewController/glCameraRejectDisabled@2x.png"; sourceTree = "<group>"; };
+		500521E3150006D70039FAC1 /* tabBar-camera-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabBar-camera-on.png"; path = "Resources_for_FiltersViewController/tabBar-camera-on.png"; sourceTree = "<group>"; };
+		500521E4150006D70039FAC1 /* tabBar-camera-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabBar-camera-on@2x.png"; path = "Resources_for_FiltersViewController/tabBar-camera-on@2x.png"; sourceTree = "<group>"; };
+		500521E5150006D70039FAC1 /* tabBar-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabBar-camera.png"; path = "Resources_for_FiltersViewController/tabBar-camera.png"; sourceTree = "<group>"; };
+		500521E6150006D70039FAC1 /* tabBar-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabBar-camera@2x.png"; path = "Resources_for_FiltersViewController/tabBar-camera@2x.png"; sourceTree = "<group>"; };
 		5009A25D14FC6861005E7073 /* InstaFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5009A26114FC6861005E7073 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5009A26314FC6861005E7073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -191,14 +209,6 @@
 		5009A28014FC6A65005E7073 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5060FDAC14FDF4EF0018587E /* UIImage+IF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+IF.h"; path = "UIImage_Category/UIImage+IF.h"; sourceTree = "<group>"; };
 		5060FDAD14FDF4EF0018587E /* UIImage+IF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IF.m"; path = "UIImage_Category/UIImage+IF.m"; sourceTree = "<group>"; };
-		5060FDAF14FE0F500018587E /* glCameraReject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraReject.png; sourceTree = "<group>"; };
-		5060FDB014FE0F500018587E /* glCameraReject@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraReject@2x.png"; sourceTree = "<group>"; };
-		5060FDB314FE0F660018587E /* glCameraAccept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraAccept.png; sourceTree = "<group>"; };
-		5060FDB414FE0F660018587E /* glCameraAccept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraAccept@2x.png"; sourceTree = "<group>"; };
-		5073FC6014FE5DA900D0C1F2 /* glCameraAcceptDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraAcceptDisabled.png; sourceTree = "<group>"; };
-		5073FC6114FE5DA900D0C1F2 /* glCameraAcceptDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraAcceptDisabled@2x.png"; sourceTree = "<group>"; };
-		5073FC6514FE5DC000D0C1F2 /* glCameraRejectDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraRejectDisabled.png; sourceTree = "<group>"; };
-		5073FC6614FE5DC000D0C1F2 /* glCameraRejectDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraRejectDisabled@2x.png"; sourceTree = "<group>"; };
 		5073FC7314FE69EC00D0C1F2 /* GPUImageMovieWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageMovieWriter.h; path = GPUImage/GPUImageMovieWriter.h; sourceTree = "<group>"; };
 		5073FC7414FE69EC00D0C1F2 /* GPUImageMovieWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageMovieWriter.m; path = GPUImage/GPUImageMovieWriter.m; sourceTree = "<group>"; };
 		5094857A14FC6C95007B42FF /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = GPUImage/GLProgram.h; sourceTree = "<group>"; };
@@ -361,16 +371,6 @@
 		5094879914FD2929007B42FF /* vignetteMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vignetteMap.png; path = Resources_for_IF_Filters/vignetteMap.png; sourceTree = "<group>"; };
 		5094879A14FD2929007B42FF /* waldenMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = waldenMap.png; path = Resources_for_IF_Filters/waldenMap.png; sourceTree = "<group>"; };
 		5094879B14FD2929007B42FF /* xproMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xproMap.png; path = Resources_for_IF_Filters/xproMap.png; sourceTree = "<group>"; };
-		509487C514FD2D08007B42FF /* tabBar-camera-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on.png"; sourceTree = "<group>"; };
-		509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on@2x.png"; sourceTree = "<group>"; };
-		509487C714FD2D08007B42FF /* tabBar-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera.png"; sourceTree = "<group>"; };
-		509487C814FD2D08007B42FF /* tabBar-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera@2x.png"; sourceTree = "<group>"; };
-		509487CD14FD3768007B42FF /* glCameraLibrary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraLibrary.png; sourceTree = "<group>"; };
-		509487CE14FD3768007B42FF /* glCameraLibrary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraLibrary@2x.png"; sourceTree = "<group>"; };
-		509487D114FD37AA007B42FF /* glCameraCaptureButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraCaptureButton.png; sourceTree = "<group>"; };
-		509487D214FD37AA007B42FF /* glCameraCaptureButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraCaptureButton@2x.png"; sourceTree = "<group>"; };
-		509487D314FD37AA007B42FF /* glCameraCaptureButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glCameraCaptureButtonPressed.png; sourceTree = "<group>"; };
-		509487D414FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glCameraCaptureButtonPressed@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,24 +509,24 @@
 		509485E714FC8075007B42FF /* Resources for FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5073FC6514FE5DC000D0C1F2 /* glCameraRejectDisabled.png */,
-				5073FC6614FE5DC000D0C1F2 /* glCameraRejectDisabled@2x.png */,
-				5073FC6014FE5DA900D0C1F2 /* glCameraAcceptDisabled.png */,
-				5073FC6114FE5DA900D0C1F2 /* glCameraAcceptDisabled@2x.png */,
-				5060FDB314FE0F660018587E /* glCameraAccept.png */,
-				5060FDB414FE0F660018587E /* glCameraAccept@2x.png */,
-				5060FDAF14FE0F500018587E /* glCameraReject.png */,
-				5060FDB014FE0F500018587E /* glCameraReject@2x.png */,
-				509487D114FD37AA007B42FF /* glCameraCaptureButton.png */,
-				509487D214FD37AA007B42FF /* glCameraCaptureButton@2x.png */,
-				509487D314FD37AA007B42FF /* glCameraCaptureButtonPressed.png */,
-				509487D414FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png */,
-				509487CD14FD3768007B42FF /* glCameraLibrary.png */,
-				509487CE14FD3768007B42FF /* glCameraLibrary@2x.png */,
-				509487C514FD2D08007B42FF /* tabBar-camera-on.png */,
-				509487C614FD2D08007B42FF /* tabBar-camera-on@2x.png */,
-				509487C714FD2D08007B42FF /* tabBar-camera.png */,
-				509487C814FD2D08007B42FF /* tabBar-camera@2x.png */,
+				500521D5150006D70039FAC1 /* glCameraAccept.png */,
+				500521D6150006D70039FAC1 /* glCameraAccept@2x.png */,
+				500521D7150006D70039FAC1 /* glCameraAcceptDisabled.png */,
+				500521D8150006D70039FAC1 /* glCameraAcceptDisabled@2x.png */,
+				500521D9150006D70039FAC1 /* glCameraCaptureButton.png */,
+				500521DA150006D70039FAC1 /* glCameraCaptureButton@2x.png */,
+				500521DB150006D70039FAC1 /* glCameraCaptureButtonPressed.png */,
+				500521DC150006D70039FAC1 /* glCameraCaptureButtonPressed@2x.png */,
+				500521DD150006D70039FAC1 /* glCameraLibrary.png */,
+				500521DE150006D70039FAC1 /* glCameraLibrary@2x.png */,
+				500521DF150006D70039FAC1 /* glCameraReject.png */,
+				500521E0150006D70039FAC1 /* glCameraReject@2x.png */,
+				500521E1150006D70039FAC1 /* glCameraRejectDisabled.png */,
+				500521E2150006D70039FAC1 /* glCameraRejectDisabled@2x.png */,
+				500521E3150006D70039FAC1 /* tabBar-camera-on.png */,
+				500521E4150006D70039FAC1 /* tabBar-camera-on@2x.png */,
+				500521E5150006D70039FAC1 /* tabBar-camera.png */,
+				500521E6150006D70039FAC1 /* tabBar-camera@2x.png */,
 				5094865414FCCEC5007B42FF /* DSFilterTile1977.png */,
 				5094865514FCCEC5007B42FF /* DSFilterTile1977@2x.png */,
 				5094865614FCCEC5007B42FF /* DSFilterTileAmaro.png */,
@@ -643,8 +643,8 @@
 		509486D514FCDF8A007B42FF /* Resources for IFFilters */ = {
 			isa = PBXGroup;
 			children = (
-				500521C514FF9AE20039FAC1 /* sierraMap.png */,
-				500521BD14FF99090039FAC1 /* sierraVignette.png */,
+				500521D1150006A00039FAC1 /* sierraMap.png */,
+				500521D2150006A20039FAC1 /* sierraVignette.png */,
 				5094877314FD2929007B42FF /* 1977blowout.png */,
 				5094877414FD2929007B42FF /* 1977map.png */,
 				5094877514FD2929007B42FF /* amaroMap.png */,
@@ -834,26 +834,26 @@
 				509487C214FD2929007B42FF /* vignetteMap.png in Resources */,
 				509487C314FD2929007B42FF /* waldenMap.png in Resources */,
 				509487C414FD2929007B42FF /* xproMap.png in Resources */,
-				509487C914FD2D08007B42FF /* tabBar-camera-on.png in Resources */,
-				509487CA14FD2D08007B42FF /* tabBar-camera-on@2x.png in Resources */,
-				509487CB14FD2D08007B42FF /* tabBar-camera.png in Resources */,
-				509487CC14FD2D08007B42FF /* tabBar-camera@2x.png in Resources */,
-				509487CF14FD3768007B42FF /* glCameraLibrary.png in Resources */,
-				509487D014FD3768007B42FF /* glCameraLibrary@2x.png in Resources */,
-				509487D514FD37AB007B42FF /* glCameraCaptureButton.png in Resources */,
-				509487D614FD37AB007B42FF /* glCameraCaptureButton@2x.png in Resources */,
-				509487D714FD37AB007B42FF /* glCameraCaptureButtonPressed.png in Resources */,
-				509487D814FD37AB007B42FF /* glCameraCaptureButtonPressed@2x.png in Resources */,
-				5060FDB114FE0F500018587E /* glCameraReject.png in Resources */,
-				5060FDB214FE0F500018587E /* glCameraReject@2x.png in Resources */,
-				5060FDB514FE0F660018587E /* glCameraAccept.png in Resources */,
-				5060FDB614FE0F660018587E /* glCameraAccept@2x.png in Resources */,
-				5073FC6214FE5DA900D0C1F2 /* glCameraAcceptDisabled.png in Resources */,
-				5073FC6314FE5DA900D0C1F2 /* glCameraAcceptDisabled@2x.png in Resources */,
-				5073FC6714FE5DC000D0C1F2 /* glCameraRejectDisabled.png in Resources */,
-				5073FC6814FE5DC000D0C1F2 /* glCameraRejectDisabled@2x.png in Resources */,
-				500521BF14FF99090039FAC1 /* sierraVignette.png in Resources */,
-				500521C614FF9AE20039FAC1 /* sierraMap.png in Resources */,
+				500521D3150006A30039FAC1 /* sierraMap.png in Resources */,
+				500521D4150006A30039FAC1 /* sierraVignette.png in Resources */,
+				500521E7150006D70039FAC1 /* glCameraAccept.png in Resources */,
+				500521E8150006D70039FAC1 /* glCameraAccept@2x.png in Resources */,
+				500521E9150006D70039FAC1 /* glCameraAcceptDisabled.png in Resources */,
+				500521EA150006D70039FAC1 /* glCameraAcceptDisabled@2x.png in Resources */,
+				500521EB150006D70039FAC1 /* glCameraCaptureButton.png in Resources */,
+				500521EC150006D70039FAC1 /* glCameraCaptureButton@2x.png in Resources */,
+				500521ED150006D70039FAC1 /* glCameraCaptureButtonPressed.png in Resources */,
+				500521EE150006D70039FAC1 /* glCameraCaptureButtonPressed@2x.png in Resources */,
+				500521EF150006D70039FAC1 /* glCameraLibrary.png in Resources */,
+				500521F0150006D70039FAC1 /* glCameraLibrary@2x.png in Resources */,
+				500521F1150006D70039FAC1 /* glCameraReject.png in Resources */,
+				500521F2150006D70039FAC1 /* glCameraReject@2x.png in Resources */,
+				500521F3150006D70039FAC1 /* glCameraRejectDisabled.png in Resources */,
+				500521F4150006D70039FAC1 /* glCameraRejectDisabled@2x.png in Resources */,
+				500521F5150006D70039FAC1 /* tabBar-camera-on.png in Resources */,
+				500521F6150006D70039FAC1 /* tabBar-camera-on@2x.png in Resources */,
+				500521F7150006D70039FAC1 /* tabBar-camera.png in Resources */,
+				500521F8150006D70039FAC1 /* tabBar-camera@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
