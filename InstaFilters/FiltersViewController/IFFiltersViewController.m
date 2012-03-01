@@ -77,6 +77,11 @@
 - (void)IFVideoCameraWillStartCaptureStillImage:(IFVideoCamera *)videoCamera {
     
     self.shootButton.hidden = YES;
+    
+    if (self.isInVideoRecorderMode == NO) {
+        self.photoAlbumButton.hidden = YES;
+    }
+    
     [self.cancelAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraRejectDisabled" ofType:@"png"]] forState:UIControlStateNormal];
     [self.confirmAlbumPhotoButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"glCameraAcceptDisabled" ofType:@"png"]] forState:UIControlStateNormal];
     self.cancelAlbumPhotoButton.hidden = NO;
@@ -207,6 +212,9 @@
     self.videoCamera.rawImage = [self processAlbumPhoto:info];
     [self.videoCamera switchFilter:currentType];
     self.shootButton.hidden = YES;
+    if (self.isInVideoRecorderMode == NO) {
+        self.photoAlbumButton.hidden = YES;
+    }
     self.cancelAlbumPhotoButton.hidden = NO;
     self.confirmAlbumPhotoButton.hidden = NO;
     
@@ -548,6 +556,9 @@
     self.cancelAlbumPhotoButton.hidden = YES;
     self.confirmAlbumPhotoButton.hidden = YES;
     self.shootButton.hidden = NO;
+    if (self.isInVideoRecorderMode == NO) {
+        self.photoAlbumButton.hidden = NO;
+    }
     [self.videoCamera cancelAlbumPhotoAndGoBackToNormal];
 }
 - (void)confirmAlbumPhotoButtonPressed:(id)sender {
